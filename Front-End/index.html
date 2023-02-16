@@ -64,18 +64,20 @@
 
 
             <div class="row insert signInField" >
+                <form id="signInForm">
                 <div class="col-7">
-                    <input type="text" class="form-control" placeholder="name">
-                </div>
-                <div class="col-7">
-                    <input type="password" class="form-control" placeholder="password">
+                    <input type="text" class="form-control" placeholder="name" id="txtuserName">
                 </div>
 
+                <div class="col-7">
+                    <input type="password" class="form-control" placeholder="password" id="txtuserPassword">
+                </div>
+                </form>
             </div>
 
             <div class="row" style="padding-top: 24px;padding-left: 150px">
 
-                <button type="button" class="btn btn-primary col-lg-6 col-md-4">Submit</button>
+                <button  id="btnSignIn" type="button" class="btn btn-primary col-lg-6 col-md-4">Submit</button>
 
             </div>
 
@@ -128,15 +130,42 @@
 </footer>
 
 
-<script>
 
 
 
+    <script>
+
+        let baseURL= "http://localhost:8080/Back_End_war/";
 
 
+
+        $("#btnSignIn").click(function (){
+
+        var formData = $("#signInForm").serialize();
+
+
+        $.ajax({
+        url: baseURL+"user",
+        method : "post",
+        data : formData,
+        dataType: "json",
+
+        success:function (res){
+        alert(res.message);
+    },
+        error:function (error){
+        var jsObject=JSON.parse(error.responseText);
+        alert(jsObject.message);
+    }
+
+    });
+    });
 
 
 </script>
+
+
+
 
 </body>
 </html>

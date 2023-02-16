@@ -1,6 +1,7 @@
 package lk.ijse.spring.config;
 
 
+import lk.ijse.spring.repo.LoggingRepo;
 import lk.ijse.spring.repo.UserRepo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +20,8 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement//aspect (Transaction tika manage krnwa)//tranactoin execute wenna kina anotation
-@EnableJpaRepositories(basePackageClasses = {UserRepo.class})//dao classes tika mekta link krgnna
+@EnableJpaRepositories(basePackageClasses = {UserRepo.class,LoggingRepo.class})//dao classes tika mekta link krgnna
+//@EnableJpaRepositories(basePackageClasses = {LoggingRepo.class})//dao classes tika mekta link krgnna
 public class JPAConfig {
 
 

@@ -5,12 +5,10 @@ import lk.ijse.spring.entity.user;
 import lk.ijse.spring.repo.UserRepo;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 
+@RestController
 @RequestMapping("/user")
 @CrossOrigin
 
@@ -26,10 +24,10 @@ public class UserController {
     public ResponseUtil registerUser(@ModelAttribute UserDTO dto){
 
         System.out.println(dto.toString());
-        user user = new user(dto.getId());
+        user user = new user(dto.getUserId(),dto.getName(),dto.getUserNicNo(), dto.getUserAddress(),dto.getUserContactNumber(),dto.getUserEmail(),dto.getUserName(),dto.getUserDrivingLicenseNo(),dto.getUserDrivingLicenseImg(),dto.getUserNicImg(),dto.getUserNicImg() );
 
-        repo.save()
-        return  new ResponseUtil("200",dto.toString()+"saved");
+        repo.save(user);
+        return  new ResponseUtil("200",dto.toString()+"saved",null);
 
     }
 
