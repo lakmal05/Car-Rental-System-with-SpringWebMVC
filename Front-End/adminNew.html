@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta name="viewport" content="width=device-width initial-scale=1">
+
+    <link rel="icon" href="assets/img/logo.png">
+    <link rel="stylesheet" href="assets/css%20normalize/normalize.css">
+
+    <link rel="stylesheet" href="assets/fonts/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Montserrat:wght@100&family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Montserrat:wght@100&family=Open+Sans:wght@800&family=Roboto&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Montserrat:wght@100;800&family=Open+Sans:wght@800&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Montserrat:wght@100;800&family=Roboto&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/35bc792765.js" crossorigin="anonymous"></script>
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/styles/style2.css">
+
+
+</head>
+<body>
+
+    <main>
+
+        <section class="row" style="height: 120vh;background-color: #4d5154">
+
+
+
+<!--            sectoin1-->
+            <section class="col-8">
+
+<!--                options-->
+                 <div class="col-1" style="background-color: red ; height: 120vh">
+
+                     <i id="iHome" class="fa-solid fa-house-user"></i>
+                     <i id="iDriver" class="fa-solid fa-screwdriver-wrench"></i>
+                     <i id="iCar" class="fa-solid fa-car"></i>
+                     <i id="iUser" class="fa-solid fa-user"></i>
+                     <i id="iAdmin" class="fa-solid fa-unlock-keyhole"></i>
+                     <i id="iSettings" class="fa-solid fa-book"></i>
+                 </div>
+
+<!--   details-->
+                    <div id="incomeDetails_container">
+                        <div id="dailyIncomeBox">
+                            <i id="iDaily" class="fa-regular fa-clock"></i>
+                            <label id="lblDaily">Daily incomes</label>
+                            <label id="lblDailyDescription">Details of Today</label>
+                            <label id="lblDailyIncome">LKR 8040.00</label>
+                        </div>
+
+                        <div id="weeklyIncomeBox">
+                            <i id="iWeekly" class="fa-regular fa-calendar-plus"></i>
+                            <label id="lblWeekly">Weekly incomes</label>
+                            <label id="lblWeeklyDescription">Details of last week</label>
+                            <label id="lblWeeklyIncome">LKR 28460.00</label>
+                        </div>
+
+                        <div id="monthlyIncomeBox">
+                            <i id="iMonthly" class="fa-regular fa-calendar-minus"></i>
+                            <label id="lblMonthly">Monthly incomes</label>
+                            <label id="lblMonthlyDescription">Details of last month</label>
+                            <label id="lblMonthlyIncome">LKR 328460.00</label>
+                        </div>
+
+                        <div id="annuallyIncomeBox">
+                            <i id="iAnnually" class="fa-regular fa-calendar-check"></i>
+                            <label id="lblAnnually">Annually incomes</label>
+                            <label id="lblAnnuallyDescription">Details of last year</label>
+                            <label id="lblAnnuallyIncome">LKR 3941520.00</label>
+                        </div>
+
+                        <div id="customIncomeBox">
+                            <svg id="svgCustom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 416C0 398.3 14.33 384 32 384H86.66C99 355.7 127.2 336 160 336C192.8 336 220.1 355.7 233.3 384H480C497.7 384 512 398.3 512 416C512 433.7 497.7 448 480 448H233.3C220.1 476.3 192.8 496 160 496C127.2 496 99 476.3 86.66 448H32C14.33 448 0 433.7 0 416V416zM192 416C192 398.3 177.7 384 160 384C142.3 384 128 398.3 128 416C128 433.7 142.3 448 160 448C177.7 448 192 433.7 192 416zM352 176C384.8 176 412.1 195.7 425.3 224H480C497.7 224 512 238.3 512 256C512 273.7 497.7 288 480 288H425.3C412.1 316.3 384.8 336 352 336C319.2 336 291 316.3 278.7 288H32C14.33 288 0 273.7 0 256C0 238.3 14.33 224 32 224H278.7C291 195.7 319.2 176 352 176zM384 256C384 238.3 369.7 224 352 224C334.3 224 320 238.3 320 256C320 273.7 334.3 288 352 288C369.7 288 384 273.7 384 256zM480 64C497.7 64 512 78.33 512 96C512 113.7 497.7 128 480 128H265.3C252.1 156.3 224.8 176 192 176C159.2 176 131 156.3 118.7 128H32C14.33 128 0 113.7 0 96C0 78.33 14.33 64 32 64H118.7C131 35.75 159.2 16 192 16C224.8 16 252.1 35.75 265.3 64H480zM160 96C160 113.7 174.3 128 192 128C209.7 128 224 113.7 224 96C224 78.33 209.7 64 192 64C174.3 64 160 78.33 160 96z"/></svg>
+                            <label id="lblCustom">Custom incomes</label>
+                            <label id="lblCustomDescription">Details of custom</label>
+                            <input id="inputCustomDate1" type="date">
+                            <label id="lblTo">to</label>
+                            <input id="inputCustomDate2" type="date">
+                            <label id="lblCustomIncome">LKR 0000.00</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <form id="carRegistration_container">
+                    <label id="lblAddNewCar">Add new car</label>
+                    <label id="lblCarDetails">Input car details</label>
+
+                    <input id="inputCarId" type="text" name="carId" placeholder="  C001">
+                    <i id="iCarId" class="fa-solid fa-car"></i>
+                    <label id="lblCarId">id</label>
+
+                    <input id="inputCarAvailability" type="text" name="carAvailability" placeholder="  In Stock">
+                    <i id="iCarAvailability" class="fa-solid fa-cubes-stacked"></i>
+                    <label id="lblCarAvailability">Availability</label>
+
+                    <input id="inputCarRegistrationNumber" type="text" name="registrationNumber" placeholder="  AB 0000">
+                    <i id="iCarRegistrationNumber" class="fa-regular fa-credit-card"></i>
+                    <label id="lblCarRegistrationNumber">Registration number</label>
+
+                    <input id="inputCarType" type="text" name="carType" placeholder="  Mini / Luxury">
+                    <i id="iCarType" class="fa-solid fa-car-side"></i>
+                    <label id="lblCarType">Type</label>
+
+                    <input id="inputCarColor" type="text" name="carColor" placeholder="  White">
+                    <i id="iCarColor" class="fa-solid fa-droplet"></i>
+                    <label id="lblCarColor">Color</label>
+
+                    <input id="inputCarMileage" type="text" name="carMileage" placeholder="  2700km">
+                    <i id="iCarMileage" class="fa-solid fa-chart-simple"></i>
+                    <label id="lblCarMileage">Mileage</label>
+
+                    <input id="inputCarTransmission" type="text" name="carTransmissionType" placeholder="  Auto / Manual">
+                    <i id="iCarTransmission" class="fa-solid fa-charging-station"></i>
+                    <label id="lblCarTransmission">Transmission</label>
+
+                    <input id="inputCarFuelType" type="text" name="carFuelType" placeholder="  Petrol / Diesel">
+                    <i id="iCarFuelType" class="fa-solid fa-gas-pump"></i>
+                    <label id="lblCarFuelType">Fuel Type</label>
+
+                    <input id="inputCarNumberOfPassengers" name="carNumberOfPassengers" type="text" placeholder="  0">
+                    <i id="iCarNumberOfPassengers" class="fa-solid fa-users"></i>
+                    <label id="lblNumberOfPassengers">Passengers</label>
+
+                    <input id="inputCarDailyRate" type="text" name="carDailyRate" placeholder="  LKR 00000.00">
+                    <i id="iCarDailyRate" class="fa-solid fa-chart-line"></i>
+                    <label id="lblCarDailyRate">Daily rate</label>
+
+                    <input id="inputCarMonthlyRate" type="text" name="carMonthlyRate" placeholder="  LKR 00000.00">
+                    <i id="iCarMonthlyRate" class="fa-solid fa-money-bill-trend-up"></i>
+                    <label id="lblCarMonthlyRate">Monthly rate</label>
+
+                    <input id="inputCarPriceForExtraKM" type="text" name="carPriceForExtraKM" placeholder="  LKR 00000.00">
+                    <i id="iCarPriceForExtraKM" class="fa-solid fa-hand-holding-dollar"></i>
+                    <label id="lblCarPriceForExtraKM">Ex km price</label>
+
+                    <input id="inputCarBrand" type="text" name="carBrand" placeholder="  BMW">
+                    <i id="iCarBrand" class="fa-solid fa-camera"></i>
+                    <label id="lblCarBrand">Brand</label>
+
+                    <input id="inputCarDamagePrice" type="text" name="carDamagePrice" placeholder="  LKR 00000.00">
+                    <i id="iCarDamagePrice" class="fa-solid fa-car-burst"></i>
+                    <label id="lblCarDamagePrice">Damage price</label>
+
+                    <button id="btnSaveCar" type="button">Save car</button>
+                    <i id="btnUpdateCar" class="fa-regular fa-pen-to-square"></i>
+                    <i id="btnSearchCar" class="fa-solid fa-magnifying-glass"></i>
+                    <i id="btnDeleteCar" class="fa-regular fa-trash-can"></i>
+
+                    <input id="default-btn" type="file" hidden>
+                    <button onclick="defaultBtnActive()" id="custom-btn">Choose a file</button>
+
+
+                </form>
+
+
+                <section id="driverTable_container">
+                    <label id="lblDriverDetail">Driver details</label>
+                    <label id="lblDriverDetailsDescription">Manage your drivers and driver details here.</label>
+
+
+                    <hr id="lineTwo">
+
+                    <!--driver table-->
+                    <table class="content-table">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Contact number</th>
+                            <th>Email address</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblDriverJson">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!--<tr class="active-row">
+                         </tr>-->
+                        </tbody>
+                    </table>
+
+                    <i id="btnGetAllDriver" class="fa-solid fa-reply-all"></i>
+
+                </section>
+
+                <section id="carTable_container">
+                    <label id="lblCarDetail">Car details</label>
+                    <label id="lblCarDetailsDescription">Manage your cars and car details here.</label>
+
+                    <hr id="lineOne">
+
+                    <!--car table-->
+                    <table class="content-table">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Brand</th>
+                            <th>Availability</th>
+                            <th>Reg no</th>
+                            <th>Type</th>
+                            <th>Color</th>
+                            <th>Mileage</th>
+                            <th>Transmission</th>
+                            <th>Fuel</th>
+                            <th>Seat</th>
+                            <th>Daily rate</th>
+                            <th>Monthly rate</th>
+                            <th>Ex price</th>
+                            <th>Damage price</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblCarJson">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!--<tr class="active-row">
+                         </tr>-->
+                        </tbody>
+                    </table>
+
+                    <i id="btnGetAllCar" class="fa-solid fa-reply-all"></i>
+                </section>
+
+                <section id="userTable_container">
+                    <label id="lblUserDetail">User details</label>
+                    <label id="lblUserDetailsDescription">Manage your members and member details here.</label>
+
+                    <hr id="lineFour">
+
+                    <!--driver table-->
+                    <table class="content-table">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nic</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Email address</th>
+                            <th>Contact Number</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblUserJson">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!--<tr class="active-row">
+                         </tr>-->
+                        </tbody>
+                    </table>
+
+                    <i id="btnGetAllUser" class="fa-solid fa-reply-all"></i>
+                    <i id="btnDeleteUser" class="fa-regular fa-trash-can"></i>
+
+                </section>
+
+                <section id="bookingTable_container">
+                    <label id="lblBookingDetail">Booking details</label>
+                    <label id="lblBookingDetailsDescription">Manage booking details and booking details here.</label>
+
+                    <hr id="lineThree">
+
+                    <!--booking details table-->
+                    <table class="content-table">
+                        <thead>
+                        <tr>
+                            <th>Booking id</th>
+                            <th>User id</th>
+                            <th>Car id</th>
+                            <th>Payment id</th>
+                            <th>Driver status</th>
+                            <th>Pick up</th>
+                            <th>Drop off</th>
+                            <th>Pick up date</th>
+                            <th>Drop off date</th>
+                            <th>Pick up time</th>
+                            <th>Drop off time</th>
+                            <th>Drop off date</th>
+                            <th>Current date</th>
+                            <th>Current time</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblBookingJson">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!--<tr class="active-row">
+                         </tr>-->
+                        </tbody>
+                    </table>
+
+                    <i id="btnGetAllBooking" class="fa-solid fa-reply-all"></i>
+
+                </section>
+
+                <form id="driverForm_container">
+                    <label id="lblAddNewDriver">Add new driver</label>
+                    <label id="lblDriverDetails">Input driver details</label>
+
+                    <input id="inputDriverId" type="text" name="driverId" placeholder="  D001">
+                    <i id="iId" class="fa-solid fa-user-shield"></i>
+                    <label id="lblDriverId">Driver id</label>
+
+                    <input id="inputDriverName" type="text" name="driverName" placeholder="  First & last name">
+                    <i id="iName" class="fa-solid fa-user"></i>
+                    <label id="lblDriverName">Driver name</label>
+
+                    <input id="inputDriverAge" type="text" name="driverAge" placeholder="  00">
+                    <i id="iAge" class="fa-solid fa-user-clock"></i>
+                    <label id="lblDriverAge">Driver age</label>
+
+                    <input id="inputDriverNumber" type="text" name="driverContactNumber" placeholder="  +94000000000">
+                    <i id="iNumber" class="fa-solid fa-user-gear"></i>
+                    <label id="lblDriverNumber">Driver contact no</label>
+
+                    <input id="inputDriverEmailAddress" type="text" name="driverEmailAddress" placeholder="  Driver@gmail.com">
+                    <i id="iEmailAddress" class="fa-solid fa-user-tag"></i>
+                    <label id="lblDriverEmailAddress">Driver Email</label>
+
+                    <button id="btnSaveDriver" type="button">Save driver</button>
+
+                    <i id="btnUpdateDriver" class="fa-regular fa-pen-to-square"></i>
+                    <i id="btnDeleteDriver" class="fa-regular fa-trash-can"></i>
+                    <i id="btnSearchDriver" class="fa-solid fa-magnifying-glass"></i>
+                </form>
+
+
+
+            </section>
+
+
+
+
+
+
+
+
+<!--            section-->
+            <section class="col-4" style="background-color: blue">
+
+
+
+            </section>
+
+
+
+
+        </section>
+
+
+
+    </main>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+
+<script>
+
+
+    $("#carRegistration_container").css('visibility','visible');
+    $("#driverTable_container").css('visibility','hidden');
+    $("#carTable_container").css('visibility','hidden');
+    $("#userTable_container").css('visibility','hidden');
+    $("#bookingTable_container").css('visibility','hidden');
+    $("#driverForm_container").css('visibility','visible');
+
+
+
+
+   $("#iDriver").click(function (){
+   $("#carRegistration_container").css('visibility','hidden');
+   $("#driverForm_container").css('visibility','hidden');
+    $("#driverTable_container").css('visibility','visible');
+       });
+
+
+    $("#iHome").click(function (){
+        $("#carRegistration_container").css('visibility','visible');
+        $("#driverTable_container").css('visibility','hidden');
+        $("#driverForm_container").css('visibility','visible');
+
+    });
+
+
+
+
+
+/*opacity buttons*/
+    {
+        $("#iHome").click(function () {
+            $("#iDriver, #iCar, #iSettings, #iUser, #iAdmin").css("opacity", "20%");
+            $("#iHome").css("opacity", "90%");
+        });
+
+        $("#iDriver").click(function () {
+            $("#iHome, #iCar, #iSettings, #iUser, #iAdmin").css("opacity", "20%");
+            $("#iDriver").css("opacity", "90%");
+        });
+
+        $("#iCar").click(function () {
+            $("#iHome, #iDriver, #iSettings, #iUser, #iAdmin").css("opacity", "20%");
+            $("#iCar").css("opacity", "90%");
+        });
+
+        $("#iUser").click(function () {
+            $("#iHome, #iDriver, #iCar, #iSettings, #iAdmin").css("opacity", "20%");
+            $("#iUser").css("opacity", "90%");
+        });
+
+        $("#iAdmin").click(function () {
+            $("#iHome, #iDriver, #iCar, #iUser, #iSettings").css("opacity", "20%");
+            $("#iAdmin").css("opacity", "90%");
+        });
+
+        $("#iSettings").click(function () {
+            $("#iHome, #iDriver, #iCar, #iUser, #iAdmin").css("opacity", "20%");
+            $("#iSettings").css("opacity", "90%");
+        });
+
+    }
+
+
+    // /*car img form*/
+    // const wrapper = document.querySelector(".wrapper");
+    // const fileName = document.querySelector(".file-name");
+    // const cancelBtn = document.querySelector("#cancel-btn");
+    // const defaultBtn = document.querySelector("#default-btn");
+    // const customBtn = document.querySelector("#custom-btn");
+    // const img =  document.querySelector("img");
+    // let regExp = /[0-9a-zA-Z\^\&\'@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+    // function defaultBtnActive() {
+    //     defaultBtn.click();
+    // }
+    // defaultBtn.addEventListener("change", function () {
+    //     const file = this.files[0];
+    //     if (file){
+    //         const reader = new FileReader();
+    //         reader.onload = function () {
+    //             const result = reader.result;
+    //             img.src = result;
+    //             wrapper.classList.add("active");
+    //         }
+    //         cancelBtn.addEventListener("click", function () {
+    //             img.src = "";
+    //             wrapper.classList.remove("active");
+    //         })
+    //         reader.readAsDataURL(file);
+    //     }
+    //     if (this.value){
+    //         let valueStore = this.value.match(regExp);
+    //         fileName.textContent = valueStore;
+    //     }
+    // })
+
+
+
+
+</script>
+
+
+</body>
+</html>

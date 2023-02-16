@@ -1,0 +1,2274 @@
+/*------------------- Nav Bar ---------------------*/
+body{
+    background-color: #F5F5F5;
+}
+
+/*header{
+    display: flex;
+    border-bottom: 1px solid #f6f4f4;
+    align-items: center;
+    justify-items: center;
+    !*background-color: #FFFFFF;*!
+    !*border-radius: 30px 30px 0 0;*!
+    !*border: 1px solid red;*!
+    width: 30%;
+}
+
+#logo{
+    !*border: 1px solid red;*!
+    position: absolute;
+    left: 3%;
+    font-size: 20px;
+    color: #4375F8;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header>ul>li{
+    !*border: 1px solid green;*!
+    display:inline-block;
+    padding: 0 17px 0 17px;
+    font-size: 13px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    position: relative;
+    left: 100px;
+    color: gray;
+    opacity: 80%;
+}
+
+header>ul>li:hover{
+    cursor: pointer;
+    color: black;
+}
+
+#avatar:hover{
+    cursor: pointer;
+}*/
+
+/*-------------------- car img form container ---------------------*/
+#carForm_container{
+    position: absolute;
+    /*border: 1px solid #eaeaea;*/
+    top: 79px;
+    left: 1042px;
+    width: 290px;
+    height: 272px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 30px 30px 30px 30px;
+}
+
+#carForm_container .wrapper{
+    position: relative;
+    width: 100%;
+    height: 271px;
+    border-radius: 30px;
+    border: 2px solid #FFFFFF;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.wrapper.active{
+    border: none;
+}
+
+.wrapper .image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.wrapper .icon{
+    font-size: 50px;
+    color: gray;
+    opacity: 10%;
+    text-align: center;
+}
+
+.wrapper .text{
+    font-size: 16px;
+    color: gray;
+    opacity: 10%;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.wrapper #cancel-btn{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #4375F8;
+    display: none;
+}
+
+.wrapper.active:hover #cancel-btn{
+    display: block;
+}
+
+.wrapper #cancel-btn:hover{
+    color: #ff253a;
+}
+
+.wrapper .file-name{
+    position: absolute;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    padding: 8px 0;
+    font-size: 13px;
+    background: #FFFFFF;
+    text-align: center;
+    display: none;
+    opacity: 68%;
+}
+
+.wrapper.active:hover .file-name{
+    display: block;
+}
+
+#carRegistration_container #custom-btn{
+    font-size: 12px;
+    padding: 9px 5px;
+    transition: all 1s ease;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    width: 110px;
+    height: 34px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #4375F8;
+    z-index: 4;
+    position: absolute;
+    top: 345px;
+    right: 34px;
+    display: block;
+    color: #FFFFFF;
+    cursor: pointer;
+    background: #4375F8;
+    outline: none;
+}
+
+/*new add*/
+img::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+/*------------------- main form container -------------------*/
+#main_container{
+    position: absolute;
+    /*border: 1px solid red;*/
+    height: 100%;
+    width: 78%;
+    top: 0;
+}
+
+/*Hello admin*/
+#lblHelloAdmin{
+    position: absolute;
+    left: 75px;
+    top: 24px;
+    color: black;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+#lblDescription{
+    position: absolute;
+    left: 76px;
+    top: 53px;
+    color: black;
+    cursor: pointer;
+    font-size: 11px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    opacity: 40%;
+}
+
+/*search*/
+#inputSearch{
+    position: absolute;
+    width: 27.5%;
+    left: 1042px;
+    top: 4%;
+    background-color: #FFFFFF;
+    border-radius: 14px;
+    height: 37px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#inputSearch::placeholder{
+    opacity: 60%;
+}
+
+/*nav icons*/
+#iHome{
+    position: relative;
+    top: 225px;
+    left: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #4375F8;
+    opacity: 90%;
+}
+
+#iDriver{
+    position: relative;
+    top: 266px;
+    right: 3px;
+    cursor: pointer;
+    opacity: 20%;
+    font-size: 17px;
+    color: #4375F8;
+}
+
+#iCar{
+    position: relative;
+    top: 305px;
+    right: 24px;
+    opacity: 20%;
+    cursor: pointer;
+    font-size: 18px;
+    color: #4375F8;
+}
+
+#iUser{
+    position: relative;
+    top: 345px;
+    right: -21px;
+    opacity: 20%;
+    cursor: pointer;
+    font-size: 19px;
+    color: #4375F8;
+}
+
+#iAdmin{
+    position: relative;
+    top: 385px;
+    right: 2px;
+    opacity: 20%;
+    cursor: pointer;
+    font-size: 19px;
+    color: #4375F8;
+}
+
+#iSettings{
+    position: relative;
+    top: 425px;
+    right: 2px;
+    opacity: 20%;
+    cursor: pointer;
+    font-size: 19px;
+    color: #4375F8;
+}
+
+#iHome:hover{
+    opacity: 90%;
+    color: #4375F8;
+}
+
+#iDriver:hover{
+    opacity: 90%;
+    color: #4375F8;
+}
+
+#iCar:hover{
+    opacity: 90%;
+    color: #4375F8;
+}
+
+#iUser:hover{
+    opacity: 90%;
+    color: #4375F8;
+}
+
+#iAdmin:hover{
+    opacity: 90%;
+    color: #4375F8;
+}
+
+#iSettings:hover{
+    opacity: 90%;
+    color: #4375F8;
+}
+
+/*income details*/
+#incomeDetails_container{
+    position: absolute;
+    width: 970px;
+    height: 150px;
+    /*border: 1px solid red;*/
+    top: 11%;
+    left: 5%;
+    border-radius: 30px 30px 30px 30px;
+    /*background-color: red;*/
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-items: center;
+}
+
+#dailyIncomeBox{
+    width: 125px;
+    height: 100%;
+    background-color: #FFFFFF;
+    border-radius: 15px 15px 15px 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#weeklyIncomeBox{
+    width: 170px;
+    height: 100%;
+    background-color: #FFFFFF;
+    border-radius: 15px 15px 15px 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#monthlyIncomeBox{
+    width: 170px;
+    height: 100%;
+    background-color: #FFFFFF;
+    border-radius: 15px 15px 15px 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#annuallyIncomeBox{
+    width: 170px;
+    height: 100%;
+    background-color: #FFFFFF;
+    border-radius: 15px 15px 15px 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#customIncomeBox{
+    width: 225px;
+    height: 100%;
+    background-color: #FFFFFF;
+    border-radius: 15px 15px 15px 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/*#lblDescription2{
+    position: relative;
+    left: 76px;
+    top: 250px;
+    color: black;
+    cursor: pointer;
+    font-size: 11px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    opacity: 40%;
+}*/
+
+/*daily income*/
+#iDaily{
+    position: relative;
+    left: 22px;
+    top: 25px;
+    color: #4375F8;
+    width: 26px;
+    height: 26px;
+    opacity: 90%;
+    font-size: 25px;
+}
+
+#lblDaily{
+    position: relative;
+    right: 8px;
+    top: 48px;
+    color: black;
+    font-size: 14px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    opacity: 40%;
+}
+
+#lblDailyDescription{
+    position: absolute;
+    right: 862px;
+    top: 76px;
+    color: #4375F8;
+    font-size: 11px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    opacity: 40%;
+}
+
+#lblDailyIncome{
+    position: absolute;
+    right: 839px;
+    top: 104px;
+    color: black;
+    font-weight: lighter;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+/*weekly income*/
+#iWeekly{
+    position: relative;
+    left: 22px;
+    top: 24px;
+    color: #4375F8;
+    opacity: 90%;
+    font-size: 25px;
+}
+
+#lblWeekly{
+    position: relative;
+    right: 4px;
+    top: 48px;
+    color: black;
+    font-size: 14px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    opacity: 40%;
+}
+
+#lblWeeklyDescription{
+    position: absolute;
+    right: 663px;
+    top: 76px;
+    color: #4375F8;
+    font-size: 11px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    opacity: 40%;
+}
+
+#lblWeeklyIncome{
+    position: absolute;
+    right: 647px;
+    top: 104px;
+    color: black;
+    font-weight: lighter;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+/*monthly income*/
+#iMonthly{
+    position: relative;
+    left: 23px;
+    top: 24px;
+    color: #4375F8;
+    font-size: 25px;
+    opacity: 90%;
+}
+
+#lblMonthly{
+    position: relative;
+    right: 3px;
+    top: 48px;
+    color: black;
+    font-size: 14px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    opacity: 40%;
+}
+
+#lblMonthlyDescription{
+    position: absolute;
+    right: 473px;
+    top: 76px;
+    color: #4375F8;
+    font-size: 11px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    opacity: 40%;
+}
+
+#lblMonthlyIncome{
+    position: absolute;
+    right: 453px;
+    top: 104px;
+    color: black;
+    font-weight: lighter;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+/*Annually income*/
+#iAnnually{
+    position: relative;
+    left: 22px;
+    top: 24px;
+    color: #4375F8;
+    opacity: 90%;
+    font-size: 25px;
+}
+
+#lblAnnually{
+    position: relative;
+    right: 4px;
+    top: 48px;
+    color: black;
+    font-size: 14px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    opacity: 40%;
+}
+
+#lblAnnuallyDescription{
+    position: absolute;
+    right: 302px;
+    top: 76px;
+    color: #4375F8;
+    font-size: 11px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    opacity: 40%;
+}
+
+#lblAnnuallyIncome{
+    position: absolute;
+    right: 260px;
+    top: 104px;
+    color: black;
+    font-weight: lighter;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+/*custom income*/
+#svgCustom{
+    position: relative;
+    left: 22px;
+    top: 20px;
+    color: #4375F8;
+    width: 26px;
+    height: 26px;
+    opacity: 30%;
+}
+
+#lblCustom{
+    position: relative;
+    left: 35px;
+    top: 6px;
+    color: black;
+    font-size: 14px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    opacity: 40%;
+}
+
+#lblCustomDescription{
+    position: absolute;
+    right: 80px;
+    top: 36px;
+    color: #4375F8;
+    font-size: 11px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    opacity: 40%;
+}
+
+#lblCustomIncome{
+    position: absolute;
+    right: 108px;
+    top: 104px;
+    color: black;
+    font-weight: lighter;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputCustomDate1{
+    position: relative;
+    width: 35%;
+    height: 20%;
+    right: 118px;
+    top: 36%;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    color: #bdbdbd;
+}
+
+#inputCustomDate2{
+    position: relative;
+    width: 35%;
+    height: 20%;
+    left: 128px;
+    top: 16%;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    color: #bdbdbd;
+}
+
+#lblTo{
+    position: absolute;
+    right: 112px;
+    top: 72px;
+    color: black;
+    font-weight: lighter;
+    font-size: 11px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+/*Driver container*/
+#driverForm_container{
+    position: absolute;
+    width: 408px;
+    height: 398px;
+    /*border: 1px solid red;*/
+    top: 37%;
+    left: 58%;
+    border-radius: 30px 30px 30px 30px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#lblAddNewDriver{
+    position: absolute;
+    left: 35px;
+    top: 25px;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    opacity: 90%;
+}
+
+#lblDriverDetails{
+    position: relative;
+    left: 35px;
+    top: 36px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: lighter;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 30%;
+}
+
+#inputDriverId{
+    position: relative;
+    width: 40%;
+    right: 71px;
+    top: 25%;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iId{
+    position: relative;
+    top: 72px;
+    right: 238px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblDriverId{
+    position: relative;
+    right: 234px;
+    top: 72px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputDriverName{
+    position: relative;
+    width: 40%;
+    left: 213px;
+    top: 66px;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iName{
+    position: relative;
+    top: 38px;
+    left: 46px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblDriverName{
+    position: relative;
+    left: 50px;
+    top: 38px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputDriverAge{
+    position: relative;
+    width: 40%;
+    left: 213px;
+    top: 100px;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iAge{
+    position: relative;
+    top: 72px;
+    left: 46px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblDriverAge{
+    position: relative;
+    left: 50px;
+    top: 72px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputDriverNumber{
+    position: relative;
+    width: 40%;
+    left: 31px;
+    top: 65px;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iNumber{
+    position: relative;
+    top: 39px;
+    right: 136px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblDriverNumber{
+    position: relative;
+    right: 132px;
+    top: 38px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputDriverEmailAddress{
+    position: relative;
+    width: 84%;
+    left: 31px;
+    top: 97px;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iEmailAddress{
+    position: relative;
+    top: 70px;
+    right: 316px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblDriverEmailAddress{
+    position: absolute;
+    left: 59px;
+    top: 217px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputDriverId::placeholder, #inputDriverName::placeholder, #inputDriverNumber::placeholder, #inputDriverAge::placeholder, #inputDriverEmailAddress::placeholder{
+    opacity: 50%;
+}
+
+#btnSaveDriver{
+    position: relative;
+    width: 348px;
+    height: 34px;
+    background-color: #4375F8;
+    color: #FFFFFF;
+    border: 1px solid #4375F8;
+    border-radius: 10px 10px 10px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 9px 5px;
+    transition: all 1s ease;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    top: 129px;
+    left: 30px;
+}
+
+#btnUpdateDriver{
+    position: relative;
+    bottom: 154px;
+    left: 16px;
+    opacity: 60%;
+    cursor: pointer;
+    color: black;
+    font-size: 12px;
+}
+
+#btnDeleteDriver{
+    position: relative;
+    bottom: 154px;
+    right: 28px;
+    opacity: 60%;
+    cursor: pointer;
+    color: black;
+    font-size: 12px;
+}
+
+#btnSearchDriver{
+    position: relative;
+    bottom: 154px;
+    right: 70px;
+    opacity: 40%;
+    cursor: pointer;
+    color: black;
+    font-size: 12px;
+}
+
+#iDelete:hover, #iUpdate:hover, #iSearch:hover{
+    color: #4375F8;
+}
+
+/*-------------- car Registration --------------*/
+#carRegistration_container {
+    position: absolute;
+    width: 534px;
+    height: 398px;
+    /* border: 1px solid red; */
+    top: 44%;
+    left: 76px;
+    border-radius: 30px 30px 30px 30px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+}
+
+#lblAddNewCar{
+    position: absolute;
+    left: 35px;
+    top: 25px;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    opacity: 90%;
+}
+
+#lblCarDetails{
+    position: relative;
+    left: 35px;
+    top: 36px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: lighter;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 30%;
+}
+
+/*#carRegistrationForm{
+    position: absolute;
+    width: 480px;
+    height: 280px;
+    border: 1px solid red;
+    top: 18%;
+    left: 5%;
+    border-radius: 30px 30px 30px 30px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-items: center;
+}*/
+
+#inputCarId{
+    position: relative;
+    width: 20%;
+    right:  56px;
+    top: 25%;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iCarId{
+    position: relative;
+    top: 72px;
+    right: 162px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblCarId{
+    position: relative;
+    right: 160px;
+    top: 72px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputCarAvailability{
+    position: relative;
+    width: 20%;
+    right:  77px;
+    top: 25%;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iCarAvailability{
+    position: relative;
+    top: 72px;
+    right: 180px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblCarAvailability{
+    position: relative;
+    right: 178px;
+    top: 72px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputCarRegistrationNumber{
+    position: absolute;
+    width: 20%;
+    right:  142px;
+    top: 25%;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iCarRegistrationNumber{
+    position: relative;
+    top: 72px;
+    right: 135px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblCarRegistrationNumber{
+    position: relative;
+    right: -306px;
+    top: 40px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputCarType{
+    position: absolute;
+    width: 20%;
+    right:  18px;
+    top: 25%;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iCarType{
+    position: relative;
+    top: 38px;
+    left: 370px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblCarType{
+    position: relative;
+    left: 370px;
+    top: 38px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputCarColor{
+    position: relative;
+    width: 20%;
+    right:  60px;
+    top: 133px;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iCarColor{
+    position: relative;
+    top: 105px;
+    right: 166px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblCarColor{
+    position: relative;
+    right: 165px;
+    top: 106px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputCarMileage{
+    position: relative;
+    width: 20%;
+    right:  97px;
+    top: 133px;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iCarMileage{
+    position: relative;
+    top: 105px;
+    right: 202px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblCarMileage{
+    position: relative;
+    right: 200px;
+    top: 106px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputCarTransmission{
+    position: absolute;
+    width: 20%;
+    right:  142px;
+    top: 167px;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iCarTransmission{
+    position: absolute;
+    top: 150px;
+    right: 230px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblCarTransmission{
+    position: absolute;
+    right: 154px;
+    top: 150px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputCarFuelType{
+    position: absolute;
+    width: 20%;
+    right:  18px;
+    top: 167px;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iCarFuelType{
+    position: absolute;
+    top: 150px;
+    right: 104px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblCarFuelType{
+    position: absolute;
+    right: 48px;
+    top: 150px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputCarNumberOfPassengers{
+    position: absolute;
+    width: 20%;
+    left:  33px;
+    top: 232px;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iCarNumberOfPassengers{
+    position: absolute;
+    top: 215px;
+    left: 39px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblNumberOfPassengers{
+    position: absolute;
+    top: 216px;
+    left: 57px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputCarDailyRate{
+    position: absolute;
+    width: 20%;
+    left:  157px;
+    top: 232px;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iCarDailyRate{
+    position: absolute;
+    top: 215px;
+    left: 167px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblCarDailyRate{
+    position: absolute;
+    top: 216px;
+    left: 184px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputCarMonthlyRate{
+    position: absolute;
+    width: 20%;
+    left:  33px;
+    top: 298px;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iCarMonthlyRate{
+    position: absolute;
+    top: 281px;
+    left: 40px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblCarMonthlyRate{
+    position: absolute;
+    top: 281px;
+    left: 58px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputCarPriceForExtraKM{
+    position: absolute;
+    width: 20%;
+    left:  157px;
+    top: 298px;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iCarPriceForExtraKM{
+    position: absolute;
+    top: 281px;
+    left: 166px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblCarPriceForExtraKM{
+    position: absolute;
+    top: 281px;
+    left: 183px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputCarBrand{
+    position: absolute;
+    width: 20%;
+    left:  282px;
+    top: 232px;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iCarBrand{
+    position: absolute;
+    top: 215px;
+    left: 290px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblCarBrand{
+    position: absolute;
+    top: 215px;
+    left: 308px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputCarDamagePrice{
+    position: absolute;
+    width: 20%;
+    left:  405px;
+    top: 232px;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 8%;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iCarDamagePrice{
+    position: absolute;
+    top: 215px;
+    left: 416px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblCarDamagePrice{
+    position: absolute;
+    top: 215px;
+    left: 434px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 80%;
+}
+
+#inputCarId::placeholder, #inputCarBrand::placeholder, #inputCarAvailability::placeholder, #inputCarRegistrationNumber::placeholder, #inputCarType::placeholder, #inputCarColor::placeholder, #inputCarMileage::placeholder, #inputCarTransmission::placeholder, #inputCarFuelType::placeholder, #inputCarNumberOfPassengers::placeholder, #inputCarDailyRate::placeholder, #inputCarMonthlyRate::placeholder, #inputCarPriceForExtraKM::placeholder, #inputCarDamagePrice::placeholder{
+    opacity: 50%;
+}
+
+#btnSaveCar{
+    position: relative;
+    width: 110px;
+    height: 34px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #4375F8;
+    background-color: #4375F8;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 9px 5px;
+    transition: all 1s ease;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    top: 230px;
+    left: 405px;
+}
+
+#btnUpdateCar{
+    position: absolute;
+    top: 30px;
+    left: 498px;
+    opacity: 40%;
+    cursor: pointer;
+    color: black;
+    font-size: 12px;
+}
+
+
+#btnDeleteCar{
+    position: absolute;
+    top: 30px;
+    left: 472px;
+    opacity: 40%;
+    cursor: pointer;
+    color: black;
+    font-size: 12px;
+    /*border: 2px solid red;*/
+}
+
+#btnSearchCar{
+    position: absolute;
+    top: 30px;
+    left: 446px;
+    opacity: 40%;
+    cursor: pointer;
+    color: black;
+    font-size: 12px;
+}
+
+#btnDeleteCar:hover, #btnSearchCar:hover, #btnUpdateCar:hover{
+    color: #4375F8;
+}
+
+/*admin form*/
+#adminForm_container{
+    position: absolute;
+    /*border: 1px solid #eaeaea;*/
+    top: 370px;
+    left: 1042px;
+    width: 290px;
+    height: 272px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 30px 30px 30px 30px;
+}
+
+#lblAddNewAdmin{
+    position: absolute;
+    left: 35px;
+    top: 25px;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    opacity: 90%;
+}
+
+#lblAdminDetails{
+    position: relative;
+    left: 35px;
+    top: 44px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: lighter;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 30%;
+}
+
+#inputAdminId{
+    position: absolute;
+    width: 80px;
+    top: 230px;
+    right: 173px;
+    background-color: #FFFFFF;
+    height: 10px;
+    border: none;
+    outline: none;
+    font-size: 11px;
+    opacity: 85%;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+#inputAdminPassword::placeholder, #inputAdminName::placeholder{
+    opacity: 50%;
+}
+
+#inputAdminName{
+    position: absolute;
+    width: 180px;
+    right: 71px;
+    top: 35%;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 34px;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iAdminName{
+    position: absolute;
+    top: 80px;
+    right: 233px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblAdminName{
+    position: absolute;
+    right: 157px;
+    top: 80px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 40%;
+}
+
+#inputAdminPassword{
+    position: absolute;
+    width: 180px;
+    right: 71px;
+    top: 60%;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 10px 10px;
+    height: 34px;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#iAdminPassword{
+    position: absolute;
+    top: 146px;
+    right: 235px;
+    opacity: 80%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 12px;
+}
+
+#lblAdminPassword{
+    position: absolute;
+    right: 174px;
+    top: 146px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 40%;
+}
+
+#lblAddAdmin{
+    position: absolute;
+    left: 204px;
+    top: 230px;
+    color: #4375F8;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#iAdminUpdate{
+    position: relative;
+    top: 28px;
+    left: 125px;
+    opacity: 60%;
+    cursor: pointer;
+    color: black;
+    font-size: 12px;
+}
+
+#iAdminDelete{
+    position: relative;
+    top: 28px;
+    left: 81px;
+    opacity: 60%;
+    cursor: pointer;
+    color: black;
+    font-size: 12px;
+}
+
+#iAdminSearch{
+    position: relative;
+    top: 28px;
+    left: 120px;
+    opacity: 40%;
+    cursor: pointer;
+    color: black;
+    font-size: 12px;
+}
+
+#iDelete:hover, #iUpdate:hover, #iSearch:hover{
+    color: #4375F8;
+}
+
+/*car table container*/
+#carTable_container{
+    display: none;
+    position: absolute;
+    width: 955px;
+    height: 398px;
+    /*border: 1px solid red;*/
+    top: 37%;
+    left: 70px;
+    border-radius: 30px 30px 30px 30px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#lblCarDetail{
+    position: absolute;
+    left: 35px;
+    top: 25px;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    opacity: 90%;
+}
+
+#lblCarDetailsDescription{
+    position: relative;
+    left: 35px;
+    top: 45px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: lighter;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 30%;
+}
+
+#lineOne{
+    position: absolute;
+    top: 65px;
+    width: 880px;
+    border: 0.5px solid #acacac;
+    opacity: 15%;
+    left: 36px;
+}
+
+/*car table*/
+.content-table {
+    position: absolute;
+    top: 70px;
+    left: 26px;
+    width: 900px;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 10.5px;
+    min-width: 400px;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    font-weight: lighter;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.content-table thead tr {
+    background-color: #e8e8e8;
+    color: #7A808C;
+    text-align: left;
+    font-weight: lighter;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+    font-weight: lighter;
+    color: #7A808C;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #dddddd;
+}
+
+/*.content-table tbody tr.active-row {
+    font-weight: lighter;
+    color: #7a808c;
+}*/
+
+#btnGetAllCar{
+    position: relative;
+    top: 28px;
+    left: 700px;
+    opacity: 90%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 14px;
+    /*border: 2px solid red;*/
+}
+
+/*driver table container*/
+#driverTable_container{
+    /*display: none;*/
+    position: absolute;
+    width: 955px;
+    height: 398px;
+    /*border: 1px solid red;*/
+    top: 37%;
+    left: 70px;
+    border-radius: 30px 30px 30px 30px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#lblDriverDetail{
+    position: absolute;
+    left: 35px;
+    top: 25px;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    opacity: 90%;
+}
+
+#lblDriverDetailsDescription{
+    position: relative;
+    left: 35px;
+    top: 45px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: lighter;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 30%;
+}
+
+#lineTwo {
+    position: absolute;
+    top: 65px;
+    width: 880px;
+    border: 0.5px solid #acacac;
+    opacity: 15%;
+    left: 36px;
+}
+
+#btnGetAllDriver{
+    position: relative;
+    top: 28px;
+    left: 674px;
+    opacity: 90%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 14px;
+    /*border: 2px solid red;*/
+}
+
+/*booking table container*/
+#bookingTable_container{
+    display: none;
+    position: absolute;
+    width: 955px;
+    height: 398px;
+    /*border: 1px solid red;*/
+    top: 37%;
+    left: 70px;
+    border-radius: 30px 30px 30px 30px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#lblBookingDetail{
+    position: absolute;
+    left: 35px;
+    top: 25px;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    opacity: 90%;
+}
+
+#lblBookingDetailsDescription{
+    position: relative;
+    left: 35px;
+    top: 45px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: lighter;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 30%;
+}
+
+#lineThree {
+    position: absolute;
+    top: 65px;
+    width: 880px;
+    border: 0.5px solid #acacac;
+    opacity: 15%;
+    left: 36px;
+}
+
+#btnGetAllBooking{
+    position: relative;
+    top: 28px;
+    left: 642px;
+    opacity: 90%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 14px;
+    /*border: 2px solid red;*/
+}
+
+/*user table container*/
+#userTable_container{
+    display: none;
+    position: absolute;
+    width: 955px;
+    height: 398px;
+    /*border: 1px solid red;*/
+    top: 37%;
+    left: 70px;
+    border-radius: 30px 30px 30px 30px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#lblUserDetail{
+    position: absolute;
+    left: 35px;
+    top: 25px;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    opacity: 90%;
+}
+
+#lblUserDetailsDescription{
+    position: relative;
+    left: 35px;
+    top: 45px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: lighter;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 30%;
+}
+
+#lineFour {
+    position: absolute;
+    top: 65px;
+    width: 880px;
+    border: 0.5px solid #acacac;
+    opacity: 15%;
+    left: 36px;
+}
+
+#btnGetAllUser{
+    position: relative;
+    top: 28px;
+    left: 645px;
+    opacity: 90%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 14px;
+    /*border: 2px solid red;*/
+}
+
+#btnDeleteUser{
+    position: relative;
+    top: 27px;
+    left: 595px;
+    opacity: 60%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 14px;
+    /*border: 2px solid red;*/
+}
+
+#btnDeleteUser:hover{
+    color: #4375F8;
+}
+
+/*admin table container*/
+#adminTable_container{
+    display: none;
+    position: absolute;
+    width: 955px;
+    height: 398px;
+    /*border: 1px solid red;*/
+    top: 37%;
+    left: 70px;
+    border-radius: 30px 30px 30px 30px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#lblAdmin{
+    position: absolute;
+    left: 35px;
+    top: 25px;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    opacity: 90%;
+}
+
+#lblAdminDescription{
+    position: relative;
+    left: 35px;
+    top: 45px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: lighter;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    opacity: 30%;
+}
+
+#lineFive {
+    position: absolute;
+    top: 65px;
+    width: 880px;
+    border: 0.5px solid #acacac;
+    opacity: 15%;
+    left: 36px;
+}
+
+#btnGetAllAdmins{
+    position: relative;
+    top: 28px;
+    left: 700px;
+    opacity: 90%;
+    cursor: pointer;
+    color: #4375F8;
+    font-size: 14px;
+    /*border: 2px solid red;*/
+}
+
+
+
+
+
+
