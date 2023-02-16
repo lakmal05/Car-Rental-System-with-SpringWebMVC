@@ -11,6 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a9886c7d-ff0b-4267-aeca-a9704f4ccf4a" name="Default Changelist" comment="content U">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/config/JPAConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/config/JPAConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +208,7 @@
       <workItem from="1676530849857" duration="810000" />
       <workItem from="1676533830154" duration="3796000" />
       <workItem from="1676539134123" duration="4033000" />
-      <workItem from="1676547735483" duration="2126000" />
+      <workItem from="1676547735483" duration="3013000" />
     </task>
     <servers />
   </component>

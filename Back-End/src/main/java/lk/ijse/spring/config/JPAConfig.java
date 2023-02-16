@@ -18,7 +18,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 @Configuration
-@EnableTransactionManagement//aspect (Transaction tika manage krnwa)
+@EnableTransactionManagement//aspect (Transaction tika manage krnwa)//tranactoin execute wenna kina anotation
 @EnableJpaRepositories(basePackageClasses = {UserRepo.class})//dao classes tika mekta link krgnna
 public class JPAConfig {
 
