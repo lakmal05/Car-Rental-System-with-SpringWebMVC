@@ -22,7 +22,7 @@ public class LoggingController {
     LoggingRepo repo;
 
 
-    @PostMapping
+    @GetMapping
     public ResponseUtil registerUser(@ModelAttribute LoginDTO dto){
 
         System.out.println(dto.toString());
