@@ -23,13 +23,15 @@
         }
 
         .bg {
-            background: #9b3636;
+            background: white;
             position: fixed;
             top: 0;
             left: 0;
             width: 50%;
             height: 100vh;
             z-index: 1;
+
+            border: 1px solid red;
         }
 
         .section {
@@ -70,7 +72,7 @@
         }
 
         .section-text {
-            padding: 5vw;
+            padding: 0vw;
         }
 
         .section.active .section-img-inner {
@@ -96,6 +98,31 @@
         top: 464px;
         }
 
+
+
+        .carDetails{
+            position: relative;
+        }
+
+        .carType{
+            position: relative;
+            top: -94px;
+        }
+
+        .carModel{
+            position: relative;
+            top: -93px;
+        }
+
+
+        .carImg{
+           /*background-color: black ;*/
+            height: 57px;
+            width: 163px;
+            position: relative;
+            background-position: center;
+            background-size: cover;
+        }
 
 
     </style>
@@ -134,227 +161,160 @@
 
     <div class="bg"></div>
 
-    <div class="section">
-        <div class="section-img">
-            <div  class="section-img-inner" style="background-image: url(view/customer/registerImg.jpg);"></div>
-        </div>
+    <section class="sectionGeneral">
 
-<!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
-        <div class="section-body">
-            <div class="section-text">
-                <h2>General Cars</h2>
-                <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
-<!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
-                <div style="background-color: yellow ;height: 167px;width: 225%;position: relative; top: -101px;"></div>
+        <div class="section">
+            <div class="section-img">
+                <div  class="section-img-inner" style="background-image: url(assets/cars/general/prius/prius-1.webp);"></div>
+
+                <div class="carDetails">
+                    <h3>full Type</h3>
+                </div>
+            </div>
+
+            <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
+            <div class="section-body">
+                <div class="section-text">
+                    <h2 class="carType">General CARS</h2>
+                    <h3 class="carModel">Totoyra prius</h3>
+                    <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
+                    <div style="background-color: blue;height: 215px;width: 225%;position: relative; top: -107px; border-radius: 35px;left: 26px ">
+<!--                        // box-shadow: 0 5px 15px rgb(0 0 0/0.40)-->
+
+                        <div class="carImg" style="top: 50px;left: 18px;    background-image: url(assets/cars/general/prius/prius-3.webp)" >
+
+                        </div>
+
+
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+
+
+        <div class="section">
+            <div class="section-img">
+                <div  class="section-img-inner" style="background-image: url(assets/cars/general/suzuki-Alto/alto-1.png);">
+                    <div class="carDetails">
+                        <h3> Type</h3>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
+            <div class="section-body">
+                <div class="section-text">
+                    <h3 class="carModel">Tottta Aqua</h3>
+                    <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
+                    <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
+                    <div style="background-color: black ;height: 215px;width: 549px;position: relative; top: -177px; border-radius: 35px;left: 36px">
+<!--                         box-shadow: 0 5px 15px rgb(0 0 0/0.40-->
+
+                        <div class="carImg">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section">
+            <div class="section-img">
+                <div  class="section-img-inner" style="background-image: url(assets/cars/general/suzuki-Alto/alto-1.png);">
+                    <div class="carDetails">
+                        <h3>Manual</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
+            <div class="section-body">
+                <div class="section-text">
+                    <h3 class="carModel">Tottta Aqua</h3>
+                    <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
+                    <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
+                    <div style="background-color: blue ;height: 215px;width: 390%;position: relative; top: -101px; border-radius: 35px;margin-left: 40px"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+
+
+
+<section class="sectionPremium">
 
 
     <div class="section">
         <div class="section-img">
-            <div  class="section-img-inner" style="background-image: url(view/customer/compositor.jpg);"></div>
+            <div  class="section-img-inner" style="background-image: url(assets/cars/general/prius/prius-1.webp);"></div>
+
+            <div class="carDetails">
+                <h3>Prmium</h3>
+            </div>
         </div>
 
         <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
         <div class="section-body">
             <div class="section-text">
-                <h2>General Cars</h2>
+                <h2 class="carType">Premium Cars</h2>
+
+
+                <h3 class="carModel">Toyota prius</h3>
                 <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
-                <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
-                <div style="background-color: blue ;height: 167px;width: 225%;position: relative; top: -101px;"></div>
+                <div style="background-color: blue ;height: 215px;width: 225%;position: relative; top: -101px;border-radius: 35px"></div>
             </div>
         </div>
     </div>
 
 
-    <div class="section">
-        <div class="section-img">
-            <div  class="section-img-inner" style="background-image: url(view/customer/registerImg.jpg);"></div>
-        </div>
-
-        <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
-        <div class="section-body">
-            <div class="section-text">
-                <h2>General Cars</h2>
-                <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
-                <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
-                <div style="background-color: black ;height: 167px;width: 225%;position: relative; top: -101px;"></div>
-            </div>
-        </div>
-    </div>
 
 
 
     <div class="section">
         <div class="section-img">
-            <div  class="section-img-inner" style="background-image: url(view/customer/compositor.jpg);"></div>
+            <div  class="section-img-inner" style="background-image: url(assets/cars/general/prius/prius-1.webp);"></div>
+
+            <div class="carDetails">
+                <h3>full Type</h3>
+            </div>
         </div>
 
         <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
         <div class="section-body">
             <div class="section-text">
-                <h2>General Cars</h2>
+                <h3 class="carModel">Totoyra prius</h3>
                 <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
-                <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
-                <div style="background-color: #0f5132 ;height: 167px;width: 225%;position: relative; top: -101px;"></div>
+                <div style="background-color: blue ;height: 215px;width: 225%;position: relative; top: -101px;border-radius: 35px"></div>
             </div>
         </div>
     </div>
 
-
-    <div class="section">
-        <div class="section-img">
-            <div  class="section-img-inner" style="background-image: url(view/customer/registerImg.jpg);"></div>
-        </div>
-
-        <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
-        <div class="section-body">
-            <div class="section-text">
-                <h2>General Cars</h2>
-                <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
-                <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
-                <div style="background-color: #0f5132 ;height: 167px;width: 225%;position: relative; top: -101px;"></div>
-            </div>
-        </div>
-    </div>
 
 
 
     <div class="section">
         <div class="section-img">
-            <div  class="section-img-inner" style="background-image: url(view/customer/compositor.jpg);"></div>
-        </div>
+            <div  class="section-img-inner" style="background-image: url(assets/cars/general/prius/prius-1.webp);"></div>
 
-        <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
-        <div class="section-body">
-            <div class="section-text">
-                <h2>General Cars</h2>
-                <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
-                <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
-                <div style="background-color: #0f5132 ;height: 167px;width: 225%;position: relative; top: -101px;"></div>
+            <div class="carDetails">
+                <h3>full Type</h3>
             </div>
         </div>
-    </div>
-
-
-    <div class="section">
-        <div class="section-img">
-            <div  class="section-img-inner" style="background-image: url(view/customer/registerImg.jpg);"></div>
-        </div>
 
         <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
         <div class="section-body">
             <div class="section-text">
-                <h2>General Cars</h2>
+                <h3 class="carModel">Totoyra prius</h3>
                 <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
-                <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
-                <div style="background-color: #0f5132 ;height: 167px;width: 225%;position: relative; top: -101px;"></div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="section">
-        <div class="section-img">
-            <div  class="section-img-inner" style="background-image: url(view/customer/compositor.jpg);"></div>
-        </div>
-
-        <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
-        <div class="section-body">
-            <div class="section-text">
-                <h2>General Cars</h2>
-                <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
-                <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
-                <div style="background-color: #0f5132 ;height: 167px;width: 225%;position: relative; top: -101px;"></div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="section">
-        <div class="section-img">
-            <div  class="section-img-inner" style="background-image: url(view/customer/registerImg.jpg);"></div>
-        </div>
-
-        <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
-        <div class="section-body">
-            <div class="section-text">
-                <h2>General Cars</h2>
-                <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
-                <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
-                <div style="background-color: #0f5132 ;height: 167px;width: 225%;position: relative; top: -101px;"></div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="section">
-        <div class="section-img">
-            <div  class="section-img-inner" style="background-image: url(view/customer/compositor.jpg);"></div>
-        </div>
-
-        <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
-        <div class="section-body">
-            <div class="section-text">
-                <h2>General Cars</h2>
-                <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
-                <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
-                <div style="background-color: #0f5132 ;height: 167px;width: 225%;position: relative; top: -101px;"></div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="section">
-        <div class="section-img">
-            <div  class="section-img-inner" style="background-image: url(view/customer/registerImg.jpg);"></div>
-        </div>
-
-        <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
-        <div class="section-body">
-            <div class="section-text">
-                <h2>General Cars</h2>
-                <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
-                <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
-                <div style="background-color: #0f5132 ;height: 167px;width: 225%;position: relative; top: -101px;"></div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="section">
-        <div class="section-img">
-            <div  class="section-img-inner" style="background-image: url(view/customer/compositor.jpg);"></div>
-        </div>
-
-        <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
-        <div class="section-body">
-            <div class="section-text">
-                <h2>General Cars</h2>
-                <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
-                <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
-                <div style="background-color: #0f5132 ;height: 167px;width: 225%;position: relative; top: -101px;"></div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="section">
-        <div class="section-img">
-            <div  class="section-img-inner" style="background-image: url(view/customer/registerImg.jpg);"></div>
-        </div>
-
-        <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
-        <div class="section-body">
-            <div class="section-text">
-                <h2>General Cars</h2>
-                <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
-                <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
-                <div style="background-color: #0f5132 ;height: 167px;width: 225%;position: relative; top: -101px;"></div>
+                <div style="background-color: blue ;height: 215px;width: 225%;position: relative; top: -101px;border-radius: 35px"></div>
             </div>
         </div>
     </div>
@@ -362,15 +322,25 @@
 
 
 
+</section>
 
 
 
 
 
-    <div id="details-div">
 
 
-    </div>
+
+
+
+
+
+
+
+<!--    <div id="details-div">-->
+
+
+<!--    </div>-->
 
 
 
