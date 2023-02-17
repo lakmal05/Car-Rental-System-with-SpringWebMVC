@@ -118,8 +118,15 @@
         }
 
         .carModel{
+
+            font-family: 'Montserrat',sans-serif;
+            font-size: 27px;
+
+
             position: relative;
-            top: -93px;
+            top: -105px;
+            left: 50px;
+
         }
 
 
@@ -131,6 +138,34 @@
             background-position: center;
             background-size: cover;
         }
+
+        #filterCars{
+            background-color: black;
+            height: 50px;
+            width: 410px;
+            display: inline-block;
+            position: absolute;
+            right: 445px;
+            z-index: 999;
+            top: 40px;
+           /*flex-direction: row;*/
+        }
+        #filterCars >ul{
+            display: flex;
+            flex-direction: row;
+            text-decoration: none;
+            grid-gap: 10px;
+
+        }
+
+#filterCars>ul>li{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
 
 
     </style>
@@ -169,6 +204,28 @@
 
     <div class="bg"></div>
 
+<!--    ============Filter=========-->
+    <div id="filterCars" >
+
+        <ul>
+            <li> <a>All</a></li>
+            <li> <a>Primeam</a></li>
+            <li> <a>Genral</a></li>
+            <li> <a>Luxury</a></li>
+            <li> <a>All</a></li>
+
+        </ul>
+
+
+    </div>
+
+
+
+
+
+
+    <!--===================================Section General============================================-->
+
     <section class="sectionGeneral">
 
         <div class="section">
@@ -184,7 +241,7 @@
             <div class="section-body">
                 <div class="section-text">
                     <h2 class="carType">General CARS</h2>
-                    <h3 class="carModel">Totoyra prius</h3>
+                    <h3 class="carModel">Toyota Prius C / Aqua </h3>
                     <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
                     <div style="background-color: blue;height: 215px;width: 225%;position: relative; top: -107px; border-radius: 35px;left: 26px ">
 <!--                        // box-shadow: 0 5px 15px rgb(0 0 0/0.40)-->
@@ -204,7 +261,7 @@
             <div class="section-img">
                 <div  class="section-img-inner" style="background-image: url(assets/cars/general/suzuki-Alto/alto-1.png);">
                     <div class="carDetails">
-                        <h3> Type</h3>
+                        <h3> Suzuki Alto K10</h3>
                     </div>
 
                 </div>
@@ -213,7 +270,7 @@
             <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
             <div class="section-body">
                 <div class="section-text">
-                    <h3 class="carModel">Tottta Aqua</h3>
+                    <h3 class="carModel" style="top: -175px;left: 36px">Suzuki Alto K10</h3>
                     <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
                     <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
                     <div style="background-color: black ;height: 215px;width: 549px;position: relative; top: -177px; border-radius: 35px;left: 36px">
@@ -233,7 +290,7 @@
             <div class="section-img">
                 <div  class="section-img-inner" style="background-image: url(assets/cars/general/suzuki-Alto/alto-1.png);">
                     <div class="carDetails">
-                        <h3>Manual</h3>
+                        <h3>Suzuki Celerio</h3>
                     </div>
                 </div>
             </div>
@@ -241,7 +298,7 @@
             <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
             <div class="section-body">
                 <div class="section-text">
-                    <h3 class="carModel">Tottta Aqua</h3>
+                    <h3 class="carModel">Suzuki Celerio</h3>
                     <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
                     <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
                     <div style="background-color: blue ;height: 215px;width: 390%;position: relative; top: -101px; border-radius: 35px;margin-left: 40px"></div>
@@ -250,12 +307,11 @@
         </div>
 
 
-
-
     </section>
 
 
 
+    <!--===================================Section Premium============================================-->
 
     <section class="sectionPremium">
 
@@ -273,17 +329,12 @@
         <div class="section-body">
             <div class="section-text">
                 <h2 class="carType">Premium CARS</h2>
-
-
-                <h3 class="carModel">Toyota prius</h3>
+                <h3 class="carModel">Toyota Corolla Axio</h3>
                 <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
                 <div style="background-color: blue ;height: 215px;width: 225%;position: relative; top: -101px;border-radius: 35px;margin-left: 35px;"></div>
             </div>
         </div>
     </div>
-
-
-
 
 
     <div class="section">
@@ -298,7 +349,7 @@
         <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
         <div class="section-body">
             <div class="section-text">
-                <h3 class="carModel">Toyota prius</h3>
+                <h3 class="carModel">Toyota Allion NZT 260</h3>
                 <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
                 <div style="background-color: blue ;height: 215px;width: 335%;position: relative; top: -101px;border-radius: 35px;margin-left: 35px;"></div>
             </div>
@@ -307,7 +358,6 @@
 
 
 
-
     <div class="section">
         <div class="section-img">
             <div  class="section-img-inner" style="background-image: url(assets/cars/general/prius/prius-1.webp);"></div>
@@ -320,7 +370,7 @@
         <!--        <img src="assets/register/registerImg.jpg" id="bannerImage" style="height: 600px">-->
         <div class="section-body">
             <div class="section-text">
-                <h3 class="carModel">Totoyra prius</h3>
+                <h3 class="carModel">Toyota Bezza Prime Sedan</h3>
                 <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
                 <div style="background-color: blue ;height: 215px;width: 335%;position: relative; top: -101px;border-radius: 35px;margin-left: 35px;"></div>
             </div>
@@ -333,9 +383,12 @@
 </section>
 
 
+<!--===================================Section Luxury============================================-->
 
     <section class="sectionLuxury">
-        <div class="section">
+
+     <!--  ============Mercedes=========-->
+    <div class="section">
             <div class="section-img">
                 <div  class="section-img-inner" style="background-image: url(assets/cars/general/suzuki-Alto/alto-1.png);">
                     <div class="carDetails">
@@ -357,7 +410,8 @@
             </div>
         </div>
 
-        <div class="section">
+     <!--  ============BMW I8=========-->
+    <div class="section">
             <div class="section-img">
                 <div  class="section-img-inner" style="background-image: url(assets/cars/general/suzuki-Alto/alto-1.png);">
                     <div class="carDetails">
