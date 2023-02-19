@@ -11,6 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a9886c7d-ff0b-4267-aeca-a9704f4ccf4a" name="Default Changelist" comment="content U">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/adminNew.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/adminNew.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/vehicle.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/vehicle.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +27,7 @@
         <option value="CSS File" />
         <option value="Class" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -74,11 +78,11 @@
       <recent name="D:\Easy-Car-Rental-Company-master\Front-End\assets\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Easy-Car-Rental-Company-master\Front-End" />
+      <recent name="D:\Easy-Car-Rental-Company-master\Front-End\assets\cars\general\suzuki-celerio" />
+      <recent name="D:\Easy-Car-Rental-Company-master\Front-End\assets\cars\premium\toyota-corolla-axio" />
+      <recent name="D:\Easy-Car-Rental-Company-master\Front-End\assets\cars\premium\toyota-bezza" />
+      <recent name="D:\Easy-Car-Rental-Company-master\Front-End\assets\cars\luxury\mercedes" />
       <recent name="D:\Easy-Car-Rental-Company-master\Front-End\assets\cars\luxury\bmwi8" />
-      <recent name="D:\Easy-Car-Rental-Company-master\Front-End\assets\cars\general\prius" />
-      <recent name="E:\Easy-Car-Rental-Company-master\Front-End\assets" />
-      <recent name="E:\Easy-Car-Rental-Company-master\Front-End" />
     </key>
   </component>
   <component name="RunManager">
@@ -212,7 +216,9 @@
       <workItem from="1676539134123" duration="4033000" />
       <workItem from="1676547735483" duration="3013000" />
       <workItem from="1676550919854" duration="4326000" />
-      <workItem from="1676592818619" duration="23798000" />
+      <workItem from="1676592818619" duration="23843000" />
+      <workItem from="1676789229200" duration="1153000" />
+      <workItem from="1676809491287" duration="4031000" />
     </task>
     <servers />
   </component>
