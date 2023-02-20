@@ -5,20 +5,114 @@
     <title>Title</title>
     <script src="01.js" ></script>
 
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <link rel="stylesheet" href="1.html">
+
+<style>
+/* Hide the default checkbox */
+.checkBox1 input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+}
+
+.checkBox1 {
+display: flex;
+gap: 10px;
+}
+
+
+/* Create a custom checkbox */
+.checkmark {
+position: relative;
+box-shadow: rgb(255, 84, 0) 0px 0px 0px 2px;
+background-color: white;
+height: 20px;
+width: 20px;
+margin-right: 10px;
+flex-shrink: 0;
+margin-top: -1px;
+transition: all 0.2s ease 0s;
+cursor: pointer;
+transform-origin: 0px 10px;
+border-radius: 4px;
+margin: -1px 10px 0px 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+.checkBox1 input:checked ~ .checkmark {
+box-shadow: rgb(255, 84, 0) 0px 0px 0px 2px;
+background-color: rgba(245, 24, 24, 0.5);
+height: 20px;
+width: 20px;
+margin-right: 10px;
+flex-shrink: 0;
+margin-top: -1px;
+transition: all 0.2s ease 0s;
+cursor: pointer;
+transform-origin: 0px 10px;
+border-radius: 4px;
+margin: -1px 10px 0px 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+.checkBox1 input:checked ~ .checkmark:after {
+display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkBox1 .checkmark:after {
+left: 0.45em;
+top: 0.25em;
+width: 0.25em;
+height: 0.5em;
+border: solid white;
+border-width: 0 0.15em 0.15em 0;
+transform: rotate(45deg);
+transition: all 500ms ease-in-out;
+}
+</style>
+
 
 <body>
 
 
+<label class="checkBox1">
+    <input checked="checked" type="checkbox">
+    <div class="checkmark"></div>
+</label>
 
-<div id="one" style="background-color: black; height: 100px;width: 100px"></div>
-<div id="two" style="background-color: red; height: 100px;width: 100px"></div>
+<label class="checkBox1">
+    <input checked="checked" type="checkbox">
+    <div class="checkmark"></div>
+</label>
+
+
+
+
+
+
 
 
 </body>
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+
+
 
 
 <script >

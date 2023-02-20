@@ -5,6 +5,7 @@ import lk.ijse.spring.repo.LoggingRepo;
 import lk.ijse.spring.repo.UserRepo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -20,8 +21,9 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement//aspect (Transaction tika manage krnwa)//tranactoin execute wenna kina anotation
-@EnableJpaRepositories(basePackageClasses = {UserRepo.class,LoggingRepo.class})//dao classes tika mekta link krgnna
+@EnableJpaRepositories(basePackages ="lk.ijse.spring.repo")//dao classes tika mekta link krgnna
 //@EnableJpaRepositories(basePackageClasses = {LoggingRepo.class})//dao classes tika mekta link krgnna
+//@PropertySource("classpath:application.properties")
 public class JPAConfig {
 
 
