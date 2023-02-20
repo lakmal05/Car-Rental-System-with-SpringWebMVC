@@ -11,10 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a9886c7d-ff0b-4267-aeca-a9704f4ccf4a" name="Default Changelist" comment="content U">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/adminNew.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/adminNew.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/assets/cars/general/suzuki-celerio/toyota-celerio-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/assets/cars/premium/toyota-corolla-axio/toyota-corolla-02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/assets/cars/luxury/bmwi8/imgFour.png" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/assets/cars/luxury/bmwi8/bmw-02.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/vehicle.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/vehicle.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -221,7 +217,7 @@
       <workItem from="1676592818619" duration="23843000" />
       <workItem from="1676789229200" duration="1153000" />
       <workItem from="1676809491287" duration="8230000" />
-      <workItem from="1676865082100" duration="3169000" />
+      <workItem from="1676865082100" duration="10625000" />
     </task>
     <servers />
   </component>

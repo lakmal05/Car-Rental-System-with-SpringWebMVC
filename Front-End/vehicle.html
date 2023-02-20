@@ -15,6 +15,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital@1&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 
     <style>
         html {
@@ -168,6 +171,26 @@
 
 
 
+.detailsDiv{
+    position: relative;
+    width: 414px;
+    height: 179px;
+    top: -105px;
+    left: 191px;
+
+}
+.detailsDiv>div>p{
+
+    font-family: 'Ubuntu' , sans-serif;
+    font-size:12px;
+    margin: 10px;
+    padding: 0px;
+}
+
+
+
+
+
     </style>
 
 
@@ -243,14 +266,35 @@
                     <h2 class="carType">General CARS</h2>
                     <h3 class="carModel">Toyota Prius C / Aqua </h3>
                     <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
-                    <div style="background-color: blue;height: 215px;width: 225%;position: relative; top: -107px; border-radius: 35px;left: 26px ">
+                    <div style="background-color: blue;height: 215px;width: 140%;position: relative; top: -107px; border-radius: 35px;left: 20px ">
 <!--                        // box-shadow: 0 5px 15px rgb(0 0 0/0.40)-->
 
-
-
-                        <div class="carImg" style="top: 50px;left: 18px;    background-image: url(assets/cars/general/prius/prius-3.webp)" >
-
+                   <!-- ==============book now button================-->
+                        <div class="row col-3 bookNowBtn">
+                        <button type="button" class="btn btn-dark ms-3 fs-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Book Car</button>
                         </div>
+
+                        <div class="carImg" style="top: 50px;left: 18px;    background-image: url(assets/cars/general/prius/prius-3.webp)"></div>
+
+
+                        <!--details div-->
+                        <div   class="row  detailsDiv" style="background-color: red;width: 435px;height: 170px;position: relative">
+                            <div class="col-lg-6" style="margin-right:-50px ">
+                                <p>Brand : Toyota Prius C</p>
+                                <p>Type  :General</p>
+                                <p>Num Of Pass : 04 passengers</p>
+                                <p>Transmission Type : Manual</p>
+                                <p>Fuel Type : Petrol</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Daily rate : Rs 2500</p>
+                                <p>Free mileage for a Day : 100km</p>
+                                <p>Monthly rate : Rs 64,350</p>
+                                <p>Free mileage for a Month : 2400Km</p>
+                                <p>Price for extra Km : Rs 30.00</p></div>
+                        </div>
+
+
 
 
                     </div>
@@ -278,9 +322,32 @@
                     <div style="background-color: black ;height: 215px;width: 549px;position: relative; top: -177px; border-radius: 35px;left: 36px">
 <!--                         box-shadow: 0 5px 15px rgb(0 0 0/0.40-->
 
+                         <!--==============book now button================-->
+                        <div class="row col-3 bookNowBtn">
+                            <button type="button" class="btn btn-dark ms-3 fs-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Book Car</button>
+                        </div>
+
+
+
+
                         <div class="carImg" style="top: 50px;left: 18px;    background-image: url(assets/cars/general/suzuki-Alto/alto-2.png)"></div>
 
-
+                        <!--details div-->
+                        <div   class="row  detailsDiv" style="background-color: red;width: 435px;height: 170px;position: relative">
+                            <div class="col-lg-6" style="margin-right:-50px ">
+                                <p>Brand : Toyota Prius C</p>
+                                <p>Type  :General</p>
+                                <p>Num Of Pass : 04 passengers</p>
+                                <p>Transmission Type : Manual</p>
+                                <p>Fuel Type : Petrol</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Daily rate : Rs 2500</p>
+                                <p>Free mileage for a Day : 100km</p>
+                                <p>Monthly rate : Rs 64,350</p>
+                                <p>Free mileage for a Month : 2400Km</p>
+                                <p>Price for extra Km : Rs 30.00</p></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -302,18 +369,38 @@
                     <h3 class="carModel">Suzuki Celerio</h3>
                     <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
                     <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
-                    <div style="background-color: yellow;height: 215px;width: 390%;position: relative; top: -101px; border-radius: 35px;margin-left: 40px">
+                    <div style="background-color: yellow;height: 215px;width: 300%;position: relative; top: -101px; border-radius: 35px;margin-left: 20px">
 
-<!--                        ========book Now Button=======-->
+                        <!--==============book now button================-->
+                        <div class="row col-3 bookNowBtn">
+                            <button type="button" class="btn btn-dark ms-3 fs-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Book Car</button>
+                        </div>
 
 
                         <div class="carImg" style="top: 50px;left: 18px;    background-image: url(assets/cars/general/suzuki-celerio/suzuki-celerio-01.png)"></div>
+
+                        <!--details div-->
+                        <div   class="row  detailsDiv" style="background-color: red;width: 435px;height: 170px;position: relative">
+                            <div class="col-lg-6" style="margin-right:-50px ">
+                                <p>Brand : Toyota Prius C</p>
+                                <p>Type  :General</p>
+                                <p>Num Of Pass : 04 passengers</p>
+                                <p>Transmission Type : Manual</p>
+                                <p>Fuel Type : Petrol</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Daily rate : Rs 2500</p>
+                                <p>Free mileage for a Day : 100km</p>
+                                <p>Monthly rate : Rs 64,350</p>
+                                <p>Free mileage for a Month : 2400Km</p>
+                                <p>Price for extra Km : Rs 30.00</p></div>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
         </div>
-
-
 
 
     </section>
@@ -338,14 +425,36 @@
                 <h2 class="carType">Premium CARS</h2>
                 <h3 class="carModel">Toyota Corolla Axio</h3>
                 <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
-                <div style="background-color: blue ;height: 215px;width: 225%;position: relative; top: -101px;border-radius: 35px;margin-left: 35px;">
+                <div style="background-color: blue ;height: 215px;width: 205%;position: relative; top: -101px;border-radius: 35px;margin-left: 25px;">
+
+                    <!--==============book now button================-->
+                    <div class="row col-3 bookNowBtn">
+                        <button type="button" class="btn btn-dark ms-3 fs-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Book Car</button>
+                    </div>
 
                     <div class="carImg" style="top: 50px;left: 18px;    background-image: url(assets/cars/premium/toyota-corolla-axio/toyota-corolla-axio-01.png)"></div>
+                    <!--details div-->
+                    <div   class="row  detailsDiv" style="background-color: red;width: 435px;height: 170px;position: relative">
+                        <div class="col-lg-6" style="margin-right:-50px ">
+                            <p>Brand : Toyota Prius C</p>
+                            <p>Type  :General</p>
+                            <p>Num Of Pass : 04 passengers</p>
+                            <p>Transmission Type : Manual</p>
+                            <p>Fuel Type : Petrol</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>Daily rate : Rs 2500</p>
+                            <p>Free mileage for a Day : 100km</p>
+                            <p>Monthly rate : Rs 64,350</p>
+                            <p>Free mileage for a Month : 2400Km</p>
+                            <p>Price for extra Km : Rs 30.00</p></div>
+                    </div>
 
                 </div>
             </div>
         </div>
     </div>
+
 
 
     <div class="section">
@@ -362,9 +471,32 @@
             <div class="section-text">
                 <h3 class="carModel">Toyota Allion NZT 260</h3>
                 <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
-                <div style="background-color: blue ;height: 215px;width: 335%;position: relative; top: -101px;border-radius: 35px;margin-left: 35px;">
+                <div style="background-color: blue ;height: 215px;width: 197%;position: relative; top: -101px;border-radius: 35px;margin-left: 25px;">
+
+                    <!--==============book now button================-->
+                    <div class="row col-3 bookNowBtn">
+                        <button type="button" class="btn btn-dark ms-3 fs-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Book Car</button>
+                    </div>
 
                     <div class="carImg" style="top: 50px;left: 18px;    background-image: url(assets/cars/premium/toyota-allion-nzt-260/toyota-allion-nzt-260-02.png)"></div>
+
+
+                    <!--details div-->
+                    <div   class="row  detailsDiv" style="background-color: red;width: 435px;height: 170px;position: relative">
+                        <div class="col-lg-6" style="margin-right:-50px ">
+                            <p>Brand : Toyota Prius C</p>
+                            <p>Type  :General</p>
+                            <p>Num Of Pass : 04 passengers</p>
+                            <p>Transmission Type : Manual</p>
+                            <p>Fuel Type : Petrol</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>Daily rate : Rs 2500</p>
+                            <p>Free mileage for a Day : 100km</p>
+                            <p>Monthly rate : Rs 64,350</p>
+                            <p>Free mileage for a Month : 2400Km</p>
+                            <p>Price for extra Km : Rs 30.00</p></div>
+                    </div>
 
                 </div>
             </div>
@@ -387,16 +519,37 @@
             <div class="section-text">
                 <h3 class="carModel">Toyota Bezza Prime Sedan</h3>
                 <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
-                <div style="background-color: blue ;height: 215px;width: 335%;position: relative; top: -101px;border-radius: 35px;margin-left: 35px;">
+                <div style="background-color: blue ;height: 215px;width: 160%;position: relative; top: -101px;border-radius: 35px;margin-left: 25px;">
+
+                    <!--==============book now button================-->
+                    <div class="row col-3 bookNowBtn">
+                        <button type="button" class="btn btn-dark ms-3 fs-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Book Car</button>
+                    </div>
+
                     <div class="carImg" style="top: 50px;left: 18px;    background-image: url(assets/cars/premium/toyota-bezza/toyota-bezza-prime-01.png)"></div>
+
+
+                    <!--details div-->
+                    <div   class="row  detailsDiv" style="background-color: red;width: 435px;height: 170px;position: relative">
+                        <div class="col-lg-6" style="margin-right:-50px ">
+                            <p>Brand : Toyota Prius C</p>
+                            <p>Type  :General</p>
+                            <p>Num Of Pass : 04 passengers</p>
+                            <p>Transmission Type : Manual</p>
+                            <p>Fuel Type : Petrol</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>Daily rate : Rs 2500</p>
+                            <p>Free mileage for a Day : 100km</p>
+                            <p>Monthly rate : Rs 64,350</p>
+                            <p>Free mileage for a Month : 2400Km</p>
+                            <p>Price for extra Km : Rs 30.00</p></div>
+                    </div>
 
                 </div>
             </div>
         </div>
     </div>
-
-
-
 
 </section>
 
@@ -423,7 +576,30 @@
                     <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
                     <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
                     <div style="background-color: blue ;height: 215px;width: 240%;position: relative; top: -101px; border-radius: 35px;margin-left: 40px">
+
+                        <!--==============book now button================-->
+                        <div class="row col-3 bookNowBtn">
+                            <button type="button" class="btn btn-dark ms-3 fs-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Book Car</button>
+                        </div>
+
                         <div class="carImg" style=" width: 180px; height: 142px;top: 4px;left: 27px;display: inline-block;   background-image: url(assets/cars/luxury/mercedes/mercedes-01.png)"></div>
+
+                        <!--details div-->
+                        <div   class="row  detailsDiv" style="background-color: red;width: 435px;height: 170px;position: relative">
+                            <div class="col-lg-6" style="margin-right:-50px ">
+                                <p>Brand : Toyota Prius C</p>
+                                <p>Type  :General</p>
+                                <p>Num Of Pass : 04 passengers</p>
+                                <p>Transmission Type : Manual</p>
+                                <p>Fuel Type : Petrol</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Daily rate : Rs 2500</p>
+                                <p>Free mileage for a Day : 100km</p>
+                                <p>Monthly rate : Rs 64,350</p>
+                                <p>Free mileage for a Month : 2400Km</p>
+                                <p>Price for extra Km : Rs 30.00</p></div>
+                        </div>
 
                     </div>
 
@@ -448,9 +624,31 @@
                     <h3 class="carModel">BMW i8</h3>
                     <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
                     <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
-                    <div style="background-color: blue ;height: 215px;width: 550%;position: relative; top: -101px; border-radius: 35px;margin-left: 40px">
+                    <div style="background-color: blue ;height: 215px;width: 295%;position: relative; top: -101px; border-radius: 35px;margin-left: 30px">
+
+                        <!--==============book now button================-->
+                        <div class="row col-3 bookNowBtn">
+                            <button type="button" class="btn btn-dark ms-3 fs-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Book Car</button>
+                        </div>
 
                         <div class="carImg" style="top: 50px;left: 18px;    background-image: url(assets/cars/luxury/bmwi8/bmw-01.png)"></div>
+                        <!--details div-->
+                        <div   class="row  detailsDiv" style="background-color: red;width: 435px;height: 170px;position: relative">
+                            <div class="col-lg-6" style="margin-right:-50px ">
+                                <p>Brand : Toyota Prius C</p>
+                                <p>Type  :General</p>
+                                <p>Num Of Pass : 04 passengers</p>
+                                <p>Transmission Type : Manual</p>
+                                <p>Fuel Type : Petrol</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Daily rate : Rs 2500</p>
+                                <p>Free mileage for a Day : 100km</p>
+                                <p>Monthly rate : Rs 64,350</p>
+                                <p>Free mileage for a Month : 2400Km</p>
+                                <p>Price for extra Km : Rs 30.00</p></div>
+                        </div>
+
                 </div>
             </div>
         </div>
@@ -471,8 +669,7 @@
 
 
     <!---------------------- car booking model start------------------------------>
-
-    <div class="modal fade modal-lg" id="popUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -503,7 +700,7 @@
                         </div>
                         <div class="col-md-8">
                             <label for="inputName" class="form-label fs-5">User Name : </label>
-                            <label class="form-label fs-5" id="inputName">Hansika Perera</label>
+                            <label class="form-label fs-5" id="inputName">Lakmal</label>
                         </div>
                         <div class="col-md-4">
                             <label for="inputPickUpDate" class="form-label">PickUp Date</label>
@@ -531,7 +728,6 @@
                         </div>
                         <div class="col-md-6">
                             <label for="inputBankSlip" class="form-label">Bank Slip</label>
-
                             <input type="file" class="form-control" id="inputBankSlip">
                         </div>
                         <div class="col-md-6">
@@ -569,15 +765,13 @@
             </div>
         </div>
     </div>
-
     <!---------------------- car booking model end--------------------------------->
-
-
 
 
 
 </main>
 
+<script src="assets/js/bootstrap.min.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script>
