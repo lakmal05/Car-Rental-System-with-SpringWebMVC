@@ -224,7 +224,7 @@
 
 
 
-    <!--===================================Section General============================================-->
+<!--===================================Section General============================================-->
 
     <section class="sectionGeneral">
 
@@ -245,6 +245,8 @@
                     <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
                     <div style="background-color: blue;height: 215px;width: 225%;position: relative; top: -107px; border-radius: 35px;left: 26px ">
 <!--                        // box-shadow: 0 5px 15px rgb(0 0 0/0.40)-->
+
+
 
                         <div class="carImg" style="top: 50px;left: 18px;    background-image: url(assets/cars/general/prius/prius-3.webp)" >
 
@@ -287,7 +289,7 @@
 
         <div class="section">
             <div class="section-img">
-                <div  class="section-img-inner" style="background-image: url(assets/cars/general/suzuki-Alto/alto-1.png);">
+                <div  class="section-img-inner" style="background-image: url(assets/cars/general/suzuki-celerio/suzuki-celerio-03.png);">
                     <div class="carDetails">
                         <h3>Suzuki Celerio</h3>
                     </div>
@@ -300,27 +302,30 @@
                     <h3 class="carModel">Suzuki Celerio</h3>
                     <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
                     <!--                <div  onclick="changeImage('assets/carImages/general/car-3.png')"  style="background-color: red ;height: 100px;width: 100%"></div>-->
-                    <div style="background-color: blue ;height: 215px;width: 390%;position: relative; top: -101px; border-radius: 35px;margin-left: 40px">
-                        <div class="carImg" style="top: 50px;left: 18px;    background-image: url(assets/cars/general/suzuki-celerio/suzuki-celerio-01.png)"></div>
+                    <div style="background-color: yellow;height: 215px;width: 390%;position: relative; top: -101px; border-radius: 35px;margin-left: 40px">
 
+<!--                        ========book Now Button=======-->
+
+
+                        <div class="carImg" style="top: 50px;left: 18px;    background-image: url(assets/cars/general/suzuki-celerio/suzuki-celerio-01.png)"></div>
                     </div>
                 </div>
             </div>
         </div>
 
 
+
+
     </section>
 
 
-
-    <!--===================================Section Premium============================================-->
-
+<!--===================================Section Premium============================================-->
     <section class="sectionPremium">
 
 
     <div class="section">
         <div class="section-img">
-            <div  class="section-img-inner" style="background-image: url(assets/cars/general/prius/prius-1.webp);"></div>
+            <div  class="section-img-inner" style="background-image: url(assets/cars/premium/toyota-corolla-axio/toyota-corolla-02.png);"></div>
 
             <div class="carDetails">
                 <h3>Prmium</h3>
@@ -345,7 +350,7 @@
 
     <div class="section">
         <div class="section-img">
-            <div  class="section-img-inner" style="background-image: url(assets/cars/general/prius/prius-1.webp);"></div>
+            <div  class="section-img-inner" style="background-image: url(assets/cars/premium/toyota-allion-nzt-260/toyota-allion-nzt-260-01.png);"></div>
 
             <div class="carDetails">
                 <h3>full Type</h3>
@@ -359,7 +364,7 @@
                 <!--        <p>--><!--          advantage to your team.--><!--        </p>-->
                 <div style="background-color: blue ;height: 215px;width: 335%;position: relative; top: -101px;border-radius: 35px;margin-left: 35px;">
 
-                    <div class="carImg" style="top: 50px;left: 18px;    background-image: url(assets/cars/premium/toyota-bezza/toyota-bezza-prime-01.png)"></div>
+                    <div class="carImg" style="top: 50px;left: 18px;    background-image: url(assets/cars/premium/toyota-allion-nzt-260/toyota-allion-nzt-260-02.png)"></div>
 
                 </div>
             </div>
@@ -370,7 +375,7 @@
 
     <div class="section">
         <div class="section-img">
-            <div  class="section-img-inner" style="background-image: url(assets/cars/general/prius/prius-1.webp);"></div>
+            <div  class="section-img-inner" style="background-image: url(assets/cars/premium/toyota-bezza/toyota-bezza-prime-02.png);"></div>
 
             <div class="carDetails">
                 <h3>full Type</h3>
@@ -397,13 +402,12 @@
 
 
 <!--===================================Section Luxury============================================-->
-
     <section class="sectionLuxury">
 
      <!--  ============Mercedes=========-->
     <div class="section">
             <div class="section-img">
-                <div  class="section-img-inner" style="background-image: url(assets/cars/general/suzuki-Alto/alto-1.png);">
+                <div  class="section-img-inner" style="background-image: url(assets/cars/luxury/mercedes/mercedes-02.png);">
                     <div class="carDetails">
                         <h3>Manual</h3>
                     </div>
@@ -431,7 +435,7 @@
      <!--  ============BMW I8=========-->
     <div class="section">
             <div class="section-img">
-                <div  class="section-img-inner" style="background-image: url(assets/cars/general/suzuki-Alto/alto-1.png);">
+                <div  class="section-img-inner" style="background-image: url(assets/cars/luxury/bmwi8/bmw-02.png);">
                     <div class="carDetails">
                         <h3>Manual</h3>
                     </div>
@@ -457,21 +461,118 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 <!--    <div id="details-div">-->
 
 
 <!--    </div>-->
+
+
+
+
+
+    <!---------------------- car booking model start------------------------------>
+
+    <div class="modal fade modal-lg" id="popUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-4 " id="exampleModalLabel">Car Booking</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label fs-4 fw-bold">Rent ID : </label>
+                            <label id="inputState" class="form-label fs-4 fw-bold">R001</label>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputRentDate" class="form-label fs-4 fw-bold">Rent Date : </label>
+                            <label class="form-label fs-4 fw-bold" id="inputRentDate">2023-02-27</label>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="carColour" class="form-label">Car Color : </label>
+                            <select class="form-select" id="carColour" aria-label="Default select example"></select>
+                        </div>
+                        <div class="col-md-8 align-self-center">
+                            <label for="inputCraID" class="form-label fs-5">Registration Num of Car : </label>
+                            <label type="text" class="form-label fs-5" id="inputCraID"></label>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputId" class="form-label fs-5">User ID : </label>
+                            <label type="text" class="form-label fs-5" id="inputId">U001</label>
+                        </div>
+                        <div class="col-md-8">
+                            <label for="inputName" class="form-label fs-5">User Name : </label>
+                            <label class="form-label fs-5" id="inputName">Hansika Perera</label>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputPickUpDate" class="form-label">PickUp Date</label>
+                            <input type="date" class="form-control" id="inputPickUpDate">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputPickUpTime" class="form-label">PickUp Time</label>
+                            <input type="time" class="form-control" id="inputPickUpTime">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputPickUpVenue" class="form-label">PickUp Venue</label>
+                            <input type="text" class="form-control" id="inputPickUpVenue">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputReturnDate" class="form-label">Return Date</label>
+                            <input type="date" class="form-control" id="inputReturnDate">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputReturnTime" class="form-label">Return Time</label>
+                            <input type="time" class="form-control" id="inputReturnTime">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputReturnVenue" class="form-label">Return Venue</label>
+                            <input type="text" class="form-control" id="inputReturnVenue">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputBankSlip" class="form-label">Bank Slip</label>
+
+                            <input type="file" class="form-control" id="inputBankSlip">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputLossDamageWaiver" class="form-label">Loss Damage Waiver</label>
+                            <input type="text" class="form-control" id="inputLossDamageWaiver" readonly>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-check mt-1 ms-3">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    I Want Driver
+                                </label>
+                            </div>
+                            <div class="form-check mt-2 ms-3">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    I Don't Want Driver
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputDriverName" class="form-label">Driver Name</label>
+                            <input type="text" class="form-control" id="inputDriverName"  readonly>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputDriverContactNo" class="form-label">Driver Contact No</label>
+                            <input type="text" class="form-control" id="inputDriverContactNo" readonly>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark">Place Booking</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------- car booking model end--------------------------------->
+
+
 
 
 
