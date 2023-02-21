@@ -108,6 +108,27 @@
 
 }
 
+
+.addRentDetails{
+    background-color: white;
+
+    height: 58%;
+    width: 100%;
+    position: relative;
+    top: 51px;
+    left: -7px;
+    border-radius: 35px;
+    box-shadow: 0 5px 15px rgb(0 0 0/0.40);
+
+}
+.rentForm{
+    position: relative;
+    /* margin-top: 9px; */
+    margin-left: 35px;
+    top: 34px;
+}
+
+
 .detailsDiv{
     position: relative;
     top: 65px;
@@ -148,7 +169,8 @@
                 <i id="iCar" class="fa-solid fa-car i-cons"></i>
                 <i id="iUser" class="fa-solid fa-user i-cons"></i>
                 <i id="iAdmin" class="fa-solid fa-unlock-keyhole i-cons"></i>
-                <i id="iSettings" class="fa-solid fa-book i-cons"></i>
+                <i id="iRent" class="fa-solid fa-book i-cons"></i>
+                <i id="iPayment"  class="fa-sharp fa-regular fa-credit-card  i-cons"></i>
 
             </div>
 
@@ -585,7 +607,214 @@
                     </form>
 
 
+                    <div class="row " style="margin-top:0px;margin-left: 0px;width: 96%;top: 150px;position: relative">
+
+
+                        <table class="table">
+                            <thead class="thead-dark bg-dark text-white">
+                            <tr>
+                                <th scope="col">Registation No</th>
+                                <th scope="col">Brand</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Transmission Type</th>
+                                <th scope="col">Fuel Type</th>
+                                <th scope="col">No Of Passengers</th>
+                                <th scope="col">Daily Rate</th>
+                                <th scope="col">Monthly Rate</th>
+                                <th scope="col">Car Available</th>
+                            </tr>
+
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+
+
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+
+
+
+
                 </div>
+
+
+                <!--=====================Rent Form==============================-->
+                <div class="addRentDetails">
+
+                    <label class="headLabel">Rents</label>
+                    <hr style="width: 100%;background-color: black;position: relative;top: 30px">
+
+
+                    <form class="rentForm">
+
+                        <div class="row">
+
+                            <div class="col-2">
+                                <label class="form-label" for="txtRentID">Rent ID</label>
+                                <input class="form-control" id="txtRentID" type="text">
+                            </div>
+
+                            <div class="col-2">
+                                <label class="form-label" for="txtRentDate">Rent Date</label>
+                                <input class="form-control" id="txtRentDate" type="text">
+                            </div>
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtRentCarRegistrationNo">Car Registration No</label>
+                                <input class="form-control" id="txtRentCarRegistrationNo" type="text">
+                            </div>
+
+
+                            <div class="col-2">
+                                <label class="form-label" for="txtRentUserId">User Id</label>
+                                <input class="form-control" id="txtRentUserId" type="text">
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtRentUserName">User Name</label>
+                                <input class="form-control" id="txtRentUserName" type="text">
+                            </div>
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtRentPickUpDate">Pick Up Date</label>
+                                <input class="form-control" id="txtRentPickUpDate" type="text">
+                            </div>
+
+
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtRentPickUpTime">Pick Up Time</label>
+                                <input class="form-control" id="txtRentPickUpTime" type="text">
+                            </div>
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtRentPickUpVenue">Pick Up Venue</label>
+                                <input class="form-control" id="txtRentPickUpVenue" type="text">
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtRentReturnDate">ReturnDate</label>
+                                <input class="form-control" id="txtRentReturnDate" type="text">
+                            </div>
+
+
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtRentReturnTime">Return Time</label>
+                                <input class="form-control" id="txtRentReturnTime" type="text">
+                            </div>
+
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtRentReturnVenue">Return Venue</label>
+                                <input class="form-control" id="txtRentReturnVenue" type="text">
+                            </div>
+
+
+                            <div class="col-3">
+                                <label class="form-label" for="ImageofBankSlip">ImageOfBankSlip</label>
+                                <div id="ImageofBankSlip" style="height: 30px;width: 30px;background-color: black"></div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+
+
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtRentDriverId">Driver ID</label>
+                                <input class="form-control" id="txtRentDriverId" type="text">
+                            </div>
+
+
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtRentDriverName">Driver Name</label>
+                                <input class="form-control" id="txtRentDriverName" type="text">
+                            </div>
+
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtRentLossDamageWaiver">Loss Damage Waiver</label>
+                                <input class="form-control" id="txtRentLossDamageWaiver" type="text">
+                            </div>
+
+                        </div>
+
+                    </form>
+
+
+                    <div class="row " style="margin-top:0px;margin-left: 0px;width: 96%;top: 150px;position: relative">
+
+
+                        <table class="table">
+                            <thead class="thead-dark bg-dark text-white">
+                            <tr>
+                                <th scope="col">Registation No</th>
+                                <th scope="col">Brand</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Transmission Type</th>
+                                <th scope="col">Fuel Type</th>
+                                <th scope="col">No Of Passengers</th>
+                                <th scope="col">Daily Rate</th>
+                                <th scope="col">Monthly Rate</th>
+                                <th scope="col">Car Available</th>
+                            </tr>
+
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+
+
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+                </div>
+
+
             </section>
 
 
@@ -648,6 +877,7 @@
     $("#addDriverDetails").css('display','none');
     $("#addCarDetails").css('display','none');
     $(".addUserDetails").css('display','none');
+    $(".addRentDetails").css('display','none');
 
 
     $("#iHome").click(function (){
@@ -655,6 +885,8 @@
         $("#addDriverDetails").css('display','none');
         $("#addCarDetails").css('display','none');
         $(".addUserDetails").css('display','none');
+        $(".addRentDetails").css('display','none');
+
     });
 
 
@@ -663,6 +895,8 @@
         $(".homeSection").css('display','none');
         $("#addCarDetails").css('display','none');
         $(".addUserDetails").css('display','none');
+        $(".addRentDetails").css('display','none');
+
     });
 
     $("#iCar").click(function (){
@@ -670,6 +904,8 @@
         $("#addDriverDetails").css('display','none');
         $(".homeSection").css('display','none');
         $(".addUserDetails").css('display','none');
+        $(".addRentDetails").css('display','none');
+
     });
 
     $("#iUser").click(function (){
@@ -678,9 +914,27 @@
         $("#addCarDetails").css('display','none');
         $("#addDriverDetails").css('display','none');
         $(".homeSection").css('display','none');
+        $(".addRentDetails").css('display','none');
+
 
     });
 
+    $("#iRent").click(function (){
+
+        $(".addRentDetails").css('display','block');
+        $(".addUserDetails").css('display','none');
+        $("#addCarDetails").css('display','none');
+        $("#addDriverDetails").css('display','none');
+        $(".homeSection").css('display','none');
+    });
+    $("#iPayment").click(function (){
+
+        $(".addRentDetails").css('display','none');
+        $(".addUserDetails").css('display','none');
+        $("#addCarDetails").css('display','none');
+        $("#addDriverDetails").css('display','none');
+        $(".homeSection").css('display','none');
+    })
 
 
 
@@ -688,34 +942,41 @@
 /*opacity buttons*/
     {
         $("#iHome").click(function () {
-            $("#iDriver, #iCar, #iSettings, #iUser, #iAdmin").css("opacity", "20%");
+            $("#iDriver, #iCar, #iRent, #iUser, #iAdmin,#iPayment").css("opacity", "20%");
             $("#iHome").css("opacity", "90%");
         });
 
         $("#iDriver").click(function () {
-            $("#iHome, #iCar, #iSettings, #iUser, #iAdmin").css("opacity", "20%");
+            $("#iHome, #iCar, #iRent, #iUser, #iAdmin,#iPayment").css("opacity", "20%");
             $("#iDriver").css("opacity", "90%");
         });
 
         $("#iCar").click(function () {
-            $("#iHome, #iDriver, #iSettings, #iUser, #iAdmin").css("opacity", "20%");
+            $("#iHome, #iDriver, #iRent, #iUser, #iAdmin,#iPayment").css("opacity", "20%");
             $("#iCar").css("opacity", "90%");
         });
 
         $("#iUser").click(function () {
-            $("#iHome, #iDriver, #iCar, #iSettings, #iAdmin").css("opacity", "20%");
+            $("#iHome, #iDriver, #iCar, #iRent, #iAdmin,#iPayment").css("opacity", "20%");
             $("#iUser").css("opacity", "90%");
         });
 
         $("#iAdmin").click(function () {
-            $("#iHome, #iDriver, #iCar, #iUser, #iSettings").css("opacity", "20%");
+            $("#iHome, #iDriver, #iCar, #iUser, #iRent,#iPayment").css("opacity", "20%");
             $("#iAdmin").css("opacity", "90%");
         });
 
-        $("#iSettings").click(function () {
-            $("#iHome, #iDriver, #iCar, #iUser, #iAdmin").css("opacity", "20%");
-            $("#iSettings").css("opacity", "90%");
+        $("#iRent").click(function () {
+            $("#iHome, #iDriver, #iCar, #iUser, #iAdmin,#iPayment").css("opacity", "20%");
+            $("#iRent").css("opacity", "90%");
         });
+
+        $("#iPayment").click(function () {
+            $("#iHome, #iDriver, #iCar, #iUser, #iAdmin,#iRent").css("opacity", "20%");
+            $("#iPayment").css("opacity", "90%");
+        });
+
+
 
     }
 

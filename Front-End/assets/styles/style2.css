@@ -290,10 +290,18 @@ img::after {
     cursor: pointer;
 }
 
-#iSettings{
+#iRent{
     position: relative;
     top: 431px;
     right: 3px;
+    opacity: 20%;
+    cursor: pointer;
+}
+
+#iPayment{
+    position: relative;
+    top: 465px;
+    right: -25px;
     opacity: 20%;
     cursor: pointer;
 }
@@ -323,10 +331,15 @@ img::after {
     color: #4375F8;
 }
 
-#iSettings:hover{
+#iRent:hover{
     opacity: 90%;
     color: #4375F8;
 }
+#iPayment:hover{
+    opacity: 90%;
+    color: #4375F8;
+}
+
 
 /*income details*/
 #incomeDetails_container{
