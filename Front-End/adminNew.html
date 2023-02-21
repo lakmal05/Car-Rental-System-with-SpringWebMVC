@@ -68,15 +68,20 @@
 
         .addCarDetails{
             background-color: white;
-
-            height: 80%;
-            width: 900px;
+            height: 65%;
+            width: 100%;
             position: relative;
-            top: 135px;
+            top: 50px;
             left: -7px;
+            border-radius: 35px;
+            box-shadow: 0 5px 15px rgb(0 0 0/0.40);
 
-            /*border-radius: 35px;*/
-            /*box-shadow: 0 5px 15px rgb(0 0 0/0.40);*/
+
+
+
+
+
+
         }
 
 
@@ -93,12 +98,13 @@
 .addUserDetails{
     background-color: white;
 
-    height: 80%;
-    width: 100px;
+    height: 49%;
+    width: 100%;
     position: relative;
-    top: 135px;
+    top: 51px;
     left: -7px;
-
+    border-radius: 35px;
+    box-shadow: 0 5px 15px rgb(0 0 0/0.40);
 
 }
 
@@ -118,13 +124,6 @@
         .headLabel{
 
         }
-
-
-
-
-
-
-
 
 
     </style>
@@ -157,7 +156,7 @@
 
 
                 <!--=====================Home Table and div=============================-->
-            <section class="homeSection">
+                 <section class="homeSection">
                     <div class="row detailsDiv">
                     <div class="col-3" style="background-color: yellow;height: 100px">a</div>
                     <div class="col-3" style="background-color: yellow;height: 100px">a</div>
@@ -170,7 +169,7 @@
 
 
                 <!--    Table-->
-                <div class="row " style="margin-top:0px;margin-left: 0px;width: 96%;top: 150px;position: relative">
+                <div class="row " style="margin-top:0;margin-left: 0;width: 96%;top: 150px;position: relative">
 
 
                     <table class="table">
@@ -290,9 +289,8 @@
                 </form>
 
 
-<!--  Driver Tabel-->
-
-                   <div class="row " style="margin-top:0px;margin-left: 0px;width: 96%;top: 150px;position: relative">
+                    <!--  Driver Tabel-->
+                <div class="row " style="margin-top:0px;margin-left: 0px;width: 96%;top: 150px;position: relative">
 
 
                        <table class="table">
@@ -330,18 +328,13 @@
                        </table>
                    </div>
 
-
-
-
-
-
                </div>
 
 
                 <!--=====================Car Form==============================-->
                 <div class="  addCarDetails" id="addCarDetails">
 
-                    <label class="headLabel">Add Driver</label>
+                    <label class="headLabel">Add Car</label>
 
                     <hr style="width: 100%;background-color: black;position: relative;top: 30px">
 
@@ -350,86 +343,113 @@
 
                         <div class="row">
                             <div class="col-4">
-                                <label class="form-label" for="txtDriverName">RegisterTION num</label>
+                                <label class="form-label" for="txtRegistrationNumber">Register No</label>
                                 <input class="form-control" id="txtRegistrationNumber" type="text">
                             </div>
 
                             <div class="col-4">
-                                <label class="form-label" for="txtDriverId">Car Brand</label>
-                                <input class="form-control" id="txtCarBrand" type="text">
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-3">
-                                <label class="form-label" for="txtDriverName">RegisterTION num</label>
-                                <input class="form-control" id="txtRegistrationNumber" type="text">
-                            </div>
-
-                            <div class="col-3">
-                                <label class="form-label" for="txtDriverId">Car Brand</label>
-                                <input class="form-control" id="txtCarBrand" type="text">
-                            </div>
-                            <div class="col-3">
-                                <label class="form-label" for="txtDriverId">Car Brand</label>
-                                <input class="form-control" id="txtCarBrand" type="text">
-                            </div>
-                        </div>
-
-
-
-                        <div class="row">
-                            <div class="col-3">
-                                <label class="form-label" for="txtDriverName">RegisterTION num</label>
-                                <input class="form-control" id="txtRegistrationNumber" type="text">
-                            </div>
-
-                            <div class="col-3">
-                                <label class="form-label" for="txtDriverId">Car Brand</label>
+                                <label class="form-label" for="txtCarBrand">Car Brand</label>
                                 <input class="form-control" id="txtCarBrand" type="text">
                             </div>
 
-                            <div class="col-3">
-                                <label class="form-label" for="txtDriverId">Car Brand</label>
-                                <input class="form-control" id="txtCarBrand" type="text">
-                            </div>
-                        </div>
-
-                        <div class="row">
                             <div class="col-4">
-                                <label class="form-label" for="txtDriverName">RegisterTION num</label>
-                                <input class="form-control" id="txtRegistrationNumber" type="text">
+                                <label class="form-label" for="txtCarType">Type</label>
+                                <input class="form-control" id="txtCarType" type="text">
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="row">
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtCarFuelType"> Fuel Type</label>
+                                <input class="form-control" id="txtCarFuelType" type="text">
+                            </div>
+                            <div class="col-3">
+                                <label class="form-label" for="txtCarTransmissionType">Transmission Type</label>
+                                <input class="form-control" id="txtCarTransmissionType" type="text">
+                            </div>
+
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtCarNoOfPassengers">No of Passengers</label>
+                                <input class="form-control" id="txtCarNoOfPassengers" type="text">
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="row">
+
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtCarDailyRate">Daily Rate</label>
+                                <input class="form-control" id="txtCarDailyRate" type="text">
                             </div>
 
                             <div class="col-3">
-                                <label class="form-label" for="txtDriverId">Car Brand</label>
-                                <input class="form-control" id="txtCarBrand" type="text">
+                                <label class="form-label" for="txtCarMonthlyRate">Monthly Rate</label>
+                                <input class="form-control" id="txtCarMonthlyRate" type="text">
                             </div>
 
-                            <div class="col-3">
-                                <label class="form-label" for="txtDriverId">Car Brand</label>
-                                <input class="form-control" id="txtCarBrand" type="text">
+                            <div class="col-4">
+                                <label class="form-label" for="txtCarFreeKmForaDay">Free Km for a Day</label>
+                                <input class="form-control" id="txtCarFreeKmForaDay" type="text">
                             </div>
 
                         </div>
 
 
                         <div class="row">
+
+
                             <div class="col-3">
-                                <label class="form-label" for="txtDriverName">RegisterTION num</label>
-                                <input class="form-control" id="txtRegistrationNumber" type="text">
+                                <label class="form-label" for="txtCarFreeKmForaMonth">Free Km for a Month</label>
+                                <input class="form-control" id="txtCarFreeKmForaMonth" type="text">
                             </div>
 
                             <div class="col-3">
-                                <label class="form-label" for="txtDriverId">Car Brand</label>
-                                <input class="form-control" id="txtCarBrand" type="text">
+                                <label class="form-label" for="txtCarPricePerExtraKm">Price Per Extra Km</label>
+                                <input class="form-control" id="txtCarPricePerExtraKm" type="text">
                             </div>
 
                             <div class="col-3">
-                                <label class="form-label" for="txtDriverId">Car Brand</label>
-                                <input class="form-control" id="txtCarBrand" type="text">
+                                <label class="form-label" for="txtCarAvailable">Available</label>
+                                <input class="form-control" id="txtCarAvailable" type="text">
                             </div>
+
+
+
+                        </div>
+
+
+                        <div class="row">
+
+
+                            <div class="col-3">
+                                <label class="form-label" for="ImgFront">Front Image</label>
+                                <input class="form-control" id="ImgFront" type="file">
+                            </div>
+
+                            <div class="col-3">
+                                <label class="form-label" for="ImgBack">Back Image</label>
+                                <input class="form-control" id="ImgBack" type="file">
+                            </div>
+
+                            <div class="col-3">
+                                <label class="form-label" for="ImgSide">Side Image</label>
+                                <input class="form-control" id="ImgSide" type="file">
+                            </div>
+                            <div class="col-3">
+                                <label class="form-label" for="ImgInterior">Interior Image</label>
+                                <input class="form-control" id="ImgInterior" type="file">
+                            </div>
+
+
 
                         </div>
 
@@ -437,13 +457,53 @@
                     </form>
 
 
-                <div>
+<!--                <div>-->
 
-                    <button>Add Car</button>
-                    <button>Update Car</button>
-                    <button>Delete Car</button>
+<!--                    <button>Add Car</button>-->
+<!--                    <button>Update Car</button>-->
+<!--                    <button>Delete Car</button>-->
 
-                </div>
+<!--                </div>-->
+
+
+                    <div class="row " style="margin-top:0px;margin-left: 0px;width: 96%;top: 150px;position: relative">
+
+
+                        <table class="table">
+                            <thead class="thead-dark bg-dark text-white">
+                            <tr>
+                                <th scope="col">Registation No</th>
+                                <th scope="col">Brand</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Transmission Type</th>
+                                <th scope="col">Fuel Type</th>
+                                <th scope="col">No Of Passengers</th>
+                                <th scope="col">Daily Rate</th>
+                                <th scope="col">Monthly Rate</th>
+                                <th scope="col">Car Available</th>
+                            </tr>
+
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+
+
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
 
 
 
@@ -451,16 +511,22 @@
 
 
                 <!--=====================User Form==============================-->
-                <div class="col addUserDetails">
+                <div class=" addUserDetails">
 
                     <label class="headLabel">Add User</label>
 
                     <hr style="width: 100%;background-color: black;position: relative;top: 30px">
 
 
-                    <form class="carForm">
+                    <form class="userForm">
 
                         <div class="row">
+
+                            <div class="col-2">
+                                <label class="form-label" for="txtUserID">User ID</label>
+                                <input class="form-control" id="txtUserID" type="text">
+                            </div>
+
                             <div class="col-4">
                                 <label class="form-label" for="txtUserName">User Name</label>
                                 <input class="form-control" id="txtUserName" type="text">
@@ -470,42 +536,58 @@
                                 <label class="form-label" for="txtUserAddress">User Address</label>
                                 <input class="form-control" id="txtUserAddress" type="text">
                             </div>
-                        </div>
 
 
-                        <div class="row">
-                            <div class="col-3">
+                            <div class="col-2">
                                 <label class="form-label" for="txtContactNo">User ContactNo</label>
                                 <input class="form-control" id="txtContactNo" type="text">
                             </div>
+
+                        </div>
+
+                    <div class="row">
+
 
                             <div class="col-3">
                                 <label class="form-label" for="txtEmail">Email</label>
                                 <input class="form-control" id="txtEmail" type="text">
                             </div>
+
                             <div class="col-3">
                                 <label class="form-label" for="txtNic">NIC</label>
                                 <input class="form-control" id="txtNic" type="text">
                             </div>
+
+                             <div class="col-3">
+                                <label class="form-label" for="txtDrivingLicense">Driving License</label>
+                                 <input class="form-control" id="txtDrivingLicense" type="text">
+                              </div>
+
+
                         </div>
 
 
 
                         <div class="row">
+
                             <div class="col-3">
-                                <label class="form-label" for="txtDrivingLicense">Driving License</label>
-                                <input class="form-control" id="txtDrivingLicense" type="text">
+                                <label class="form-label" for="ImageofNic">Driving License</label>
+                                <div id="ImageofNic" style="height: 30px;width: 30px;background-color: black"></div>
+                            </div>
+                            <div class="col-3">
+                                <label class="form-label" for="ImageofDrivingLicense">ImageOfDrivingLicense</label>
+                                <div id="ImageofDrivingLicense" style="height: 30px;width: 30px;background-color: black"></div>
                             </div>
 
                         </div>
+
+
                     </form>
 
 
                 </div>
+            </section>
 
-
-
-                </section>
 
 
             <section class="col" style="background-color: #0c4128">
@@ -520,7 +602,7 @@
 
 
 
-
+</section>
 
     </main>
 
