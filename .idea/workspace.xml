@@ -11,23 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a9886c7d-ff0b-4267-aeca-a9704f4ccf4a" name="Default Changelist" comment="content U">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/config/JPAConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/config/JPAConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/config/WebAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/config/WebAppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/config/JPAConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/config/JPAConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/config/WebAppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/config/WebAppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/dto/LoginDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/dto/LoginDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/config/JPAConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/config/JPAConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/config/WebAppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/config/WebAppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/dto/LoginDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/dto/LoginDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/assets/cars/general/suzuki-celerio/suzuki-celerio-03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/adminNew.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/adminNew.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/adminPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/assets/styles/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/assets/styles/style2.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/registerFrom.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/registerFrom.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/vehicle.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/vehicle.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,17 +87,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 8.5.83" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.83" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Back_End_war/" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -235,7 +211,8 @@
       <workItem from="1676809491287" duration="8230000" />
       <workItem from="1676865082100" duration="13339000" />
       <workItem from="1676883831494" duration="3008000" />
-      <workItem from="1676888663192" duration="9587000" />
+      <workItem from="1676888663192" duration="15047000" />
+      <workItem from="1676945101917" duration="14889000" />
     </task>
     <servers />
   </component>

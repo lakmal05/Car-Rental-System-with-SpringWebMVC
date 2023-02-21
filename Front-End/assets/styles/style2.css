@@ -252,62 +252,50 @@ img::after {
 /*nav icons*/
 #iHome{
     position: relative;
-    top: 225px;
+    top: 153px;
     left: 20px;
     cursor: pointer;
-    font-size: 18px;
-    color: #4375F8;
     opacity: 90%;
 }
 
 #iDriver{
     position: relative;
-    top: 266px;
-    right: 3px;
+    top: 219px;
+    right: 12px;
     cursor: pointer;
     opacity: 20%;
-    font-size: 17px;
-    color: #4375F8;
 }
 
 #iCar{
     position: relative;
-    top: 305px;
-    right: 24px;
+    top: 254px;
+    right: -25px;
     opacity: 20%;
     cursor: pointer;
-    font-size: 18px;
-    color: #4375F8;
 }
 
 #iUser{
     position: relative;
-    top: 345px;
-    right: -21px;
+    top: 321px;
+    right: 7px;
     opacity: 20%;
     cursor: pointer;
-    font-size: 19px;
-    color: #4375F8;
 }
 
 #iAdmin{
     position: relative;
-    top: 385px;
-    right: 2px;
+    top: 355px;
+    right: -27px;
     opacity: 20%;
     cursor: pointer;
-    font-size: 19px;
-    color: #4375F8;
 }
 
 #iSettings{
     position: relative;
-    top: 425px;
-    right: 2px;
+    top: 431px;
+    right: 3px;
     opacity: 20%;
     cursor: pointer;
-    font-size: 19px;
-    color: #4375F8;
 }
 
 #iHome:hover{
