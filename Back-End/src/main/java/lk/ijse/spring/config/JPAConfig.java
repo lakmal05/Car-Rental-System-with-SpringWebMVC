@@ -1,11 +1,10 @@
 package lk.ijse.spring.config;
 
 
-import lk.ijse.spring.repo.LoggingRepo;
-import lk.ijse.spring.repo.UserRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -25,6 +24,12 @@ import javax.sql.DataSource;
 //@EnableJpaRepositories(basePackageClasses = {LoggingRepo.class})//dao classes tika mekta link krgnna
 //@PropertySource("classpath:application.properties")
 public class JPAConfig {
+
+
+
+    @Autowired
+    Environment env;
+
 
 
    @Bean
@@ -69,8 +74,6 @@ public class JPAConfig {
 
     @Bean
     public PlatformTransactionManager transactionManager(EntityManagerFactory emf) {
-
-
         return new JpaTransactionManager(emf);
 
 
