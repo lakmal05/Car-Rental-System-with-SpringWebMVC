@@ -26,24 +26,24 @@ public class CarRent {
     private String status;
 
 
-    @Id
-    private String registrationNO;
-    @Id
-    private String customerId;
+//    @Id
+//    private String registrationNO;
+//    @Id
+//    private String customerId;
 
-
-
-    @ManyToOne(cascade ={CascadeType.REFRESH,CascadeType.DETACH})
-    @JoinColumn(name ="licenceNo",referencedColumnName = "licenceNo",nullable = false)
-    private Driver licenceNo;
 
 
     @ManyToOne
-    @JoinColumn(name = "registrationNO",referencedColumnName = "registrationNO",insertable =false,updatable = false)
+    @JoinColumn(name ="licenceNo",referencedColumnName = "licenceNo",nullable = false)
+    private Driver driver;
+
+
+    @ManyToOne
+    @JoinColumn(name = "registrationNO",referencedColumnName = "registrationNO")
     private Car car;
 
     @ManyToOne
-    @JoinColumn(name = "customerId",referencedColumnName = "customerId",insertable = false,updatable = false)
+    @JoinColumn(name = "customerId",referencedColumnName = "customerId")
     private Customer customer;
 
 

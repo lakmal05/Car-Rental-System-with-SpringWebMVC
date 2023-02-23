@@ -47,7 +47,7 @@ public class Car {
     private String status;
 
 
-    @OneToMany(mappedBy = "registrationNO", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
     private List<CarRent> rentals = new ArrayList<>();
 //
 //    @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)

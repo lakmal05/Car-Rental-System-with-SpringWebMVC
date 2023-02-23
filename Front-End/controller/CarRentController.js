@@ -6,6 +6,27 @@ let baseURL = "http://localhost:8080/Back_End_war/";
 
 
 
+$('#cmbType').change(function () {
+    let type = $('#cmbType').find('option:selected').text();
+    // clearRentalFields();
+    $('#cmbRegistrationNo').empty();
+    $('#cmbRegistrationNo').append(new Option("-Select Registration No-", ""));
+    $.ajax({
+        url: baseURL + "car/getRegNo/" + type,
+        method: "GET",
+        success: function (res) {
+            let i = 0;
+            for (let regNo of res.data) {
+                $('#cmbRegistrationNo').append(new Option(regNo, i));
+                i++;
+            }
+        }
+    })
+})
+
+
+
+
 $('#cmbRegistrationNo').change(function () {
     let registrationNo = $('#cmbRegistrationNo').find('option:selected').text();
     $.ajax({
@@ -24,6 +45,8 @@ $('#cmbRegistrationNo').change(function () {
 
 
 function setCarDataToFields(car){
+
+    $('#txtCarColor').val(car.color);
     $('#txtCarLossDamageWavier').val(car.lossDamageWaiver);
 
 }

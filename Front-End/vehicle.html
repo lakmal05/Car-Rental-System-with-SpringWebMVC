@@ -8,7 +8,7 @@
     <meta content="width=device-width initial-scale=1" name="viewport"> <!--    viewport-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">        <!--    boostrap-->
     <link href="assets/home.css" rel="stylesheet">
-    <link href="npm i bootstrap@5.3.0-alpha1" crossorigin="anonymous" rel="stylesheet">
+<!--    <link href="npm i bootstrap@5.3.0-alpha1" crossorigin="anonymous" rel="stylesheet">-->
 
 <!--    <link href="assets/googleFonts/static/Montserrat-Regular.ttf">-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -706,17 +706,34 @@
                     <form class="row g-3">
                         <div class="col-md-6">
                             <label for="txtCarRentId" class="form-label fs-4 fw-bold">Rent ID : </label>
-                            <label id="txtCarRentId" class="form-label fs-4 fw-bold">R001</label>
+                            <label id="txtCarRentId" class="form-label fs-4 fw-bold" disabled></label>
                         </div>
                         <div class="col-md-6">
                             <label for="txtCarTodayDate" class="form-label fs-4 fw-bold">Rent Date : </label>
                             <label class="form-label fs-4 fw-bold" id="txtCarTodayDate">2023-02-27</label>
                         </div>
 
+                        <div class="col-md-3">
+                            <label for="cmbType" class="form-label mb-0">Car Type</label>
+                            <select class="form-select" aria-label="Default select example" id="cmbType" name="type">
+                                <option selected>- Select Car Type -</option>
+                                <option value="1">General</option>
+                                <option value="2">Premium</option>
+                                <option value="3">Luxury</option>
+                            </select>
+                        </div>
+
+
 
                         <div class="col-md-4">
-                            <label for="carColour" class="form-label">Car Color : </label>
-                            <select class="form-select" id="carColour" aria-label="Default select example">  </select>
+                            <label for="txtCarColor" class="form-label">Car Color : </label>
+                            <select class="form-select" id="txtCarColor" aria-label="Default select example">
+                            <option selected> select car Type</option>
+                            <option value="1">Red</option>
+                            <option value="2">black</option>
+                            <option value="3">white</option>
+                            </select>
+
                         </div>
 
 
@@ -732,7 +749,7 @@
                         </div>
                         <div class="col-md-4">
                             <label for="txtCustId" class="form-label fs-5">User ID : </label>
-                            <label type="text" class="form-label fs-5" id="txtCustId">U001</label>
+                            <label type="text" class="form-label fs-5" id="txtCustId" disabled></label>
                         </div>
                         <div class="col-md-8">
                             <label for="inputName" class="form-label fs-5">User Name : </label>
@@ -742,10 +759,7 @@
                             <label for="txtCarPickupDate" class="form-label">PickUp Date</label>
                             <input type="date" class="form-control" id="txtCarPickupDate">
                         </div>
-<!--                        <div class="col-md-4">-->
-<!--                            <label for="inputPickUpTime" class="form-label">PickUp Time</label>-->
-<!--                            <input type="time" class="form-control" id="inputPickUpTime">-->
-<!--                        </div>-->
+
                         <div class="col-md-4">
                             <label for="txtPickUpVenue" class="form-label">PickUp Venue</label>
                             <input type="text" class="form-control" id="txtPickUpVenue">

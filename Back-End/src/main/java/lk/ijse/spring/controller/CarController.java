@@ -81,4 +81,35 @@ public class CarController {
 
 
 
+    @GetMapping(path = "/{registrationNo}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil searchCar(@PathVariable String registrationNo) {
+        return new ResponseUtil("200", "Ok", service.searchCar(registrationNo));
+    }
+
+
+    @PutMapping(path = "/updateCarStatus/{registrationNO}/{status}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil updateCarStatus(@PathVariable String registrationNO, @PathVariable String status) {
+        service.updateCarStatus(registrationNO, status);
+        return new ResponseUtil("200", "Ok", null);
+    }
+
+
+    @GetMapping(path = "/getByStatus/{status}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getAllCarsByStatus(@PathVariable String status) {
+        return new ResponseUtil("200", "Ok", service.getAllCarsByStatus(status));
+    }
+
+
+
+    @GetMapping(path = "/count/{status}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getCountOfCarsByStatus(@PathVariable String status) {
+        return new ResponseUtil("200", "Ok", service.getCountOfCarsByStatus(status));
+    }
+
+
+    @GetMapping(path = "/getRegNo/{type}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getCarRegistrationNoByType(@PathVariable String type){
+        return new ResponseUtil("200","Ok",service.getCarRegistrationNumbersByType(type));
+    }
+
 }
