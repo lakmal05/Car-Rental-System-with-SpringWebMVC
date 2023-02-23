@@ -721,11 +721,14 @@
 
 
 
+                        <div class="col-md-4">
+                            <label for="txtCarTodayDate" class="form-label mb-0">Loss Damage Viwer</label>
+                            <input type="text" class="form-control" id="txtCarTodayDate" name="carTodayDate" disabled>
+                        </div>
 
-
-                        <div class="col-md-8 align-self-center">
-                            <label for="inputCraID" class="form-label fs-5">Registration Num of Car : </label>
-                            <label type="text" class="form-label fs-5" id="inputCraID"></label>
+                        <div class="col-md-4 align-self-center">
+                            <label for="carColour" class="form-label">Registration Num of Car : </label>
+                            <select class="form-select" id="RegistrationNum" aria-label="Default select example">  </select>
                         </div>
                         <div class="col-md-4">
                             <label for="inputId" class="form-label fs-5">User ID : </label>
@@ -765,23 +768,10 @@
                             <input type="file" class="form-control" id="inputBankSlip">
                         </div>
 
-                        <div class="col-md-6">
-                            <label for="inputLossDamageWaiver" class="form-label">Loss Damage Waiver</label>
-                            <input type="text" class="form-control" id="inputLossDamageWaiver" readonly>
-                        </div>
+
                         <div class="col-md-4">
-                            <div class="form-check mt-1 ms-3">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    I Want Driver
-                                </label>
-                            </div>
-                            <div class="form-check mt-2 ms-3">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    I Don't Want Driver
-                                </label>
-                            </div>
+                            <label class="form-check-label pr-5" for="needDriver">Need a driver? </label>
+                            <input class="form-check-input" type="checkbox" value="yes" id="needDriver">
                         </div>
                         <div class="col-md-4">
                             <label for="inputDriverName" class="form-label">Driver Name</label>
