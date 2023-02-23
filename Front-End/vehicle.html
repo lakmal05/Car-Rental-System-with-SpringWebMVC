@@ -705,12 +705,12 @@
                 <div class="modal-body">
                     <form class="row g-3">
                         <div class="col-md-6">
-                            <label for="inputState" class="form-label fs-4 fw-bold">Rent ID : </label>
-                            <label id="inputState" class="form-label fs-4 fw-bold">R001</label>
+                            <label for="txtCarRentId" class="form-label fs-4 fw-bold">Rent ID : </label>
+                            <label id="txtCarRentId" class="form-label fs-4 fw-bold">R001</label>
                         </div>
                         <div class="col-md-6">
-                            <label for="inputRentDate" class="form-label fs-4 fw-bold">Rent Date : </label>
-                            <label class="form-label fs-4 fw-bold" id="inputRentDate">2023-02-27</label>
+                            <label for="txtCarTodayDate" class="form-label fs-4 fw-bold">Rent Date : </label>
+                            <label class="form-label fs-4 fw-bold" id="txtCarTodayDate">2023-02-27</label>
                         </div>
 
 
@@ -722,45 +722,45 @@
 
 
                         <div class="col-md-4">
-                            <label for="txtCarTodayDate" class="form-label mb-0">Loss Damage Viwer</label>
-                            <input type="text" class="form-control" id="txtCarTodayDate" name="carTodayDate" disabled>
+                            <label for="txtCarLossDamageWavier" class="form-label mb-0">Loss Damage Viwer</label>
+                            <input type="text" class="form-control" id="txtCarLossDamageWavier" name="carTodayDate" disabled>
                         </div>
 
                         <div class="col-md-4 align-self-center">
-                            <label for="carColour" class="form-label">Registration Num of Car : </label>
-                            <select class="form-select" id="RegistrationNum" aria-label="Default select example">  </select>
+                            <label for="cmbRegistrationNo" class="form-label mb-0">Car Registration No</label>
+                            <select class="form-select" aria-label="Default select example" id="cmbRegistrationNo" name="type"></select>
                         </div>
                         <div class="col-md-4">
-                            <label for="inputId" class="form-label fs-5">User ID : </label>
-                            <label type="text" class="form-label fs-5" id="inputId">U001</label>
+                            <label for="txtCustId" class="form-label fs-5">User ID : </label>
+                            <label type="text" class="form-label fs-5" id="txtCustId">U001</label>
                         </div>
                         <div class="col-md-8">
                             <label for="inputName" class="form-label fs-5">User Name : </label>
                             <label class="form-label fs-5" id="inputName">Lakmal</label>
                         </div>
                         <div class="col-md-4">
-                            <label for="inputPickUpDate" class="form-label">PickUp Date</label>
-                            <input type="date" class="form-control" id="inputPickUpDate">
+                            <label for="txtCarPickupDate" class="form-label">PickUp Date</label>
+                            <input type="date" class="form-control" id="txtCarPickupDate">
+                        </div>
+<!--                        <div class="col-md-4">-->
+<!--                            <label for="inputPickUpTime" class="form-label">PickUp Time</label>-->
+<!--                            <input type="time" class="form-control" id="inputPickUpTime">-->
+<!--                        </div>-->
+                        <div class="col-md-4">
+                            <label for="txtPickUpVenue" class="form-label">PickUp Venue</label>
+                            <input type="text" class="form-control" id="txtPickUpVenue">
                         </div>
                         <div class="col-md-4">
-                            <label for="inputPickUpTime" class="form-label">PickUp Time</label>
-                            <input type="time" class="form-control" id="inputPickUpTime">
+                            <label for="txtCarReturnDate" class="form-label">Return Date</label>
+                            <input type="date" class="form-control" id="txtCarReturnDate">
                         </div>
+<!--                        <div class="col-md-4">-->
+<!--                            <label for="inputReturnTime" class="form-label">Return Time</label>-->
+<!--                            <input type="time" class="form-control" id="inputReturnTime">-->
+<!--                        </div>-->
                         <div class="col-md-4">
-                            <label for="inputPickUpVenue" class="form-label">PickUp Venue</label>
-                            <input type="text" class="form-control" id="inputPickUpVenue">
-                        </div>
-                        <div class="col-md-4">
-                            <label for="inputReturnDate" class="form-label">Return Date</label>
-                            <input type="date" class="form-control" id="inputReturnDate">
-                        </div>
-                        <div class="col-md-4">
-                            <label for="inputReturnTime" class="form-label">Return Time</label>
-                            <input type="time" class="form-control" id="inputReturnTime">
-                        </div>
-                        <div class="col-md-4">
-                            <label for="inputReturnVenue" class="form-label">Return Venue</label>
-                            <input type="text" class="form-control" id="inputReturnVenue">
+                            <label for="txtReturnVenue" class="form-label">Return Venue</label>
+                            <input type="text" class="form-control" id="txtReturnVenue">
                         </div>
 
                         <div class="col-md-6">
@@ -773,19 +773,27 @@
                             <label class="form-check-label pr-5" for="needDriver">Need a driver? </label>
                             <input class="form-check-input" type="checkbox" value="yes" id="needDriver">
                         </div>
+
                         <div class="col-md-4">
-                            <label for="inputDriverName" class="form-label">Driver Name</label>
-                            <input type="text" class="form-control" id="inputDriverName"  readonly>
+                            <label for="txtDriverLicenceNo" class="form-label">Driver License</label>
+                            <input type="text" class="form-control" id="txtDriverLicenceNo"  readonly>
                         </div>
+
                         <div class="col-md-4">
-                            <label for="inputDriverContactNo" class="form-label">Driver Contact No</label>
-                            <input type="text" class="form-control" id="inputDriverContactNo" readonly>
+                            <label for="txtDriverName" class="form-label">Driver Name</label>
+                            <input type="text" class="form-control" id="txtDriverName"  readonly>
                         </div>
+
+                        <div class="col-md-4">
+                            <label for="txtDriverContactNo" class="form-label">Driver Contact No</label>
+                            <input type="text" class="form-control" id="txtDriverContactNo" readonly>
+                        </div>
+
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-dark">Place Booking</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="Close">Close</button>
+                    <button type="button" class="btn btn-dark" id="btnBookNow" >Place Booking</button>
                 </div>
             </div>
         </div>
@@ -800,8 +808,10 @@
 
 <script src="assets/js/bootstrap.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.5.1.js"></script>-->
 <script src="assets/js/jquery-3.6.1.min.js"></script>
+<script src="controller/CarRentController.js"></script>
+
 
 <script>
 

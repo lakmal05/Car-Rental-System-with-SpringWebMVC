@@ -35,8 +35,9 @@ public class Customer {
     private String username;
     private String password;
 
-//    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
-//    private List<CarRent> rentals = new ArrayList<>();
+
+    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
+    private List<CarRent> rentals = new ArrayList<>();
 
 //
 //    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
