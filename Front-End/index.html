@@ -7,7 +7,7 @@
     <meta content="width=device-width initial-scale=1" name="viewport"> <!--    viewport-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">        <!--    boostrap-->
 <!--    <link href="assets/main.css" rel="stylesheet">-->
-    <link href="npm i bootstrap@5.3.0-alpha1" crossorigin="anonymous" rel="stylesheet">
+<!--    <link href="npm i bootstrap@5.3.0-alpha1" crossorigin="anonymous" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="assets/main.css">
@@ -65,24 +65,43 @@
 
             <div class="row insert signInField" >
                 <form id="signInForm">
+                    <!--=====================LogId===================================-->
+
+                    <input class="form-control" id="txtLogId" name="logId" type="text" hidden>
+
+                    <!--=====================Selecter===================================-->
+
+                    <div class="col-7">
+                        <label for="cmbUserType" class="form-label fw-bold mb-0">User Type</label>
+                        <select class="form-control border-dark" name="userType" id="cmbUserType">
+                            <option value="-select-">-Select User Type-</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Driver">Driver</option>
+                            <option value="Customer">Customer</option>
+                        </select>
+                    </div>
+
+
+<!--=====================CustomerName===================================-->
                 <div class="col-7">
-                    <input type="text" class="form-control" placeholder="name" id="txtuserName">
+                    <input type="text" class="form-control" placeholder="name" id="txtUserName">
+                </div>
+ <!--=====================CustomerPassword===================================-->
+                <div class="col-7">
+                    <input type="password" class="form-control" placeholder="password" id="txtPassword">
                 </div>
 
-                <div class="col-7">
-                    <input type="password" class="form-control" placeholder="password" id="txtuserPassword">
-                </div>
+
+
+
+
                 </form>
+
             </div>
 
             <div class="row" style="padding-top: 24px;padding-left: 150px">
-
                 <button  id="btnSignIn" type="button" class="btn btn-primary col-lg-6 col-md-4">Submit</button>
-
             </div>
-
-
-
 
         </div>
 
@@ -132,37 +151,38 @@
 
 
 
+<script src="controller/LoginController.js"></script>
 
-    <script>
+<!--    <script>-->
 
-        let baseURL= "http://localhost:8080/Back_End_war/";
-
-
-
-        $("#btnSignIn").click(function (){
-
-        var formData = $("#signInForm").serialize();
+<!--        let baseURL= "http://localhost:8080/Back_End_war/";-->
 
 
-        $.ajax({
-        url: baseURL+"user",
-        method : "post",
-        data : formData,
-        dataType: "json",
 
-        success:function (res){
-        alert(res.message);
-    },
-        error:function (error){
-        var jsObject=JSON.parse(error.responseText);
-        alert(jsObject.message);
-    }
+<!--        $("#btnSignIn").click(function (){-->
 
-    });
-    });
+<!--        var formData = $("#signInForm").serialize();-->
 
 
-</script>
+<!--        $.ajax({-->
+<!--        url: baseURL+"user",-->
+<!--        method : "post",-->
+<!--        data : formData,-->
+<!--        dataType: "json",-->
+
+<!--        success:function (res){-->
+<!--        alert(res.message);-->
+<!--    },-->
+<!--        error:function (error){-->
+<!--        var jsObject=JSON.parse(error.responseText);-->
+<!--        alert(jsObject.message);-->
+<!--    }-->
+
+<!--    });-->
+<!--    });-->
+
+
+<!--</script>-->
 
 
 

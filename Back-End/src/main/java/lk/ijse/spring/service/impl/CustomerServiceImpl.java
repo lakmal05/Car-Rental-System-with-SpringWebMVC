@@ -18,10 +18,10 @@ import java.util.List;
 @Transactional
 public class CustomerServiceImpl implements CustomerService {
     @Autowired
-    private CustomerRepo repo;
+    CustomerRepo repo;
 
     @Autowired
-    private ModelMapper mapper;
+     ModelMapper mapper;
 
 
     @Override

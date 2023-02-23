@@ -1,21 +1,15 @@
 let baseURL = "http://localhost:8080/Back_End_war/";
 
 
+$("#inputUserType").change(function () {
 
+    var userType = $('#inputUserType').find('option:selected').text();
 
-$("#inputUserType").change(function (){
-
-    var userType =$('#inputUserType').find('option:selected').text();
-
-    if(userType ==="Customer"){
+    if (userType === "Customer") {
         generateCustomerId();
     }
 
 })
-
-
-
-
 
 
 function addCustomer() {
@@ -40,17 +34,14 @@ function addCustomer() {
         email: email,
         nicNo: nic,
         licenceNo: drivingLicense,
-        userName: userName,
+        username: userName,
         password: password,
-
-
     }
 
     $.ajax({
-
         url: baseURL + "customer",
         method: "POST",
-        contactType: "application/json",
+        contentType: "application/json",
         data: JSON.stringify(customer),
 
         success: function (resp) {
@@ -75,7 +66,6 @@ function uploadCustomerImages(id) {
 
     var fileObjectLicence = $('#inputCustomerDrivingLicenseImg')[0].files[0];
     var fileNameLicence = id + "-licence-" + $('#inputCustomerDrivingLicenseImg')[0].files[0].name;
-
 
 
     var data = new FormData();
@@ -106,25 +96,20 @@ function uploadCustomerImages(id) {
 }
 
 
-function clearCustomerTextFields(){
+function clearCustomerTextFields() {
 
-     $('#txtCustomerID').val("");
-     $('#txtName').val("");
-     $('#txtCustomerAddress').val("");
+    $('#txtCustomerID').val("");
+    $('#txtName').val("");
+    $('#txtCustomerAddress').val("");
     $('#txtCustomerContact').val("");
-     $('#txtCustomerEmail').val("");
+    $('#txtCustomerEmail').val("");
     $('#txtCustomerNic').val("");
-     $('#txtCustomerDrivingLicenseNo').val("");
-     $('#txtCustomerUserName').val("");
-     $('#txtCustomerPassword').val("");
+    $('#txtCustomerDrivingLicenseNo').val("");
+    $('#txtCustomerUserName').val("");
+    $('#txtCustomerPassword').val("");
 
 
 }
-
-
-
-
-
 
 
 function generateCustomerId() {
@@ -138,9 +123,7 @@ function generateCustomerId() {
 }
 
 
-
-
-$("#btnRegister").click(function (){
+$("#btnRegister").click(function () {
 
     if ($('#inputUserType').val() === "Customer") {
 
@@ -148,11 +131,13 @@ $("#btnRegister").click(function (){
         if (res) {
             addCustomer();
 
-
         }
     }
 
 
+    //ko isuue e
+
+    // customer register wena ek sir
 })
 
 

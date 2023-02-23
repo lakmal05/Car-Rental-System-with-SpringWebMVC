@@ -27,8 +27,8 @@ public class JPAConfig {
 
 
 
-    @Autowired
-    Environment env;
+//    @Autowired
+//    Environment env;
 
 
 
@@ -37,9 +37,7 @@ public class JPAConfig {
         LocalContainerEntityManagerFactoryBean bean = new LocalContainerEntityManagerFactoryBean();
         bean.setPackagesToScan("lk.ijse.spring.entity");
         bean.setDataSource(ds);
-
-        //Hibernate addptor
-        bean.setJpaVendorAdapter(jpa);
+        bean.setJpaVendorAdapter(jpa); //Hibernate addptor
         return bean;
     }
 

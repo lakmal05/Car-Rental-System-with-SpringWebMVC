@@ -7,7 +7,7 @@
     <meta content="width=device-width initial-scale=1" name="viewport"> <!--    viewport-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">        <!--    boostrap-->
     <link href="assets/home.css" rel="stylesheet">
-    <link href="npm i bootstrap@5.3.0-alpha1" crossorigin="anonymous" rel="stylesheet">
+<!--    <link href="npm i bootstrap@5.3.0-alpha1" crossorigin="anonymous" rel="stylesheet">-->
 
 
 </head>
@@ -43,15 +43,11 @@
 
         <!--    for Image-->
         <div class="reg-div-1 col-lg-6  " style="background-color: #b2bec3 ; padding: 28px">
-            <!--      <img src="assets/register/registerImg.jpg">-->
-            <!--        <div class="row align-items-center mt-5" style="background-color: blue;">-->
 
             <div class=" col-lg-8 reg-div-sem1"
                  style="background-color: black ; height: 525px; width: 548px ; text-align: center;margin: 0 auto;margin-left: 36px">
-
             </div>
 
-            <!--        </div>-->
         </div>
 
         <!--    for from-->
@@ -60,84 +56,65 @@
             <div class=" col-lg-8 reg-div-sem2"
                  style="background-color: white ; height: 525px; width: 548px ; text-align: center;margin: 0 auto;margin-left: -27px">
 
+                <!--=====Register Customer From===-->
                 <form id="registerForm">
-
-                    <!--  ==Name& Password===-->
+                    <!--  ==Name& Password & cmbBox===-->
                     <div class="row insert">
 
                         <div class="col-1">
-                            <input type="hidden" class="form-control" id="txtCustomerID"  placeholder="name">
+                            <input type="hidden" class="form-control" id="txtCustomerID" placeholder="name">
                         </div>
 
-                        <div class="col-5">
-                            <input type="text" class="form-control" id="txtName"  placeholder="name">
+                        <div class="col-1" style="position: relative;left: -82px">
+
+                            <label for="inputUserType">Type</label>
+                            <select name="userType" id="inputUserType">
+                                <option value="-Select User Type-">-Select Type-</option>
+                                <option value="Admin">Admin</option>
+                                <option value="Customer">Customer</option>
+                            </select>
                         </div>
 
-                        <div class="col-5">
-                            <input type="text" class="form-control" id="txtCustomerPassword"  placeholder="password">
+                        <div class="col-3">
+                            <input type="text" class="form-control" id="txtName" placeholder="name">
                         </div>
+
+                        <div class="col-3">
+                            <input type="text" class="form-control" id="txtCustomerPassword" placeholder="password">
+                        </div>
+
                     </div>
 
                     <!--===Address & Contact===-->
                     <div class="row insert">
-
-                        <div class="col-2">
-
-                            <label for="inputUserType">User Type</label>
-
-                            <select name="userType" id="inputUserType">
-                                <option value="-Select User Type-">-Select User Type-</option>
-                                <option value="Admin">Admin</option>
-                                <option value="Customer">Customer</option>
-                            </select>
-
-                        </div>
-
-
                         <div class="col-5">
-                            <input type="text" class="form-control"  id="txtCustomerAddress" placeholder="address">
+                            <input type="text" class="form-control" id="txtCustomerAddress" placeholder="address">
                         </div>
                         <div class="col-5">
-                            <input type="text" class="form-control"  id="txtCustomerContact" placeholder="contact">
+                            <input type="text" class="form-control" id="txtCustomerContact" placeholder="contact">
                         </div>
                     </div>
 
                     <!--  ==Email===-->
                     <div class="row insert">
                         <div class="col-5">
-                            <input type="text" class="form-control"  id="txtCustomerEmail" placeholder="E-mail">
+                            <input type="text" class="form-control" id="txtCustomerEmail" placeholder="E-mail">
                         </div>
                     </div>
 
-                    <!--  ==NIC===-->
+                    <!-- =======NIC Number===-->
                     <div class="row insert">
                         <div class="col-6">
-                            <input type="text" class="form-control" id="txtCustomerNic"  placeholder="NIC Number">
+                            <input type="text" class="form-control" id="txtCustomerNic" placeholder="NIC Number">
                         </div>
 
-<!--                        <div class="form-group col-4">-->
-<!--                            <input type="file" class="form-control-file" id="txtUserNicImg">-->
-<!--                        </div>-->
+                        <!-- =======NIC FrontImge===-->
                         <div class="col-md-3">
                             <label for="inputCustomerNicImgFront" class="form-label">NIC IMG</label>
                             <input type="file" class="form-control" id="inputCustomerNicImgFront">
                         </div>
 
-                    </div>
-
-                    <!--  ==driving License===-->
-                    <div class="row insert">
-                        <div class="col-6">
-                            <input type="text" class="form-control"  id="txtCustomerDrivingLicenseNo" placeholder="driving License">
-                        </div>
-
-
-
-                        <div class="col-md-3">
-                            <label for="inputCustomerDrivingLicenseImg" class="form-label">Driving LicenseFront Img</label>
-                            <input type="file" class="form-control" id="inputCustomerDrivingLicenseImg">
-                        </div>
-
+                        <!-- =======NIC NumberBackImg===-->
                         <div class="col-md-3">
                             <label for="inputCustomerNicImgBack" class="form-label">back img</label>
                             <input type="file" class="form-control" id="inputCustomerNicImgBack">
@@ -145,17 +122,33 @@
 
                     </div>
 
+                    <!--  ==driving License===-->
+                    <div class="row insert">
+
+                        <div class="col-6">
+                            <input type="text" class="form-control" id="txtCustomerDrivingLicenseNo"
+                                   placeholder="driving License">
+                        </div>
+
+                        <!--  ==driving License Image===-->
+                        <div class="col-md-3">
+                            <label for="inputCustomerDrivingLicenseImg" class="form-label">License Img</label>
+                            <input type="file" class="form-control" id="inputCustomerDrivingLicenseImg">
+                        </div>
+
+                    </div>
+
                     <!--  ===userName==-->
                     <div class="row insert">
-                        <div class="col-6">
-                            <input type="text" class="form-control"  id="txtCustomerUserName" placeholder="User Name">
+                        <div class="col-3">
+                            <input type="text" class="form-control" id="txtCustomerUserName" placeholder="User Name">
                         </div>
                     </div>
                 </form>
 
-<!--                ======Submit button====-->
+                <!--======Submit button====-->
                 <div class="row" style="padding-top: 24px;padding-left: 150px">
-                    <button type="button" class="btn btn-primary col-lg-6 col-md-4" id="btnRegister" >Submit</button>
+                    <button type="button" class="btn btn-primary col-lg-6 col-md-4" id="btnRegister">Submit</button>
                 </div>
 
             </div>
@@ -167,39 +160,14 @@
 </main>
 
 
-<script src="assets/js/jquery-3.6.1.min.js" ></script>
+<script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="controller/CustomerController.js"></script>
 <script>
 
 
 
 
-// $("#btnRegister").click(function (){
-//
-//     var formData = $("#registerForm").serialize();
-//
-//
-//     $.ajax({
-//         url: baseURL+"user",
-//         method : "post",
-//         data : formData,
-//         dataType: "json",
-//
-//         success:function (res){
-//             alert(res.message);
-//         },
-//         error:function (error){
-//             var jsObject=JSON.parse(error.responseText);
-//             alert(jsObject.message);
-//         }
-//
-//     });
-// });
-
-
-
 </script>
-
 
 
 </body>
