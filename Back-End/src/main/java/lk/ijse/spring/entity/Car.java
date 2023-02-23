@@ -21,9 +21,10 @@ import java.util.List;
 @Entity
 
 public class Car {
+//17 attributes
 
     @Id
-    private String registrationNo;
+    private String registrationNO;
     private String brand;
     private String type;
     private int noOfPassengers;
@@ -38,9 +39,11 @@ public class Car {
 
     private double dailyRate;
     private double monthlyRate;
+    private  double freeKmForPrice;
     private double freeKmForDuration;
     private double lossDamageWaiver;
     private double priceForExtraKm;
+    private double completeKm;
     private String status;
 
 

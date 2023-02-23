@@ -1648,47 +1648,28 @@ img::after {
     opacity: 50%;
 }
 
-#btnSaveCar{
-    position: relative;
-    width: 110px;
-    height: 34px;
-    border-radius: 10px 10px 10px 10px;
-    border: 1px solid #4375F8;
-    background-color: #4375F8;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-size: 12px;
-    padding: 9px 5px;
-    transition: all 1s ease;
-    font-family: 'Jost', sans-serif;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    top: 230px;
-    left: 405px;
-}
-
-#btnUpdateCar{
-    position: absolute;
-    top: 30px;
-    left: 498px;
-    opacity: 40%;
-    cursor: pointer;
-    color: black;
-    font-size: 12px;
-}
+/*#btnSaveCar{*/
+/*    position: relative;*/
+/*    width: 110px;*/
+/*    height: 34px;*/
+/*    border-radius: 10px 10px 10px 10px;*/
+/*    border: 1px solid #4375F8;*/
+/*    background-color: #4375F8;*/
+/*    color: #FFFFFF;*/
+/*    cursor: pointer;*/
+/*    font-size: 12px;*/
+/*    padding: 9px 5px;*/
+/*    transition: all 1s ease;*/
+/*    font-family: 'Jost', sans-serif;*/
+/*    font-family: 'Montserrat', sans-serif;*/
+/*    font-family: 'Open Sans', sans-serif;*/
+/*    font-family: 'Roboto', sans-serif;*/
+/*    top: 230px;*/
+/*    left: 405px;*/
+/*}*/
 
 
-#btnDeleteCar{
-    position: absolute;
-    top: 30px;
-    left: 472px;
-    opacity: 40%;
-    cursor: pointer;
-    color: black;
-    font-size: 12px;
-    /*border: 2px solid red;*/
-}
+
 
 #btnSearchCar{
     position: absolute;
