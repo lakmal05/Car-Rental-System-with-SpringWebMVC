@@ -291,8 +291,8 @@
                     <div class="row">
 
                         <div class="col-3">
-                            <label class="form-label" for="txtDriverId">Driver ID</label>
-                            <input class="form-control" id="txtDriverId" type="text">
+                            <label class="form-label" for="txtLicenceNo">license No</label>
+                            <input class="form-control" id="txtLicenceNo" type="text">
                         </div>
 
                         <div class="col-3">
@@ -322,21 +322,19 @@
                         </div>
 
                         <div class="col-3">
-                            <label class="form-label" for="txtDriverNIC">NIC</label>
-                            <input class="form-control" id="txtDriverNIC" type="text">
+                            <label class="form-label" for="txtDriverNICNo">NIC</label>
+                            <input class="form-control" id="txtDriverNICNo" type="text">
                         </div>
 
-                        <div class="col-3">
-                            <label class="form-label" for="txtDriverLicense">Driving License</label>
-                            <input class="form-control" id="txtDriverLicense" type="text">
-                        </div>
+<!--                        <div class="col-3">-->
+<!--                            <label class="form-label" for="txtDriverLicense">Driving License</label>-->
+<!--                            <input class="form-control" id="txtDriverLicense" type="text">-->
+<!--                        </div>-->
 
                     </div>
 
 
                     <div class="row">
-
-
                         <div class="col-3">
                             <label class="form-label" for="txtDriverUserName">User Name</label>
                             <input class="form-control" id="txtDriverUserName" type="text">
@@ -354,7 +352,15 @@
 
                     </div>
 
+
+
                     </div>
+
+                    <button type="button" id="btnAddDriver">Add Driver</button>
+                    <button type="button" id="btnDeleteDriver">Delete Driver</button>
+                    <button type="button" id="btnUpdateDriver">Update Driver</button>
+
+
                 </form>
 
 
@@ -1065,6 +1071,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="controller/CarController.js"></script>
+    <script src="controller/DriverController.js"></script>
 
 <script>
 

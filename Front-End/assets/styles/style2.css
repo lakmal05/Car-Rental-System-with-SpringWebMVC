@@ -996,25 +996,25 @@ img::after {
     left: 30px;
 }
 
-#btnUpdateDriver{
-    position: relative;
-    bottom: 154px;
-    left: 16px;
-    opacity: 60%;
-    cursor: pointer;
-    color: black;
-    font-size: 12px;
-}
+/*#btnUpdateDriver{*/
+/*    position: relative;*/
+/*    bottom: 154px;*/
+/*    left: 16px;*/
+/*    opacity: 60%;*/
+/*    cursor: pointer;*/
+/*    color: black;*/
+/*    font-size: 12px;*/
+/*}*/
 
-#btnDeleteDriver{
-    position: relative;
-    bottom: 154px;
-    right: 28px;
-    opacity: 60%;
-    cursor: pointer;
-    color: black;
-    font-size: 12px;
-}
+/*#btnDeleteDriver{*/
+/*    position: relative;*/
+/*    bottom: 154px;*/
+/*    right: 28px;*/
+/*    opacity: 60%;*/
+/*    cursor: pointer;*/
+/*    color: black;*/
+/*    font-size: 12px;*/
+/*}*/
 
 #btnSearchDriver{
     position: relative;
