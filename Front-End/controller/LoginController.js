@@ -1,3 +1,7 @@
+let regLoginPassword = /^[A-z0-9@#$%&!*]{8,}$/;
+let regLoginUsername = /^[A-z0-9]{6,10}$/;
+
+
 let baseURL = "http://localhost:8080/Back_End_war/";
 
 
@@ -7,21 +11,27 @@ let baseURL = "http://localhost:8080/Back_End_war/";
 
 
 
+// function checkIfLoginUserFormValid() {
+//     var username = $('#txtUserName').val();
+//     if (regLoginUsername.test(username)) {
+//         $('#txtPassword').focus();
+//         var password = $('#txtPassword').val();
+//         var response = regLoginPassword.test(password);
+//         var type = $('#cmbUserType').find('option:selected').text();
+//         if (response && type != "-Select User Type-") {
+//             loginUser();
+//         } else {
+//             $('#txtPassword').focus();
+//         }
+//     } else {
+//         $('#txtUserName').focus();
+//     }
+// }
 
 
 
-getNewLoginId();
 
 
-function getNewLoginId() {
-    $.ajax({
-        url: baseURL + "login/generateLogId",
-        method: "GET",
-        success: function (res) {
-            $('#txtLogId').val(res.data);
-        }
-    });
-}
 
 
 
@@ -47,6 +57,8 @@ function loginUser() {
 
     if (userType === "Admin") {
         // searchAdmin(userType, username, password);
+        searchCustomer(userType, username, password);
+
     } else if (userType === "Customer") {
         searchCustomer(userType, username, password);
     } else if (userType === "Driver") {
@@ -91,10 +103,21 @@ function loginSave(userType, username, password) {
     })
 }
 
+$(function (){
+    getNewLoginId();
+});
 
 
 
-
+function getNewLoginId() {
+    $.ajax({
+        url: baseURL + "login/generateLogId",
+        method: "GET",
+        success: function (res) {
+            $('#txtLogId').val(res.data);
+        }
+    });
+}
 
 
 
