@@ -129,13 +129,14 @@ public class CarRentServiceImpl implements CarRentService {
         }.getType());
     }
 
-
-
-
-
-
-
-
+    @Override
+    public void uploadBankSlip(String slipfPath, String id) {
+        if (repo.existsById(id)) {
+            repo.updateBankSlip(slipfPath, id);
+        } else {
+            throw new RuntimeException("Customer Not Found");
+        }
+    }
 
 
 }

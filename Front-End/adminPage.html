@@ -227,9 +227,9 @@
                 <!--=====================Home Table and div=============================-->
                  <section class="homeSection">
                     <div class="row detailsDiv">
-                    <div class="col-3" style="height: 100px">a</div>
-                    <div class="col-3" style="height: 100px">a</div>
-                    <div class="col-3" style="height: 100px">a</div>
+                    <div class="col-3" style="height: 100px"><h4 id="countAvailableCars">00</h4></div>
+                    <div class="col-3" style="height: 100px"><h4 id="countCust">00</h4> </div>
+                    <div class="col-3" style="height: 100px"><h4 id="countAvailableDrivers">00</h4></div>
                     <div class="col-3" style="height: 100px">a</div>
                     <div class="col-3" style="height: 100px">a</div>
                     <div class="col-3" style="height: 100px">a</div>
@@ -241,7 +241,7 @@
                 <div class="row " style="margin-top:0;margin-left: 0;width: 96%;top: 110px;position: relative;left: 50px">
 
 
-                    <table class="table">
+                    <table class="table" id="">
                         <thead class="thead-dark bg-dark text-white">
                         <tr>
                             <th scope="col">Rent ID</th>
@@ -313,7 +313,6 @@
                     <div class="row">
 
 
-
                     <div class="row">
 
                         <div class="col-3">
@@ -325,11 +324,6 @@
                             <label class="form-label" for="txtDriverNICNo">NIC</label>
                             <input class="form-control" id="txtDriverNICNo" type="text">
                         </div>
-
-<!--                        <div class="col-3">-->
-<!--                            <label class="form-label" for="txtDriverLicense">Driving License</label>-->
-<!--                            <input class="form-control" id="txtDriverLicense" type="text">-->
-<!--                        </div>-->
 
                     </div>
 
@@ -368,36 +362,21 @@
                 <div class="row " style="margin-top:0px;margin-left: 0px;width: 121%;top: 150px;position: relative;left: -31px">
 
 
-                       <table class="table">
+                       <table class="table" id="registeredDriversTbl">
                            <thead class="thead-dark bg-dark text-white">
                            <tr>
-                               <th scope="col">Driver ID</th>
-                               <th scope="col">Name</th>
-                               <th scope="col">Rent Id</th>
-                               <th scope="col">Rent Date</th>
-                               <th scope="col">Car Registration No</th>
-                               <th scope="col">PickUp Date</th>
-                               <th scope="col">Pick Up Time</th>
-                               <th scope="col">Return Date</th>
-                               <th scope="col">Return Date</th>
+                               <th>Licence No</th>
+                               <th>Name</th>
+                               <th>Address</th>
+                               <th>Contact No</th>
+                               <th>NIC No</th>
+                               <th>Status</th>
                            </tr>
 
                            </thead>
 
-                           <tbody>
-                           <tr>
-                               <th scope="row">1</th>
-                               <td>Mark</td>
-                               <td>Otto</td>
-                               <td>Otto</td>
-                               <td>Otto</td>
-                               <td>Otto</td>
-                               <td>Otto</td>
-                               <td>Otto</td>
-                               <td>Otto</td>
+                           <tbody id="tblRegisteredDrivers">
 
-
-                           </tr>
 
                            </tbody>
                        </table>
@@ -486,8 +465,7 @@
                             <div class="col-3">
                             <div class="mb-3">
                                 <label for="cmbColor" class="form-label mb-0">Color</label>
-                                <select class="form-select" aria-label="Default select example" id="cmbColor"
-                                        name="color">
+                                <select class="form-select" aria-label="Default select example" id="cmbColor" name="color">
                                     <option selected>- Select Color -</option>
                                     <option value="1">Black</option>
                                     <option value="2">White</option>
@@ -498,7 +476,6 @@
                                 </select>
                             </div>
                             </div>
-
 
 
                             <div class="col-3">
@@ -523,34 +500,19 @@
                                    name="freeKmForDuration">
                             </div>
 
-
                         </div>
 
-
                         <div class="row">
-
-
-<!--                            <div class="col-3">-->
-<!--                                <label class="form-label" for="txtCarFreeKmForaMonth">Free Km for a Month</label>-->
-<!--                                <input class="form-control" id="txtCarFreeKmForaMonth" type="text">-->
-<!--                            </div>-->
 
                             <div class="col-3">
                                 <label class="form-label" for="txtPriceForExtraKm">Price Per Extra Km</label>
                                 <input class="form-control" id="txtPriceForExtraKm" type="text">
                             </div>
 
-<!--                            <div class="col-3">-->
-<!--                                <label class="form-label" for="txtCarAvailable">Available</label>-->
-<!--                                <input class="form-control" id="txtCarAvailable" type="text">-->
-<!--                            </div>-->
-
-
                             <div class="col-3">
                                 <label for="txtLossDamageWaiver" class="form-label mb-0">Loss Damage Waiver
                                     (Rs.)</label>
-                                <input type="text" class="form-control" id="txtLossDamageWaiver"
-                                       name="lossDamageWaiver">
+                                <input type="text" class="form-control" id="txtLossDamageWaiver" name="lossDamageWaiver">
                             </div>
                         </div>
 
@@ -594,48 +556,35 @@
                     </form>
 
 
-<!--                <div>-->
 
-<!--                    <button>Add Car</button>-->
-<!--                    <button>Update Car</button>-->
-<!--                    <button>Delete Car</button>-->
-
-<!--                </div>-->
 
 
                        <div class="row " style="margin-top:0px;margin-left: 0px;width: 106%;top: 125px;left:-10px;position: relative">
 
 
-                        <table class="table">
+                        <table class="table" id="carTbl">
                             <thead class="thead-dark bg-dark text-white">
                             <tr>
-                                <th scope="col">Registation No</th>
-                                <th scope="col">Brand</th>
-                                <th scope="col">Type</th>
-                                <th scope="col">Transmission Type</th>
-                                <th scope="col">Fuel Type</th>
-                                <th scope="col">No Of Passengers</th>
-                                <th scope="col">Daily Rate</th>
-                                <th scope="col">Monthly Rate</th>
-                                <th scope="col">Car Available</th>
+                                <th >Registation No</th>
+                                <th >Brand</th>
+                                <th >Type</th>
+                                <th>No Of Passengers</th>
+                                <th>Transmission</th>
+                                <th>Fuel</th>
+                                <th>Color</th>
+                                <th>Daily Rate</th>
+                                <th>Monthly Rate</th>
+                                <th>Free Km For Price</th>
+                                <th>Free Km For Duration</th>
+                                <th>Loss Damage Waiver</th>
+                                <th>Price For Extra Km</th>
+                                <th>Complete Km</th>
+                                <th>Status</th>
                             </tr>
-
                             </thead>
 
-                            <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
+                            <tbody id="carTable">
 
-
-                            </tr>
 
                             </tbody>
                         </table>
@@ -660,24 +609,24 @@
                         <div class="row">
 
                             <div class="col-2">
-                                <label class="form-label" for="txtUserID">User ID</label>
-                                <input class="form-control" id="txtUserID" type="text">
+                                <label class="form-label" for="txtCustomerId">User ID</label>
+                                <input class="form-control" id="txtCustomerId" type="text">
                             </div>
 
                             <div class="col-4">
-                                <label class="form-label" for="txtUserName">User Name</label>
-                                <input class="form-control" id="txtUserName" type="text">
+                                <label class="form-label" for="txtCustomerName">User Name</label>
+                                <input class="form-control" id="txtCustomerName" type="text">
                             </div>
 
                             <div class="col-4">
-                                <label class="form-label" for="txtUserAddress">User Address</label>
-                                <input class="form-control" id="txtUserAddress" type="text">
+                                <label class="form-label" for="txtCustomerAddress">User Address</label>
+                                <input class="form-control" id="txtCustomerAddress" type="text">
                             </div>
 
 
                             <div class="col-2">
-                                <label class="form-label" for="txtContactNo">User ContactNo</label>
-                                <input class="form-control" id="txtContactNo" type="text">
+                                <label class="form-label" for="txtCustomerContactNo">User ContactNo</label>
+                                <input class="form-control" id="txtCustomerContactNo" type="text">
                             </div>
 
                         </div>
@@ -686,18 +635,18 @@
 
 
                             <div class="col-3">
-                                <label class="form-label" for="txtEmail">Email</label>
-                                <input class="form-control" id="txtEmail" type="text">
+                                <label class="form-label" for="txtCustomerEmail">Email</label>
+                                <input class="form-control" id="txtCustomerEmail" type="text">
                             </div>
 
                             <div class="col-3">
-                                <label class="form-label" for="txtNic">NIC</label>
-                                <input class="form-control" id="txtNic" type="text">
+                                <label class="form-label" for="txtCustomerNICNo">NIC</label>
+                                <input class="form-control" id="txtCustomerNICNo" type="text">
                             </div>
 
                              <div class="col-3">
-                                <label class="form-label" for="txtDrivingLicense">Driving License</label>
-                                 <input class="form-control" id="txtDrivingLicense" type="text">
+                                <label class="form-label" for="txtCustomerLicenceNo">Driving License</label>
+                                 <input class="form-control" id="txtCustomerLicenceNo" type="text">
                               </div>
 
 
@@ -708,53 +657,79 @@
                         <div class="row">
 
                             <div class="col-3">
-                                <label class="form-label" for="ImageofNic">Driving License</label>
-                                <div id="ImageofNic" style="height: 30px;width: 30px;background-color: black"></div>
+                                <label class="form-label" for="divNICFrontView">Driving License</label>
+                                <div id="divNICFrontView" style="height: 30px;width: 30px;background-color: black"></div>
                             </div>
                             <div class="col-3">
-                                <label class="form-label" for="ImageofDrivingLicense">ImageOfDrivingLicense</label>
-                                <div id="ImageofDrivingLicense" style="height: 30px;width: 30px;background-color: black"></div>
+                                <label class="form-label" for="divNICBackView">Driving License</label>
+                                <div id="divNICBackView" style="height: 30px;width: 30px;background-color: black"></div>
+                            </div>
+
+                            <div class="col-3">
+                                <label class="form-label" for="divLicenceImg">ImageOfDrivingLicense</label>
+                                <div id="divLicenceImg" style="height: 30px;width: 30px;background-color: black"></div>
                             </div>
 
                         </div>
 
 
+
+                        <button type="button" id="btnAcceptCustomer">Accepet Customer</button>
+                        <button type="button" id="btnRejectCustomer">Reject customer</button>
+                        <button type="button" id="btnClearFields">Cleate </button>
+
+
+
+
                     </form>
 
-
+<!--  ======================Customer Tabel=====================================-->
                     <div class="row " style="margin-top:0;margin-left: 0;width: 112%;top: 150px;left: -28px;position: relative">
 
 
                         <table class="table">
-                            <thead class="thead-dark bg-dark text-white">
+                            <thead class="thead-dark bg-dark text-white " id="pendingCustomerTbl">
                             <tr>
-                                <th scope="col">Registation No</th>
-                                <th scope="col">Brand</th>
-                                <th scope="col">Type</th>
-                                <th scope="col">Transmission Type</th>
-                                <th scope="col">Fuel Type</th>
-                                <th scope="col">No Of Passengers</th>
-                                <th scope="col">Daily Rate</th>
-                                <th scope="col">Monthly Rate</th>
-                                <th scope="col">Car Available</th>
+                                <th>Customer ID</th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Contact No</th>
+                                <th>Email</th>
+                                <th>NIC No</th>
+                                <th>Licence No</th>
+                                <th>Status</th>
                             </tr>
 
                             </thead>
 
-                            <tbody>
+                            <tbody id="tblPendingCustomers">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+
+                    <div class="row " style="margin-top:0;margin-left: 0;width: 112%;top:252px;left: -28px;position: relative">
+
+
+                        <table class="table">
+                            <thead class="thead-dark bg-dark text-white " id="registeredCustomerTbl">
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-
-
+                                <th>Customer ID</th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Contact No</th>
+                                <th>Email</th>
+                                <th>NIC No</th>
+                                <th>Licence No</th>
+                                <th>Status</th>
                             </tr>
+
+                            </thead>
+
+                            <tbody id="tblRegisteredCustomers">
 
                             </tbody>
                         </table>
@@ -1072,6 +1047,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="controller/CarController.js"></script>
     <script src="controller/DriverController.js"></script>
+    <script src="controller/AdminController.js"></script>
 
 <script>
 

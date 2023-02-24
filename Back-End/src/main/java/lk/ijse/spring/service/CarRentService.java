@@ -30,4 +30,10 @@ public interface CarRentService {
 
     List<CarRentDTO> getCarRentsByCustomerId(String customerId);
 
+
+
+    void uploadBankSlip(String slipfPath, String id);
+
+
+
 }

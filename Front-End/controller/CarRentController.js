@@ -142,6 +142,16 @@ function searchCarByRegNo(customer) {
 
 
 
+
+
+
+
+
+
+
+
+
+
 function addCarRent(customer, car, driver) {
 
     let rentId = $('#txtCarRentId').val();
@@ -172,6 +182,7 @@ function addCarRent(customer, car, driver) {
         contentType: "application/json",
         data: JSON.stringify(carRent),
         success: function (res) {
+            uploadBankSlip(id);
             getLastRent(rentId, customer);
 
 
@@ -181,6 +192,46 @@ function addCarRent(customer, car, driver) {
         }
     })
 }
+
+
+function uploadBankSlip(id){
+
+    var fileObjectSlip = $('#inputBankSlip')[0].files[0];
+    var fileNameSlip = id + "-bankSlip-" + $('#inputBankSlip')[0].files[0].name;
+
+
+    var data =new FormData();
+
+    data.append("bankSlip",fileObjectSlip,fileNameSlip);
+
+
+    $.ajax({
+
+        url: baseURL + "carRent/up/" + id,
+        method: "PUT",
+        async: true,
+        contentType: false,
+        processData: false,
+        data: data,
+
+        success: function (res) {
+            console.log("uploaded");
+            // clearCustomerTextFields();
+            //alert
+        },
+        error: function (ob) {
+            //error alert
+        }
+    });
+
+
+
+}
+
+
+
+
+
 
 
 

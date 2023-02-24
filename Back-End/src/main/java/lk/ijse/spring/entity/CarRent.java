@@ -35,7 +35,7 @@ public class CarRent {
 
     @ManyToOne
     @JoinColumn(name ="licenceNo",referencedColumnName = "licenceNo",nullable = false)
-    private Driver driver;
+    private Driver licenceNo;
 
 
     @ManyToOne

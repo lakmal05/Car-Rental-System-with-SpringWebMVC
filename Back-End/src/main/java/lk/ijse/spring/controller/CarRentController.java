@@ -8,6 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.File;
+import java.io.IOException;
 
 @RestController
 @RequestMapping("/CarRent")
@@ -92,6 +96,29 @@ public class CarRentController {
 
 
 
+
+
+
+    @PutMapping(path = "/up/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil uploadImagesAndPath(@RequestPart("bankSlip") MultipartFile bankSlip,  @PathVariable String id) {
+        try {
+//            String projectPath = String.valueOf(new File("H:\\Github Projects\\Easy-Car-Rental\\Car-Rental-FontEnd\\assets\\savedImages"));
+            String projectPath = String.valueOf(new File("D:\\Easy-Car-Rental-Company-master\\Front-End\\assets\\saveImages"));
+            File uploadsDir = new File(projectPath + "\\Slip");
+            uploadsDir.mkdir();
+            bankSlip.transferTo(new File(uploadsDir.getAbsolutePath() + "\\" + bankSlip.getOriginalFilename()));
+
+            String slipfPath = projectPath + "\\Customers\\" + bankSlip.getOriginalFilename();
+
+            service.uploadBankSlip(slipfPath, id);
+
+            return new ResponseUtil("200", "Uploaded", null);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new ResponseUtil("500", "Error", null);
+        }
+    }
 
 
 
