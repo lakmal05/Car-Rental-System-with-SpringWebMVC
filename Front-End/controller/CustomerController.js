@@ -1,6 +1,34 @@
 let baseURL = "http://localhost:8080/Back_End_war/";
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $("#inputUserType").change(function () {
 
     var userType = $('#inputUserType').find('option:selected').text();
@@ -23,7 +51,7 @@ function addCustomer() {
     let drivingLicense = $('#txtCustomerDrivingLicenseNo').val();
     let userName = $('#txtCustomerUserName').val();
     let password = $('#txtCustomerPassword').val();
-
+    let status= "pending";
 
     var customer = {
 
@@ -36,6 +64,8 @@ function addCustomer() {
         licenceNo: drivingLicense,
         username: userName,
         password: password,
+        status: status
+
     }
 
     $.ajax({

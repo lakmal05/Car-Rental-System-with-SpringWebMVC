@@ -6,8 +6,7 @@
 
     <meta name="viewport" content="width=device-width initial-scale=1">
 
-    <link rel="icon" href="assets/img/logo.png">
-    <link rel="stylesheet" href="assets/css%20normalize/normalize.css">
+<!--    <link rel="stylesheet" href="assets/css%20normalize/normalize.css">-->
 
     <link rel="stylesheet" href="assets/fonts/css/all.min.css">
 
@@ -657,17 +656,19 @@
                         <div class="row">
 
                             <div class="col-3">
-                                <label class="form-label" for="divNICFrontView">Driving License</label>
-                                <div id="divNICFrontView" style="height: 30px;width: 30px;background-color: black"></div>
-                            </div>
-                            <div class="col-3">
-                                <label class="form-label" for="divNICBackView">Driving License</label>
-                                <div id="divNICBackView" style="height: 30px;width: 30px;background-color: black"></div>
+<!--                                <div id="divNICFrontView" >&lt;!&ndash; style="height: 30px;width: 30px;background-color: black"&ndash;&gt;</div>-->
+                                <label class="form-label mb-0">NIC Front View</label>
+                                <div class="mb-3" id="divNICFrontView" style="height: 13vh; border: black 2px solid"></div>
                             </div>
 
                             <div class="col-3">
-                                <label class="form-label" for="divLicenceImg">ImageOfDrivingLicense</label>
-                                <div id="divLicenceImg" style="height: 30px;width: 30px;background-color: black"></div>
+                                <label class="form-label mb-0">NIC Back View</label>
+                                <div class="mb-3" id="divNICBackView" style="height: 13vh; border: black 2px solid" ></div>
+                            </div>
+
+                            <div class="col-3">
+                                <label class="form-label mb-0">Licence Img</label>
+                                <div class="mb-3" id="divLicenceImg" style="height: 13vh; border: black 2px solid" ></div>
                             </div>
 
                         </div>
@@ -1045,9 +1046,11 @@
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
     <script src="controller/CarController.js"></script>
     <script src="controller/DriverController.js"></script>
     <script src="controller/AdminController.js"></script>
+<!--    <script src="controller/CustomerController.js"></script>-->
 
 <script>
 

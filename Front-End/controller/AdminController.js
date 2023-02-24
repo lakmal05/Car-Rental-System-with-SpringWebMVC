@@ -1,9 +1,9 @@
+$(function (){
+    loadPendingCustomers();
+    loadRegisteredCustomers();
+    getRegisterCustomersCount();
 
-
-
-
-
-
+})
 
 
 
@@ -79,23 +79,24 @@ function searchAndLoadCustomerImgs(id) {
     $('#divLicenceImg').empty();
 
     $.ajax({
-        url: baseUrl + "/customer/" + id,
+        url: baseURL + "customer/" + id,
         method: "GET",
         success: function (res) {
             let customer = res.data;
 
+
             let nicFrontPath = customer.nicFrontImg;
             let nicFrontImg = nicFrontPath.split("D:\\Easy-Car-Rental-Company-master\\Front-End\\assets\\saveImages\\Customers\\")[1];
-            let nicFrontImgSrc = "assets\\savedImages\\Customers\\" + nicFrontImg;
+            let nicFrontImgSrc = "assets\\saveImages\\Customers\\" + nicFrontImg;
             console.log(nicFrontImgSrc);
 
             let nicBackPath = customer.nicBackImg;
             let nicBackImg = nicBackPath.split("D:\\Easy-Car-Rental-Company-master\\Front-End\\assets\\saveImages\\Customers\\")[1];
-            let nicBackImgSrc = "assets\\savedImages\\Customers\\" + nicBackImg;
+            let nicBackImgSrc = "assets\\saveImages\\Customers\\" + nicBackImg;
 
             let licencePath = customer.licenceImg;
             let licenceImg = licencePath.split("D:\\Easy-Car-Rental-Company-master\\Front-End\\assets\\saveImages\\Customers\\")[1];
-            let licenceImgSrc = "assets\\savedImages\\Customers\\" + licenceImg;
+            let licenceImgSrc = "assets\\saveImages\\Customers\\" + licenceImg;
 
             let nicfImg = `<img src=${nicFrontImgSrc} alt="NIC Front" style="background-size: cover;width: 100%;height: 100%">`;
             $('#divNICFrontView').append(nicfImg);
@@ -139,15 +140,39 @@ $('#btnRejectCustomer').click(function () {
         let customerId = $('#txtCustomerId').val();
         rejectPendingCustomer(customerId);
     } else {
-        swal({
-            title: "Error",
-            text: "Customer Not Selected",
-            icon: "error",
-            button: "Close",
-            timer: 2000
-        });
+
     }
 });
+
+
+function rejectPendingCustomer(id) {
+    $.ajax({
+        url: baseURL + "customer?id=" + id,
+        method: "DELETE",
+        success: function (res) {
+            loadPendingCustomers();
+
+        }
+    })
+}
+
+
+function loadRegisteredCustomers() {
+    $('#tblRegisteredCustomers').empty();
+    $.ajax({
+        url: baseURL + "customer/accepted",
+        method: "GET",
+        success: function (res) {
+            for (const customer of res.data) {
+                console.log(customer.status);
+                let row = `<tr><td>${customer.customerId}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.contactNo}</td><td>${customer.email}</td><td>${customer.nicNo}</td><td>${customer.licenceNo}</td><td>${customer.status}</td></tr>`;
+                $('#tblRegisteredCustomers').append(row);
+            }
+        }
+    })
+}
+
+
 
 
 

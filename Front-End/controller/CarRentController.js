@@ -170,9 +170,9 @@ function addCarRent(customer, car, driver) {
         pickUpVenue:pickUpVenue,
         ReturnVenue:ReturnVenue,
         status: status,
-        customer: customer,
-        car: car,
-        driver: driver
+        customerId: customer,
+        registrationNO: car,
+        licenceNo: driver
     }
 
 
