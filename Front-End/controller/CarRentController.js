@@ -1,5 +1,5 @@
 generateRentId();
-
+getLastLoginUser();
 let baseURL = "http://localhost:8080/Back_End_war/";
 
 
@@ -44,11 +44,45 @@ $('#cmbRegistrationNo').change(function () {
 
 
 
-function setCarDataToFields(car){
 
-    $('#txtCarColor').val(car.color);
-    $('#txtCarLossDamageWavier').val(car.lossDamageWaiver);
 
+
+function getLastLoginUser() {
+    $.ajax({
+        url: "http://localhost:8080/Back_End_war/login/getLastLogin",
+        method: "GET",
+        success: function (res) {
+            let login = res.data;
+            console.log(login.loginId);
+            getAllUserData(login.username, login.password);
+        }
+    })
+}
+
+
+
+function getAllUserData(username, password) {
+    $.ajax({
+        url: "http://localhost:8080/Back_End_war/customer/set/" + username + "/" + password,
+        method: "GET",
+        success: function (res) {
+            let customer = res.data;
+            setCustomerDetails(customer);
+            // loadMyCarRentsToTable(customer.customerId);
+        }
+    })
+}
+
+function setCustomerDetails(customer) {
+    $('#txtCustId').val(customer.customerId);
+    $('#txtCusId').val(customer.customerId);
+    $('#txtCusName').val(customer.name);
+    // $('#txtCusAddress').val(customer.address);
+    // $('#txtCusEmail').val(customer.email);
+    // $('#txtCusContactNo').val(customer.contactNo);
+    // $('#txtCusNIC').val(customer.nicNo);
+    // $('#txtCusLicenceNo').val(customer.licenceNo);
+    // $('#txtCusUsername').val(customer.username);
 }
 
 
@@ -83,6 +117,16 @@ function searchCustomerById(customerId) {
 }
 
 
+function setCarDataToFields(car){
+
+    $('#txtCarColor').val(car.color);
+    $('#txtCarLossDamageWavier').val(car.lossDamageWaiver);
+
+
+}
+
+
+
 function searchCarByRegNo(customer) {
     let registrationNo = $('#cmbRegistrationNo').find('option:selected').text();
     $.ajax({
@@ -96,25 +140,6 @@ function searchCarByRegNo(customer) {
 }
 
 
-function searchDriverByLicenceNo(customer, car) {
-    let licenceNo = $('#txtDriverLicenceNo').val();
-    if ($('#txtDriverLicenceNo').val() === "") {
-        licenceNo = null;
-    }
-    if (licenceNo != null) {
-        $.ajax({
-            url: baseURL + "driver/" + licenceNo,
-            method: "GET",
-            success: function (res) {
-                let driver = res.data;
-                console.log(res.data);
-                addCarRent(customer, car, driver);
-            }
-        })
-    } else {
-        addCarRent(customer, car, null);
-    }
-}
 
 
 function addCarRent(customer, car, driver) {
@@ -184,6 +209,32 @@ function generateRentId() {
     })
 }
 
+
+
+
+// ====================Need Driver Part=================================
+
+
+function searchDriverByLicenceNo(customer, car) {
+    let licenceNo = $('#txtDriverLicenceNo').val();
+    if ($('#txtDriverLicenceNo').val() === "") {
+        licenceNo = null;
+    }
+    if (licenceNo != null) {
+        $.ajax({
+            url: baseURL + "driver/" + licenceNo,
+            method: "GET",
+            success: function (res) {
+                let driver = res.data;
+                console.log(res.data);
+                addCarRent(customer, car, driver);
+            }
+        })
+    } else {
+        addCarRent(customer, car, null);
+    }
+}
+
 $('#needDriver').click(function (){
 
     if ($(this).is(":checked")) {
@@ -192,7 +243,6 @@ $('#needDriver').click(function (){
         clearRentalDriverFields();
     }
 })
-
 
 function searchRandomDriverForRent() {
     $.ajax({

@@ -1858,20 +1858,20 @@ input[type=checkbox]:checked + label:before {
     opacity: 90%;
 }
 
-#btnUpdateUser{
-    position: absolute;
-    top: 18px;
-    left: 786px;
-    opacity: 60%;
-    cursor: pointer;
-    color: black;
-    font-size: 12px;
-}
+/*#btnUpdateUser{*/
+/*    position: absolute;*/
+/*    top: 18px;*/
+/*    left: 786px;*/
+/*    opacity: 60%;*/
+/*    cursor: pointer;*/
+/*    color: black;*/
+/*    font-size: 12px;*/
+/*}*/
 
-#btnUpdateUser:hover{
-    color: #4375F8;
-    opacity: 90%;
-}
+/*#btnUpdateUser:hover{*/
+/*    color: #4375F8;*/
+/*    opacity: 90%;*/
+/*}*/
 
 #userTable{
     position: absolute;

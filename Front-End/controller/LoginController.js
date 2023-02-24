@@ -66,13 +66,6 @@ function loginUser() {
     }
 }
 
-
-
-
-
-
-
-
 function loginSave(userType, username, password) {
     let logId = $('#txtLogId').val();
     console.log(logId);
@@ -107,8 +100,6 @@ $(function (){
     getNewLoginId();
 });
 
-
-
 function getNewLoginId() {
     $.ajax({
         url: baseURL + "login/generateLogId",
@@ -118,11 +109,6 @@ function getNewLoginId() {
         }
     });
 }
-
-
-
-
-
 
 function searchCustomer(userType, username, password) {
     $.ajax({

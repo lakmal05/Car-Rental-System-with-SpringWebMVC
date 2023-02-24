@@ -33,12 +33,6 @@ public class CustomerController {
     }
 
 
-//    @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseUtil updateUser(){
-//
-//        return new ResponseUtil("200","Update",null) ;
-//    }
-
 
 
 
@@ -80,6 +74,77 @@ public class CustomerController {
 
 
 
+
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getAllCustomers() {
+        return new ResponseUtil("200", "Ok", service.getAllCustomers());
+    }
+
+
+
+    @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil updateCustomer(@RequestBody CustomerDTO dto) {
+        System.out.println("In");
+        service.updateCustomer(dto);
+        return new ResponseUtil("200", "Updated", null);
+    }
+
+    @DeleteMapping(params = {"id"}, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil deleteCustomer(@RequestParam String id) {
+        service.deleteCustomer(id);
+        return new ResponseUtil("200", "Deleted", null);
+    }
+
+    @GetMapping(path = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil searchCustomer(@PathVariable String id) {
+        return new ResponseUtil("200", "Ok", service.searchCustomer(id));
+    }
+
+
+
+    @GetMapping(path = "/{username}/{password}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil searchCustomerByUsernameAndPassword(@PathVariable String username, @PathVariable String password) {
+        if (service.findCustomerByUsername(username)) {
+            if (service.findCustomerByPassword(password)) {
+                return new ResponseUtil("200", "Login Successful", true);
+            } else {
+                return new ResponseUtil("404", "Incorrect Password", false);
+            }
+        } else {
+            return new ResponseUtil("404", "Incorrect Username", false);
+        }
+    }
+
+    @GetMapping(path = "/set/{username}/{password}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil findCustomerByUsernameAndPassword(@PathVariable String username, @PathVariable String password) {
+        return new ResponseUtil("200", "Ok", service.findCustomerByUsernameAndPassword(username, password));
+    }
+
+
+
+    @PutMapping(path = "/updateStatus/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil updateCustomerStatus(@PathVariable String id) {
+        service.updateCustomerStatus(id);
+        return new ResponseUtil("200", "Updated Status", null);
+    }
+
+    @GetMapping(path = "/pending", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getAllPendingCustomers() {
+        return new ResponseUtil("200", "Ok", service.getAllPendingCustomers());
+    }
+
+    @GetMapping(path = "/accepted", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getAllAcceptedCustomers() {
+        return new ResponseUtil("200", "Ok", service.getAllAcceptedCustomers());
+    }
+
+
+
+
+    @GetMapping(path = "/count",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getCountOfRegisteredCustomers(){
+        return new ResponseUtil("200","Ok",service.getCountOfCustomersRegistered());
+    }
 
 
 

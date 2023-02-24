@@ -76,7 +76,7 @@
 
 <body>
 
-
+<main>
 <div id="mySidenav" class="sidenav">
 
 
@@ -90,44 +90,49 @@
         <div class="row fields">
 
             <div class="col-6">
-                <label class="form-label" for="txtLicenceNo">Name</label>
-                <input class="form-control" id="txtLicenceNo" type="text">
+                <label class="form-label" for="txtCustId">CUSTOMER iD</label>
+                <input class="form-control" id="txtCustId" type="text">
             </div>
 
             <div class="col-6">
-                <label class="form-label" for="txtDriverName">Address</label>
-                <input class="form-control" id="txtDriverName" type="text">
+                <label class="form-label" for="txtCusName">Name</label>
+                <input class="form-control" id="txtCusName" type="text">
+            </div>
+
+            <div class="col-6">
+                <label class="form-label" for="txtCusAddress">Address</label>
+                <input class="form-control" id="txtCusAddress" type="text">
             </div>
 
 
             <div class="col-6">
-                <label class="form-label" for="txtDriverName">ContactNo </label>
-                <input class="form-control" id="txtDriverName" type="text">
+                <label class="form-label" for="txtCusContactNo">ContactNo </label>
+                <input class="form-control" id="txtCusContactNo" type="text">
             </div>
 
             <div class="col-6">
-                <label class="form-label" for="txtDriverName">Email </label>
-                <input class="form-control" id="txtDriverName" type="text">
+                <label class="form-label" for="txtCusEmail">Email </label>
+                <input class="form-control" id="txtCusEmail" type="text">
             </div>
 
             <div class="col-6">
-                <label class="form-label" for="txtDriverName">Nic </label>
-                <input class="form-control" id="txtDriverName" type="text">
+                <label class="form-label" for="txtCusNIC">Nic </label>
+                <input class="form-control" id="txtCusNIC" type="text">
             </div>
 
             <div class="col-6">
-                <label class="form-label" for="txtDriverName">Driving License </label>
-                <input class="form-control" id="txtDriverName" type="text">
+                <label class="form-label" for="txtCusLicenceNo">Driving License </label>
+                <input class="form-control" id="txtCusLicenceNo" type="text">
             </div>
 
             <div class="col-6">
-                <label class="form-label" for="txtDriverName">UserName </label>
-                <input class="form-control" id="txtDriverName" type="text">
+                <label class="form-label" for="txtCusUsername">UserName </label>
+                <input class="form-control" id="txtCusUsername" type="text">
             </div>
 
             <div class="col-6">
-                <label class="form-label" for="txtDriverName">Password</label>
-                <input class="form-control" id="txtDriverName" type="text">
+                <label class="form-label" for="txtCusPassword">Password</label>
+                <input class="form-control" id="txtCusPassword" type="text">
             </div>
 
             <!-- =======================Images============================-->
@@ -147,7 +152,7 @@
             <!-- =======================Buttons============================-->
 
             <div class="col-3">
-               <button type="button" >Update</button>
+               <button type="button" id="btnUpdateCustomer" >Update</button>
             </div>
 
 
@@ -176,23 +181,32 @@
 
 
 
+</main>
+
+
+<script src="controller/CustomerController.js"></script>
+
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "560px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+    }
+
+</script>
+
 
 </body>
 
-<script>
-function openNav() {
-document.getElementById("mySidenav").style.width = "560px";
-document.getElementById("main").style.marginLeft = "250px";
-document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-}
 
-function closeNav() {
-document.getElementById("mySidenav").style.width = "0";
-document.getElementById("main").style.marginLeft = "0";
-document.body.style.backgroundColor = "white";
-}
 
-</script>
 
 
 

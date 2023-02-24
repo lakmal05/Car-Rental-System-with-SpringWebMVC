@@ -17,12 +17,12 @@ import java.util.List;
 @Service
 @Transactional
 public class CustomerServiceImpl implements CustomerService {
+
     @Autowired
     CustomerRepo repo;
 
     @Autowired
-     ModelMapper mapper;
-
+    ModelMapper mapper;
 
     @Override
     public void saveCustomer(CustomerDTO dto) {
@@ -34,8 +34,51 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    public void updateCustomer(CustomerDTO dto) {
+        if (repo.existsById(dto.getCustomerId())) {
+            repo.updateCustomer(dto.getCustomerId(),dto.getName(),dto.getAddress(),dto.getEmail(),dto.getContactNo(),dto.getNicNo(),dto.getLicenceNo());
+        } else {
+            throw new RuntimeException("No Such Customer To Update");
+        }
+    }
+
+    @Override
+    public CustomerDTO searchCustomer(String customerId) {
+        if (repo.existsById(customerId)) {
+            return mapper.map(repo.findById(customerId).get(),CustomerDTO.class);
+        } else {
+            throw new RuntimeException("No Such Customer");
+        }
+    }
+
+    @Override
+    public void deleteCustomer(String customerId) {
+        if (repo.existsById(customerId)) {
+            repo.deleteById(customerId);
+        } else {
+            throw new RuntimeException("No Such Customer To Delete");
+        }
+    }
+
+    @Override
     public List<CustomerDTO> getAllCustomers() {
-        return null;
+        return mapper.map(repo.findAll(), new TypeToken<List<CustomerDTO>>() {
+        }.getType());
+    }
+
+    @Override
+    public boolean findCustomerByUsername(String username) {
+        return repo.findCustomerByUsername(username).isPresent();
+    }
+
+    @Override
+    public boolean findCustomerByPassword(String password) {
+        return repo.findCustomerByPassword(password).isPresent();
+    }
+
+    @Override
+    public CustomerDTO findCustomerByUsernameAndPassword(String username, String password) {
+        return mapper.map(repo.findCustomerByUsernameAndPassword(username, password).get(), CustomerDTO.class);
     }
 
     @Override
@@ -61,6 +104,14 @@ public class CustomerServiceImpl implements CustomerService {
         return id;
     }
 
+    @Override
+    public void updateCustomerStatus(String id) {
+        if (repo.existsById(id)) {
+            repo.updateCustomerStatus(id);
+        } else {
+            throw new RuntimeException("Customer Not Found");
+        }
+    }
 
     @Override
     public List<CustomerDTO> getAllPendingCustomers() {
@@ -68,6 +119,11 @@ public class CustomerServiceImpl implements CustomerService {
         }.getType());
     }
 
+    @Override
+    public List<CustomerDTO> getAllAcceptedCustomers() {
+        return mapper.map(repo.findAcceptedCustomers(), new TypeToken<List<CustomerDTO>>() {
+        }.getType());
+    }
 
     @Override
     public void uploadCustomerImages(String nicfPath, String nicbPath, String licenceImgPath, String id) {
@@ -77,6 +133,16 @@ public class CustomerServiceImpl implements CustomerService {
             throw new RuntimeException("Customer Not Found");
         }
     }
+
+    @Override
+    public int getCountOfCustomersRegistered() {
+        return repo.countByCustomerId();
+    }
+
+
+
+
+
 
 
 }
