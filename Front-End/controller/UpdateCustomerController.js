@@ -1,8 +1,41 @@
 
-$(function (){
-    getLastLoginUser();
+let baseURL = "http://localhost:8080/Back_End_war/";
+    //
+    // getLastLoginUser();
+
+
+
+
+
+$('#btnUpdateCustomer').click(function () {
+
+    console.log("ok");
+
+    if ($('#txtCusId').val() != "") {
+        let res = confirm("Do you want to update your details?");
+        if (res) {
+            updateCustomer();
+        }
+    }
 })
 
+
+
+
+
+function getLastLoginUser() {
+
+    $.ajax({
+        url: "http://localhost:8080/Back_End_war/login/getLastLogin",
+        method: "GET",
+        success: function (res) {
+            let loginData = res.data;
+            console.log(loginData);
+            getAllUserData(loginData.username, loginData.password);
+        }
+    })
+
+}
 
 
 function getAllUserData(username, password) {
@@ -16,29 +49,67 @@ function getAllUserData(username, password) {
         }
     })
 }
-function getLastLoginUser() {
+
+
+
+
+
+
+
+
+function updateCustomer() {
+
+
+    let customerId = $('#txtCusId').val();
+    let name = $('#txtCusName').val();
+    let address = $('#txtCusAddress').val();
+    let email = $('#txtCusEmail').val();
+    let contact = $('#txtCusContactNo').val();
+    let nic = $('#txtCusNIC').val();
+    let licenceNo = $('#txtCusLicenceNo').val();
+
+    var customer = {
+        customerId: customerId,
+        name: name,
+        address: address,
+        contactNo: contact,
+        email: email,
+        nicNo: nic,
+        licenceNo: licenceNo
+    }
+
     $.ajax({
-        url: "http://localhost:8080/Back_End_war/login/getLastLogin",
-        method: "GET",
+        url: baseURL + "customer",
+        method: "PUT",
+        contentType: "application/json",
+        data: JSON.stringify(customer),
         success: function (res) {
-            let login = res.data;
-            console.log(login.loginId);
-            getAllUserData(login.username, login.password);
+            getLastLoginUser();
+
+        },
+        error: function (ob) {
+
         }
     })
 }
+
+
+
+
 
 function setCustomerDetails(customer) {
     $('#txtCustId').val(customer.customerId);
     $('#txtCusId').val(customer.customerId);
     $('#txtCusName').val(customer.name);
-    // $('#txtCusAddress').val(customer.address);
-    // $('#txtCusEmail').val(customer.email);
-    // $('#txtCusContactNo').val(customer.contactNo);
-    // $('#txtCusNIC').val(customer.nicNo);
-    // $('#txtCusLicenceNo').val(customer.licenceNo);
-    // $('#txtCusUsername').val(customer.username);
+    $('#txtCusUsername').val(customer.name);
+    $('#txtCusAddress').val(customer.address);
+    $('#txtCusEmail').val(customer.email);
+    $('#txtCusContactNo').val(customer.contactNo);
+    $('#txtCusNIC').val(customer.nicNo);
+    $('#txtCusLicenceNo').val(customer.licenceNo);
+    $('#txtCusUsername').val(customer.username);
 }
+
 
 
 
@@ -52,3 +123,5 @@ function searchCustomerById(customerId) {
         }
     });
 }
+
+

@@ -34,8 +34,12 @@ public class CarRent {
 
 
     @ManyToOne
-    @JoinColumn(name ="licenceNo",referencedColumnName = "licenceNo",nullable = false)
+    @JoinColumn(name ="licenceNo",referencedColumnName = "licenceNo")
     private Driver licenceNo;
+
+//    @ManyToOne   //nulable false thibbma data null wenna ba
+//    @JoinColumn(name ="licenceNo",referencedColumnName = "licenceNo",nullable = false)
+//    private Driver licenceNo;
 
 
     @ManyToOne

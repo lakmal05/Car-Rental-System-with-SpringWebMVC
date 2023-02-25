@@ -156,8 +156,28 @@
     border-radius: 35px;
     box-shadow: 0 5px 15px rgb(0 0 0/0.40);
 }
+.addToMaintenance{
+    background-color: white;
+
+    height: 42%;
+    width: 100%;
+    position: relative;
+    top: 51px;
+    left: -7px;
+    border-radius: 35px;
+    box-shadow: 0 5px 15px rgb(0 0 0/0.40);
+}
+
+
 
 .paymentForm{
+    position: relative;
+    /* margin-top: 9px; */
+    margin-left: 35px;
+    top: 34px;
+}
+
+.maintenanceForm{
     position: relative;
     /* margin-top: 9px; */
     margin-left: 35px;
@@ -1017,6 +1037,135 @@
 
 
 
+                <!--=====================Maintenance Form==============================-->
+                <div class="addToMaintenance">
+
+                    <label class="headLabel">Payments</label>
+                    <hr style="width: 100%;background-color: black;position: relative;top: 30px">
+
+
+                    <form class="maintenanceForm">
+
+                        <div class="row">
+
+                            <div class="col-2">
+                                <label class="form-label" for="txtPaymentId">Registeration No</label>
+                                <input class="form-control" id="txtPaymentId" type="text">
+                            </div>
+
+                            <div class="col-2">
+                                <label class="form-label" for="txtPaymentDate">Brand</label>
+                                <input class="form-control" id="txtPaymentDate" type="date">
+                            </div>
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtPaymentRentPrice">Type</label>
+                                <input class="form-control" id="txtPaymentRentPrice" type="text">
+                            </div>
+
+
+                            <div class="col-2">
+                                <label class="form-label" for="txtPaymentExtraKm">Transmission</label>
+                                <input class="form-control" id="txtPaymentExtraKm" type="text">
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtPaymentPriceForExtraKm">Color</label>
+                                <input class="form-control" id="txtPaymentPriceForExtraKm" type="text">
+                            </div>
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtPaymentDamageCharges">Status</label>
+                                <input class="form-control" id="txtPaymentDamageCharges" type="text">
+                            </div>
+                            <div class="col-3">
+                                <button type="button">Add To MainTains</button>
+
+                            </div>
+
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtPaymentLossDamageWaiver">Maintenacne ID</label>
+                                <input class="form-control" id="txtPaymentLossDamageWaiver" type="text">
+                            </div>
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtPaymentDriverPayment">Registratin No</label>
+                                <input class="form-control" id="txtPaymentDriverPayment" type="text">
+                            </div>
+
+                            <div class="col-3">
+                                <label class="form-label" for="txtPaymentDriverPayment">Date</label>
+                                <input class="form-control" id="txtPaymentDriverPayment" type="text">
+                            </div>
+                            <div class="col-3">
+                                <label class="form-label" for="txtPaymentDriverPayment">Cost</label>
+                                <input class="form-control" id="txtPaymentDriverPayment" type="text">
+                            </div>
+                            <div class="col-3">
+                                <label class="form-label" for="txtPaymentDriverPayment">Details</label>
+                                <input class="form-control" id="txtPaymentDriverPayment" type="text">
+                            </div>
+
+                            <div class="col-3">
+                                <button type="button">Paid</button>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </form>
+
+                    <div class="row " style="margin-top:0px;margin-left: 0px;width: 96%;top: 250px;position: relative">
+
+
+                        <table class="table">
+                            <thead class="thead-dark bg-dark text-white">
+                            <tr>
+                                <th scope="col">Payment ID</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Rent Piece</th>
+                                <th scope="col">Extra Kms</th>
+                                <th scope="col">Price for extra KM</th>
+                                <th scope="col">Damage Charge</th>
+                                <th scope="col">Return Loos Damage Waiver</th>
+                                <th scope="col">Driver Payment</th>
+                                <th scope="col">Total Payment</th>
+                            </tr>
+
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+                                <td>Otto</td>
+
+
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+                </div>
+
+
+
 
 
 
@@ -1095,6 +1244,7 @@
     $(".addUserDetails").css('display','none');
     $(".addRentDetails").css('display','none');
     $(".addPaymentDetails").css('display','none');
+    $(".addToMaintenance").css('display','none');
 
 
     $("#iHome").click(function (){
@@ -1104,6 +1254,7 @@
         $(".addUserDetails").css('display','none');
         $(".addRentDetails").css('display','none');
         $(".addPaymentDetails").css('display','none');
+        $(".addToMaintenance").css('display','none');
 
 
     });
@@ -1116,6 +1267,7 @@
         $(".addUserDetails").css('display','none');
         $(".addRentDetails").css('display','none');
         $(".addPaymentDetails").css('display','none');
+        $(".addToMaintenance").css('display','none');
 
 
     });
@@ -1127,6 +1279,7 @@
         $(".addUserDetails").css('display','none');
         $(".addRentDetails").css('display','none');
         $(".addPaymentDetails").css('display','none');
+        $(".addToMaintenance").css('display','none');
 
 
     });
@@ -1139,6 +1292,7 @@
         $(".homeSection").css('display','none');
         $(".addRentDetails").css('display','none');
         $(".addPaymentDetails").css('display','none');
+        $(".addToMaintenance").css('display','none');
 
 
 
@@ -1152,9 +1306,25 @@
         $("#addDriverDetails").css('display','none');
         $(".addPaymentDetails").css('display','none')
         $(".homeSection").css('display','none');
+        $(".addToMaintenance").css('display','none');
+
     });
     $("#iPayment").click(function (){
         $(".addPaymentDetails").css('display','block')
+        $(".addRentDetails").css('display','none');
+        $(".addUserDetails").css('display','none');
+        $("#addCarDetails").css('display','none');
+        $("#addDriverDetails").css('display','none');
+        $(".homeSection").css('display','none');
+        $(".addToMaintenance").css('display','none');
+
+    })
+
+
+
+    $("#iAdmin").click(function (){
+        $(".addToMaintenance").css('display','block');
+        $(".addPaymentDetails").css('display','none');
         $(".addRentDetails").css('display','none');
         $(".addUserDetails").css('display','none');
         $("#addCarDetails").css('display','none');
@@ -1165,7 +1335,7 @@
 
 
 
-/*opacity buttons*/
+    /*opacity buttons*/
     {
         $("#iHome").click(function () {
             $("#iDriver, #iCar, #iRent, #iUser, #iAdmin,#iPayment").css("opacity", "20%");

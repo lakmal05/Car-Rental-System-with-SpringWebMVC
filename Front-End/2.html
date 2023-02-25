@@ -3,75 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="01.js" ></script>
+<!--    <script src="01.js" ></script>-->
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+
+
+    <style>
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: white;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+            border-radius: 35px;
+            box-shadow: 0 5px 15px rgb(0 0 0 / 40%);
+            border-top-left-radius: 0;
+            font-family: -webkit-body;
+            border-bottom-left-radius: 0;
+        }
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+
+        .fields{
+            width: 100%;
+        }
+
+        .fields>div{
+            padding-left: 35px;
+        }
+
+
+    </style>
 
 </head>
-<link rel="stylesheet" href="1.html">
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
-
-
-
-<style>
-    .sidenav {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: white;
-        overflow-x: hidden;
-        padding-top: 60px;
-        transition: 0.5s;
-        border-radius: 35px;
-        box-shadow: 0 5px 15px rgb(0 0 0 / 40%);
-        border-top-left-radius: 0;
-        font-family: -webkit-body;
-        border-bottom-left-radius: 0;
-    }
-    .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-    }
-
-    .sidenav a:hover {
-        color: #f1f1f1;
-    }
-
-    .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
-
-    #main {
-        transition: margin-left .5s;
-        padding: 20px;
-    }
-
-    @media screen and (max-height: 450px) {
-        .sidenav {padding-top: 15px;}
-        .sidenav a {font-size: 18px;}
-    }
-
-    .fields{
-        width: 100%;
-    }
-
-    .fields>div{
-        padding-left: 35px;
-    }
-
-
-</style>
 
 
 <body>
@@ -103,8 +102,6 @@
                 <label class="form-label" for="txtCusId">Address</label>
                 <input class="form-control" id="txtCusId" type="text">
             </div>
-
-
             <div class="col-6">
                 <label class="form-label" for="txtCusContactNo">ContactNo </label>
                 <input class="form-control" id="txtCusContactNo" type="text">
@@ -134,51 +131,20 @@
                 <label class="form-label" for="txtCusPassword">Password</label>
                 <input class="form-control" id="txtCusPassword" type="text">
             </div>
-
-            <!-- =======================Images============================-->
-<!--            <div class="col-4">-->
-<!--                <label class="form-label" for="imgFrontView">Nic Front Image</label>-->
-<!--                <input class="form-control" id="imgFrontView" type="file">-->
-<!--            </div>-->
-<!--            <div class="col-4">-->
-<!--                <label class="form-label" for="imgFrontView">NIC Back Image</label>-->
-<!--                <input class="form-control" id="imgFrontView" type="file">-->
-<!--            </div>-->
-<!--            <div class="col-4">-->
-<!--                <label class="form-label" for="imgFrontView">License Img</label>-->
-<!--                <input class="form-control" id="imgFrontView" type="file">-->
-<!--            </div>-->
-
-            <!-- =======================Buttons============================-->
-
             <div class="col-3">
                <button type="button" id="btnUpdateCustomer" >Update</button>
             </div>
 
-
-
         </div>
-
-
-
-
-
 
     </div>
 
-
-
-
-
 </div>
+    <div id="main">
 
+    </div>
 
 <span onclick="openNav()" style="position: relative ; left: 10px"> open</span>
-
-<div id="main">
-
-</div>
-
 
 
 </main>
@@ -187,7 +153,6 @@
 <!--<script src="controller/CustomerController.js"></script>-->
 <!--<script src="controller/CarRentController.js"></script>-->
 <!--<script src="controller/CustomerController.js"></script>-->
-<!--<script src="controller/UpdateCustomerController.js"></script>-->
 
 
 <script>
@@ -203,7 +168,9 @@
         document.body.style.backgroundColor = "white";
     }
 
+
 </script>
+<script src="controller/UpdateCustomerController.js"></script>
 
 
 </body>
