@@ -89,22 +89,22 @@
         <div class="row fields">
 
             <div class="col-6">
-                <label class="form-label" for="txtCustId">CUSTOMER iD</label>
-                <input class="form-control" id="txtCustId" type="text" disabled>
+                <label for="txtCusId" class="form-label mb-0">Customer ID</label>
+                <input type="text" class="form-control" id="txtCusId" name="cusId" disabled>
             </div>
 
             <div class="col-6">
-                <label class="form-label" for="txtCusName">Name</label>
-                <input class="form-control" id="txtCusName" type="text">
+                <label for="txtCusName" class="form-label mb-0">Name</label>
+                <input type="text" class="form-control" id="txtCusName" name="cusName">
             </div>
 
             <div class="col-6">
-                <label class="form-label" for="txtCusId">Address</label>
-                <input class="form-control" id="txtCusId" type="text">
+                <label for="txtCusAddress" class="form-label mb-0">Address</label>
+                <input type="text" class="form-control" id="txtCusAddress" name="cusAddress">
             </div>
             <div class="col-6">
-                <label class="form-label" for="txtCusContactNo">ContactNo </label>
-                <input class="form-control" id="txtCusContactNo" type="text">
+                <label for="txtCusContactNo" class="form-label mb-0">Contact No</label>
+                <input type="text" class="form-control" id="txtCusContactNo" name="cusContactNo">
             </div>
 
             <div class="col-6">
@@ -113,26 +113,28 @@
             </div>
 
             <div class="col-6">
-                <label class="form-label" for="txtCusNIC">Nic </label>
-                <input class="form-control" id="txtCusNIC" type="text">
+                <label for="txtCusNIC" class="form-label mb-0">NIC</label>
+                <input type="text" class="form-control" id="txtCusNIC" name="cusNIC">
             </div>
 
             <div class="col-6">
-                <label class="form-label" for="txtCusLicenceNo">Driving License </label>
-                <input class="form-control" id="txtCusLicenceNo" type="text">
+                <label for="txtCusLicenceNo" class="form-label mb-0">Licence No</label>
+                <input type="text" class="form-control" id="txtCusLicenceNo" name="cusLicenceNo">
             </div>
 
             <div class="col-6">
-                <label class="form-label" for="txtCusUsername">UserName </label>
-                <input class="form-control" id="txtCusUsername" type="text" disabled>
+                <label for="txtCusUsername" class="form-label mb-0">Username</label>
+                <input type="text" class="form-control" id="txtCusUsername" name="cusUsername" disabled>
             </div>
 
             <div class="col-6">
                 <label class="form-label" for="txtCusPassword">Password</label>
                 <input class="form-control" id="txtCusPassword" type="text">
             </div>
+
             <div class="col-3">
-               <button type="button" id="btnUpdateCustomer" >Update</button>
+                <button type="button" class="btn btn-warning mt-3 " id="btnUpdateCustomer">Update</button>
+<!--                <button type="button" class="btn btn-primary mt-3" id="btnRefreshCustomer">Refresh</button>-->
             </div>
 
         </div>
@@ -153,6 +155,7 @@
 <!--<script src="controller/CustomerController.js"></script>-->
 <!--<script src="controller/CarRentController.js"></script>-->
 <!--<script src="controller/CustomerController.js"></script>-->
+<script src="controller/UpdateCustomerController.js"></script>
 
 
 <script>
@@ -170,7 +173,6 @@
 
 
 </script>
-<script src="controller/UpdateCustomerController.js"></script>
 
 
 </body>

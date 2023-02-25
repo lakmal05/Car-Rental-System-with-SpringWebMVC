@@ -1,3 +1,5 @@
+getLastLoginUser();
+getAllUserData();
 
 let baseURL = "http://localhost:8080/Back_End_war/";
     //
@@ -6,18 +8,20 @@ let baseURL = "http://localhost:8080/Back_End_war/";
 
 
 
+function setCustomerDetails(customer) {
+    // $('#txtCustId').val(customer.customerId);
+    $('#txtCusId').val(customer.customerId);
+    $('#txtCusName').val(customer.name);
+    $('#txtCusAddress').val(customer.address);
+    $('#txtCusEmail').val(customer.email);
+    $('#txtCusContactNo').val(customer.contactNo);
+    $('#txtCusNIC').val(customer.nicNo);
+    $('#txtCusLicenceNo').val(customer.licenceNo);
+    $('#txtCusUsername').val(customer.username);
+    $('#txtCusPassword').val(customer.password)
+}
 
-$('#btnUpdateCustomer').click(function () {
 
-    console.log("ok");
-
-    if ($('#txtCusId').val() != "") {
-        let res = confirm("Do you want to update your details?");
-        if (res) {
-            updateCustomer();
-        }
-    }
-})
 
 
 
@@ -67,6 +71,7 @@ function updateCustomer() {
     let contact = $('#txtCusContactNo').val();
     let nic = $('#txtCusNIC').val();
     let licenceNo = $('#txtCusLicenceNo').val();
+    let password =$('#txtCusPassword').val();
 
     var customer = {
         customerId: customerId,
@@ -75,7 +80,8 @@ function updateCustomer() {
         contactNo: contact,
         email: email,
         nicNo: nic,
-        licenceNo: licenceNo
+        licenceNo: licenceNo,
+        password :password,
     }
 
     $.ajax({
@@ -97,19 +103,6 @@ function updateCustomer() {
 
 
 
-function setCustomerDetails(customer) {
-    $('#txtCustId').val(customer.customerId);
-    $('#txtCusId').val(customer.customerId);
-    $('#txtCusName').val(customer.name);
-    $('#txtCusUsername').val(customer.name);
-    $('#txtCusAddress').val(customer.address);
-    $('#txtCusEmail').val(customer.email);
-    $('#txtCusContactNo').val(customer.contactNo);
-    $('#txtCusNIC').val(customer.nicNo);
-    $('#txtCusLicenceNo').val(customer.licenceNo);
-    $('#txtCusUsername').val(customer.username);
-}
-
 
 
 
@@ -124,4 +117,15 @@ function searchCustomerById(customerId) {
     });
 }
 
+$('#btnUpdateCustomer').click(function () {
+
+    console.log("ok");
+
+    if ($('#txtCusId').val() != "") {
+        let res = confirm("Do you want to update your details?");
+        if (res) {
+            updateCustomer();
+        }
+    }
+})
 
