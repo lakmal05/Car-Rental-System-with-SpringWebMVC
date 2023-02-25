@@ -395,6 +395,7 @@
                     <form class="carForm">
 
                         <div class="row">
+
                             <div class="col-3">
                                 <label class="form-label" for="txtRegNo">Register No</label>
                                 <input class="form-control" id="txtRegNo" type="text">
@@ -414,15 +415,9 @@
                                     <option value="2">Premium</option>
                                     <option value="3">Luxury</option>
                                 </select>
-
                             </div>
 
 
-                        </div>
-
-
-
-                        <div class="row">
 
                             <div class="col-3">
                                 <label for="cmbfuel" class="form-label mb-0">Fuel</label>
@@ -433,6 +428,14 @@
                                     <option value="2">Diesel</option>
                                 </select>
                             </div>
+
+
+                        </div>
+
+
+
+                        <div class="row">
+
 
                             <div class="col-3">
                             <label for="cmbTransmissionType" class="form-label mb-0">Transmission</label>
@@ -454,6 +457,8 @@
                                   <label for="txtCompleteKm" class="form-label mb-0">Complete Kilometers (Km)</label>
                                   <input type="text" class="form-control" id="txtCompleteKm" name="completeKm">
                             </div>
+
+
 
                         </div>
 
@@ -1145,6 +1150,7 @@
         $(".addUserDetails").css('display','none');
         $("#addCarDetails").css('display','none');
         $("#addDriverDetails").css('display','none');
+        $(".addPaymentDetails").css('display','none')
         $(".homeSection").css('display','none');
     });
     $("#iPayment").click(function (){

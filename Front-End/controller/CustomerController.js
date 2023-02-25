@@ -3,7 +3,17 @@ let baseURL = "http://localhost:8080/Back_End_war/";
 
 
 
-
+function getLastLoginUser() {
+    $.ajax({
+        url: "http://localhost:8080/Back_End_war/login/getLastLogin",
+        method: "GET",
+        success: function (res) {
+            let login = res.data;
+            console.log(login.loginId);
+            getAllUserData(login.username, login.password);
+        }
+    })
+}
 
 
 
@@ -176,17 +186,7 @@ $("#btnRegister").click(function () {
 
 
 
-function getLastLoginUser() {
-    $.ajax({
-        url: "http://localhost:8080/Back_End_war/login/getLastLogin",
-        method: "GET",
-        success: function (res) {
-            let login = res.data;
-            console.log(login.loginId);
-            getAllUserData(login.username, login.password);
-        }
-    })
-}
+
 
 
 function getAllUserData(username, password) {

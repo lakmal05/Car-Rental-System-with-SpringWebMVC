@@ -1,5 +1,10 @@
 generateRentId();
 getLastLoginUser();
+
+ let today=new Date().toISOString().slice(0,10);
+ $('#txtCarTodayDate').val(today);
+
+
 let baseURL = "http://localhost:8080/Back_End_war/";
 
 
@@ -25,8 +30,6 @@ $('#cmbType').change(function () {
 })
 
 
-
-
 $('#cmbRegistrationNo').change(function () {
     let registrationNo = $('#cmbRegistrationNo').find('option:selected').text();
     $.ajax({
@@ -42,11 +45,6 @@ $('#cmbRegistrationNo').change(function () {
     })
 })
 
-
-
-
-
-
 function getLastLoginUser() {
     $.ajax({
         url: "http://localhost:8080/Back_End_war/login/getLastLogin",
@@ -58,8 +56,6 @@ function getLastLoginUser() {
         }
     })
 }
-
-
 
 function getAllUserData(username, password) {
     $.ajax({
@@ -84,15 +80,6 @@ function setCustomerDetails(customer) {
     // $('#txtCusLicenceNo').val(customer.licenceNo);
     // $('#txtCusUsername').val(customer.username);
 }
-
-
-
-
-
-
-
-
-
 
 $('#btnBookNow').click(function () {
     let regNo = $('#cmbRegistrationNo').find('option:selected').text();
@@ -143,15 +130,6 @@ function searchCarByRegNo(customer) {
 
 
 
-
-
-
-
-
-
-
-
-
 function addCarRent(customer, car, driver) {
 
     let rentId = $('#txtCarRentId').val();
@@ -160,19 +138,24 @@ function addCarRent(customer, car, driver) {
     let returnDate = $('#txtCarReturnDate').val();
     let pickUpVenue= $('#txtPickUpVenue').val();
     let ReturnVenue=$('#txtReturnVenue').val();
+    let lossDamageWavier=$('#txtCarLossDamageWavier').val();
     let status = "Pending";
+
+
+
 
     var carRent = {
         rentId: rentId,
-        date: today,
+        rentDate: today,
         pickUpDate: pickupDate,
         returnDate: returnDate,
         pickUpVenue:pickUpVenue,
-        ReturnVenue:ReturnVenue,
+        returnVenue:ReturnVenue,
         status: status,
         customerId: customer,
         registrationNO: car,
-        licenceNo: driver
+        licenceNo: driver,
+        lossDamageWaiver:lossDamageWavier,
     }
 
 
@@ -229,12 +212,6 @@ function uploadBankSlip(id){
 }
 
 
-
-
-
-
-
-
 function getLastRent(rentId, customer) {
     $.ajax({
         url: baseURL + "CarRent/" + rentId,
@@ -246,9 +223,6 @@ function getLastRent(rentId, customer) {
         }
     })
 }
-
-
-
 
 function generateRentId() {
     $.ajax({
