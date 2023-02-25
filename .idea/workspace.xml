@@ -11,15 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a9886c7d-ff0b-4267-aeca-a9704f4ccf4a" name="Default Changelist" comment="content U">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/entity/CarRent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/entity/CarRent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/entity/CarRent.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/entity/CarRent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/entity/CarRent.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/entity/CarRent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/adminPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/controller/AdminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/controller/AdminController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/controller/CarRentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/controller/CarRentController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/controller/UpdateCustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/controller/UpdateCustomerController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +238,9 @@
       <workItem from="1677290265700" duration="1953000" />
       <workItem from="1677292620405" duration="10130000" />
       <workItem from="1677306450247" duration="4530000" />
-      <workItem from="1677318107363" duration="1193000" />
+      <workItem from="1677318107363" duration="1308000" />
+      <workItem from="1677320313048" duration="1706000" />
+      <workItem from="1677332050952" duration="1323000" />
     </task>
     <servers />
   </component>

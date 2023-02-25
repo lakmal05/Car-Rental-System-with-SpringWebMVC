@@ -1040,7 +1040,7 @@
                 <!--=====================Maintenance Form==============================-->
                 <div class="addToMaintenance">
 
-                    <label class="headLabel">Payments</label>
+                    <label class="headLabel">Maintainers</label>
                     <hr style="width: 100%;background-color: black;position: relative;top: 30px">
 
 
@@ -1049,24 +1049,24 @@
                         <div class="row">
 
                             <div class="col-2">
-                                <label class="form-label" for="txtPaymentId">Registeration No</label>
-                                <input class="form-control" id="txtPaymentId" type="text">
+                                <label class="form-label" for="txtSearchRegistrationNo">Registeration No</label>
+                                <input class="form-control" id="txtSearchRegistrationNo" type="text">
                             </div>
 
                             <div class="col-2">
-                                <label class="form-label" for="txtPaymentDate">Brand</label>
-                                <input class="form-control" id="txtPaymentDate" type="date">
+                                <label class="form-label" for="txtSearchBrand">Brand</label>
+                                <input class="form-control" id="txtSearchBrand" type="date">
                             </div>
 
                             <div class="col-3">
-                                <label class="form-label" for="txtPaymentRentPrice">Type</label>
-                                <input class="form-control" id="txtPaymentRentPrice" type="text">
+                                <label class="form-label" for="txtSearchType">Type</label>
+                                <input class="form-control" id="txtSearchType" type="text">
                             </div>
 
 
                             <div class="col-2">
-                                <label class="form-label" for="txtPaymentExtraKm">Transmission</label>
-                                <input class="form-control" id="txtPaymentExtraKm" type="text">
+                                <label class="form-label" for="txtSearchTransmission">Transmission</label>
+                                <input class="form-control" id="txtSearchTransmission" type="text">
                             </div>
 
                         </div>
@@ -1074,45 +1074,45 @@
                         <div class="row">
 
                             <div class="col-3">
-                                <label class="form-label" for="txtPaymentPriceForExtraKm">Color</label>
-                                <input class="form-control" id="txtPaymentPriceForExtraKm" type="text">
+                                <label class="form-label" for="txtSearchColor">Color</label>
+                                <input class="form-control" id="txtSearchColor" type="text">
                             </div>
 
                             <div class="col-3">
-                                <label class="form-label" for="txtPaymentDamageCharges">Status</label>
-                                <input class="form-control" id="txtPaymentDamageCharges" type="text">
+                                <label class="form-label" for="txtSearchStatus">Status</label>
+                                <input class="form-control" id="txtSearchStatus" type="text">
                             </div>
                             <div class="col-3">
-                                <button type="button">Add To MainTains</button>
+                                <button type="button" id="btnAddToMaintenance">Add To MainTains</button>
 
                             </div>
 
 
                             <div class="col-3">
-                                <label class="form-label" for="txtPaymentLossDamageWaiver">Maintenacne ID</label>
-                                <input class="form-control" id="txtPaymentLossDamageWaiver" type="text">
+                                <label class="form-label" for="txtMaintenanceId">Maintenacne ID</label>
+                                <input class="form-control" id="txtMaintenanceId" type="text">
                             </div>
 
                             <div class="col-3">
-                                <label class="form-label" for="txtPaymentDriverPayment">Registratin No</label>
-                                <input class="form-control" id="txtPaymentDriverPayment" type="text">
+                                <label class="form-label" for="txtCarRegNo">Registratin No</label>
+                                <input class="form-control" id="txtCarRegNo" type="text">
                             </div>
 
                             <div class="col-3">
-                                <label class="form-label" for="txtPaymentDriverPayment">Date</label>
-                                <input class="form-control" id="txtPaymentDriverPayment" type="text">
+                                <label class="form-label" for="txtToday">Date</label>
+                                <input class="form-control" id="txtToday" type="text">
                             </div>
                             <div class="col-3">
-                                <label class="form-label" for="txtPaymentDriverPayment">Cost</label>
-                                <input class="form-control" id="txtPaymentDriverPayment" type="text">
+                                <label class="form-label" for="txtCost">Cost</label>
+                                <input class="form-control" id="txtCost" type="text">
                             </div>
                             <div class="col-3">
-                                <label class="form-label" for="txtPaymentDriverPayment">Details</label>
-                                <input class="form-control" id="txtPaymentDriverPayment" type="text">
+                                <label class="form-label" for="txtMaintenanceDetails">Details</label>
+                                <input class="form-control" id="txtMaintenanceDetails" type="text">
                             </div>
 
                             <div class="col-3">
-                                <button type="button">Paid</button>
+                                <button type="button" id="btnMaintenancePaid">Paid</button>
 
                             </div>
 
@@ -1122,43 +1122,69 @@
 
                     </form>
 
+<!--                    ==========================================Under Mantenices=========================================================-->
                     <div class="row " style="margin-top:0px;margin-left: 0px;width: 96%;top: 250px;position: relative">
 
 
-                        <table class="table">
+                        <table class="table" id="carUnderMaintenanceTbl">
                             <thead class="thead-dark bg-dark text-white">
                             <tr>
-                                <th scope="col">Payment ID</th>
-                                <th scope="col">Date</th>
-                                <th scope="col">Rent Piece</th>
-                                <th scope="col">Extra Kms</th>
-                                <th scope="col">Price for extra KM</th>
-                                <th scope="col">Damage Charge</th>
-                                <th scope="col">Return Loos Damage Waiver</th>
-                                <th scope="col">Driver Payment</th>
-                                <th scope="col">Total Payment</th>
+                                <th>Reg No</th>
+                                <th>Brand</th>
+                                <th>Type</th>
+                                <th>No Of Passengers</th>
+                                <th>Transmission</th>
+                                <th>Fuel</th>
+                                <th>Color</th>
+                                <th>Daily Rate</th>
+                                <th>Monthly Rate</th>
+                                <th>Free Km For Price</th>
+                                <th>Free Km For Duration</th>
+                                <th>Loss Damage Waiver</th>
+                                <th>Price For Extra Km</th>
+                                <th>Complete Km</th>
+                                <th>Status</th>
                             </tr>
 
                             </thead>
 
-                            <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-
-
-                            </tr>
-
+                            <tbody id="tblCarUnderMaintenance">
                             </tbody>
                         </table>
                     </div>
+
+                    <hr style="width: 100%;background-color: black;position: relative;top: -290px">
+
+
+                    <!-- ==========================================All Mantenices=========================================================&ndash;&gt;-->
+                    <div class="row " style="margin-top:0px;margin-left: 0px;width: 96%;top: 250px;position: relative">
+
+
+                        <table class="table" id="allMaintenancesTbl">
+                            <thead class="thead-dark bg-dark text-white">
+                            <tr>
+                                <th>Maintenance ID</th>
+                                <th>Registration No</th>
+                                <th>Date</th>
+                                <th>Details</th>
+                                <th>Cost</th>
+                            </tr>
+
+                            </thead>
+
+                            <tbody id="tblAllMaintenances">
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
 
 
 
