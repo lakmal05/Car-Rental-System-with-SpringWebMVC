@@ -11,6 +11,20 @@
 
 
     <style>
+
+        hr{
+            width: 100%;
+            background-color: black;
+            height: 2px;
+            position: relative;
+            top: -95px;
+        }
+
+        #profile{
+            position: relative;
+            top: -46px;
+        }
+
         .sidenav {
             height: 100%;
             width: 0;
@@ -47,6 +61,7 @@
             right: 25px;
             font-size: 36px;
             margin-left: 50px;
+
         }
 
         #main {
@@ -61,6 +76,9 @@
 
         .fields{
             width: 100%;
+            width: 100%;
+            position: relative;
+            top: -78px;
         }
 
         .fields>div{
@@ -80,18 +98,24 @@
 
 
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a>Profile</a>
+
+ <div class="row">
+     <a id="profile">Profile</a>
+
+     <div class="col-4" style="position: relative;top: -109px;left: 186px;">
+         <label for="txtCusId" class="form-label mb-0">Customer ID</label>
+         <input type="text" class="form-control" id="txtCusId" name="cusId" disabled>
+     </div>
+
+ </div>
+    <hr>
+
 
     <div>
 
-        <hr style="width: 100%;background-color: white;height: 2px">
-
         <div class="row fields">
 
-            <div class="col-6">
-                <label for="txtCusId" class="form-label mb-0">Customer ID</label>
-                <input type="text" class="form-control" id="txtCusId" name="cusId" disabled>
-            </div>
+
 
             <div class="col-6">
                 <label for="txtCusName" class="form-label mb-0">Name</label>
@@ -155,7 +179,6 @@
 <!--<script src="controller/CustomerController.js"></script>-->
 <!--<script src="controller/CarRentController.js"></script>-->
 <!--<script src="controller/CustomerController.js"></script>-->
-<script src="controller/UpdateCustomerController.js"></script>
 
 
 <script>
@@ -173,6 +196,7 @@
 
 
 </script>
+<script src="controller/UpdateCustomerController.js"></script>
 
 
 </body>
