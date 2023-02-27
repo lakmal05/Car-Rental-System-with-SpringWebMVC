@@ -16,7 +16,7 @@ public class CarRentDTO {
 
     private String rentId;
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private String rentDate;
+    private String date;
     @JsonFormat(pattern = "yyyy-MM-dd")
     private String pickUpDate;
     @JsonFormat(pattern = "yyyy-MM-dd")

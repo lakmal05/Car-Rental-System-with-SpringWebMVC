@@ -146,7 +146,7 @@ function addCarRent(customer, car, driver) {
 
     var carRent = {
         rentId: rentId,
-        rentDate: today,
+        date: today,
         pickUpDate: pickupDate,
         returnDate: returnDate,
         pickUpVenue:pickUpVenue,
@@ -165,7 +165,7 @@ function addCarRent(customer, car, driver) {
         contentType: "application/json",
         data: JSON.stringify(carRent),
         success: function (res) {
-            uploadBankSlip(id);
+            uploadBankSlip(rentId);
             getLastRent(rentId, customer);
 
 

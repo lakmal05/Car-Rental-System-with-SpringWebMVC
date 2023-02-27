@@ -26,6 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital@0;1&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="sidePage.css">
 
     <style>
         #logo{
@@ -189,15 +190,20 @@
         }
 
         #filterCars{
-            background-color: black;
+            background-color: white;
             height: 50px;
-            width: 410px;
+            width: 319px;
             display: inline-block;
             position: absolute;
-            right: 445px;
-            z-index: 999;
+            right: 528px;
+            z-index: 888;
             top: 40px;
            /*flex-direction: row;*/
+            border-radius: 35px;
+            box-shadow: 0 5px 15px rgb(0 0 0/0.40);
+
+
+
         }
         #filterCars >ul{
             display: flex;
@@ -212,7 +218,7 @@
     flex-direction: row;
     text-decoration: none;
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 
@@ -242,6 +248,13 @@
     top: 164px;
 }
 
+#btnlogOut{
+    /*height: 30px;*/
+    /*width: 30px;*/
+    /*background-image: url("assets/icon/log-out.png");*/
+    /*background-position: center;*/
+    /*background-size: cover;*/
+}
 
 
 
@@ -257,7 +270,91 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
 
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Navbar</a>
+            <div id="main"></div>
+            <div id="mySidenav" class="sidenav">
+
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                <div class="row">
+                    <a id="profile">Profile</a>
+
+                    <div class="col-4" style="position: relative;top: -109px;left: 186px;">
+                        <label for="txtCusId" class="form-label mb-0">Customer ID</label>
+                        <input type="text" class="form-control" id="txtCusId" name="cusId" disabled>
+                    </div>
+
+                </div>
+                <hr>
+
+
+                <div>
+
+                    <div class="row fields">
+
+                        <div class="col-6">
+                            <label for="txtCusName" class="form-label mb-0">Name</label>
+                            <input type="text" class="form-control" id="txtCusName" name="cusName">
+                        </div>
+
+                        <div class="col-6">
+                            <label for="txtCusAddress" class="form-label mb-0">Address</label>
+                            <input type="text" class="form-control" id="txtCusAddress" name="cusAddress">
+                        </div>
+                        <div class="col-6">
+                            <label for="txtCusContactNo" class="form-label mb-0">Contact No</label>
+                            <input type="text" class="form-control" id="txtCusContactNo" name="cusContactNo">
+                        </div>
+
+                        <div class="col-6">
+                            <label class="form-label" for="txtCusEmail">Email </label>
+                            <input class="form-control" id="txtCusEmail" type="text">
+                        </div>
+
+                        <div class="col-6">
+                            <label for="txtCusNIC" class="form-label mb-0">NIC</label>
+                            <input type="text" class="form-control" id="txtCusNIC" name="cusNIC">
+                        </div>
+
+                        <div class="col-6">
+                            <label for="txtCusLicenceNo" class="form-label mb-0">Licence No</label>
+                            <input type="text" class="form-control" id="txtCusLicenceNo" name="cusLicenceNo">
+                        </div>
+
+                        <div class="col-6">
+                            <label for="txtCusUsername" class="form-label mb-0">Username</label>
+                            <input type="text" class="form-control" id="txtCusUsername" name="cusUsername" disabled>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="form-label" for="txtCusPassword">Password</label>
+                            <input class="form-control" id="txtCusPassword" type="text">
+                        </div>
+
+                        <div class="col-3">
+                            <button type="button" class="btn btn-warning mt-3 " id="btnUpdateCustomer">Update</button>
+                        </div>
+
+                        <a id="btnlogOut" href="index.html" target="_self">
+                            <img src="assets/icon/log-out.png"  style="height: 30px; position: relative;top: 86px;width:30px;left: 1%;">
+
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <a class="navbar-brand" onclick="openNav()" style="" id="openSidePage">...</a>
+
+
+
+
+
+
+
+
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -285,15 +382,13 @@
     <div class="bg"></div>
 
 <!--    ============Filter=========-->
-    <div id="filterCars" >
+    <div id="filterCars">
 
         <ul>
-            <li> <a>All</a></li>
-            <li> <a>Primeam</a></li>
-            <li> <a>Genral</a></li>
-            <li> <a>Luxury</a></li>
-            <li> <a>All</a></li>
-
+            <li> <a id="btnAll" >All</a></li>
+            <li > <a id="btnGeneral" >Genral</a></li>
+            <li> <a id="btnPremium">Primeam</a></li>
+            <li> <a id="btnLuxury">Luxury</a></li>
         </ul>
 
 
@@ -848,6 +943,7 @@
 <!--<script src="https://code.jquery.com/jquery-3.5.1.js"></script>-->
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="controller/CarRentController.js"></script>
+<script src="controller/UpdateCustomerController.js"></script>
 
 
 <script>
@@ -891,6 +987,68 @@
 
 
 
+<script>
+
+    $(".sectionGeneral").css('display','block');
+    $(".sectionPremium").css('display','block');
+    $(".sectionLuxury").css('display','block');
+
+
+
+    $('#btnAll').click(function (){
+        $(".sectionGeneral").css('display','block');
+        $(".sectionPremium").css('display','block');
+        $(".sectionLuxury").css('display','block');
+
+    });
+
+
+    $('#btnGeneral').click(function (){
+        $(".sectionGeneral").css('display','block');
+        $(".sectionPremium").css('display','none');
+        $(".sectionLuxury").css('display','none');
+
+    });
+
+
+
+    $('#btnPremium').click(function (){
+        $(".sectionPremium").css('display','block');
+        $(".sectionGeneral").css('display','none');
+        $(".sectionLuxury").css('display','none');
+
+    });
+
+
+    $('#btnLuxury').click(function (){
+        $(".sectionLuxury").css('display','block','position');
+        $(".sectionGeneral").css('display','none');
+        $(".sectionPremium").css('display','none');
+
+    });
+
+
+</script>
+
+
+
+
+<!--for side page-->
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "560px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+    }
+
+
+</script>
 <!--<script>-->
 <!--    function changeImage(fileName){-->
 <!--        let img =document.querySelector("#bannerImage");-->

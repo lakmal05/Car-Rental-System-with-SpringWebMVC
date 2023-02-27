@@ -1,0 +1,92 @@
+hr{
+    width: 100%;
+    background-color: black;
+    height: 2px;
+    position: relative;
+    top: -95px;
+}
+
+#profile{
+    position: relative;
+    top: -46px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    border-radius: 35px;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 40%);
+    border-top-left-radius: 0;
+    font-family: -webkit-body;
+    border-bottom-left-radius: 0;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*right: 25px;*/
+    /*font-size: 36px;*/
+    /*margin-left: 50px;*/
+    position: absolute;
+    top: -6px;
+    right: 22px;
+    font-size: 45px;
+    margin-left: 8px;
+    /* display: inline-block; */
+    /* width: 10px; */
+    padding: 15px;
+
+
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.fields{
+    width: 100%;
+    position: relative;
+    top: -78px;
+}
+
+.fields>div{
+    padding-left: 35px;
+}
+
+
+
+#openSidePage{
+    position: relative;
+    left: -29px;
+    z-index: 989;
+    font-size: 44px;
+    height: 1px;
+    width: 1px;
+    top: -49px;
+}

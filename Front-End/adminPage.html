@@ -246,12 +246,15 @@
                 <!--=====================Home Table and div=============================-->
                  <section class="homeSection">
                     <div class="row detailsDiv">
-                    <div class="col-3" style="height: 100px"><h4 id="countAvailableCars">00</h4></div>
+                        <input id="txtCarTodayDate" type="text" disabled>
+
+                        <div class="col-3" style="height: 100px"><h4 id="countAvailableCars">00</h4></div>
                     <div class="col-3" style="height: 100px"><h4 id="countCust">00</h4> </div>
                     <div class="col-3" style="height: 100px"><h4 id="countAvailableDrivers">00</h4></div>
-                    <div class="col-3" style="height: 100px">a</div>
-                    <div class="col-3" style="height: 100px">a</div>
-                    <div class="col-3" style="height: 100px">a</div>
+                    <div class="col-3" style="height: 100px"><h4 id="countBookings">00</h4></div>
+                    <div class="col-3" style="height: 100px"><h4 id="countOccupiedDrivers">00</h4></div>
+                    <div class="col-3" style="height: 100px"><h4 id="countReservedCars">00</h4></div>
+
 
                     </div>
 
@@ -260,34 +263,23 @@
                 <div class="row " style="margin-top:0;margin-left: 0;width: 96%;top: 110px;position: relative;left: 50px">
 
 
-                    <table class="table" id="">
+                    <table class="table" id="bookingTbl">
                         <thead class="thead-dark bg-dark text-white">
                         <tr>
-                            <th scope="col">Rent ID</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">Pick Up Date</th>
-                            <th scope="col">Return Date</th>
-                            <th scope="col">Customer ID</th>
-                            <th scope="col">Car Registration No</th>
-                            <th scope="col">Driver License No</th>
-                            <th scope="col">Status</th>
+                            <th>Rent ID</th>
+                            <th>Date</th>
+                            <th>Pick Up Date</th>
+                            <th>Return Date</th>
+                            <th>Customer ID</th>
+                            <th>Car Registration No</th>
+                            <th>Driver Licence No</th>
+                            <th>Status</th>
                         </tr>
 
                         </thead>
 
-                        <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
+                        <tbody id="todayBookingTable">
 
-
-                        </tr>
 
                         </tbody>
                     </table>
@@ -308,6 +300,7 @@
                 <form class="DriverForm">
 
                     <div class="row">
+
 
                         <div class="col-3">
                             <label class="form-label" for="txtLicenceNo">license No</label>
@@ -583,7 +576,7 @@
 
 
 
-                       <div class="row " style="margin-top:0px;margin-left: 0px;width: 106%;top: 125px;left:-10px;position: relative">
+                       <div class="row " style="    margin-top: 0px;  margin-left: 0px;   width: 117%; top: 185px;    left: -39px;  position: relative; border-radius: 33px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);}">
 
 
                         <table class="table" id="carTbl">

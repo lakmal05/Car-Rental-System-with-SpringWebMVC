@@ -16,7 +16,7 @@ public class CarRent {
 
      @Id
     private String rentId;
-    private String rentDate;
+    private String date;
     private String pickUpDate;
     private String returnDate;
     private String pickUpVenue;
@@ -37,11 +37,6 @@ public class CarRent {
     @JoinColumn(name ="licenceNo",referencedColumnName = "licenceNo")
     private Driver licenceNo;
 
-//    @ManyToOne   //nulable false thibbma data null wenna ba
-//    @JoinColumn(name ="licenceNo",referencedColumnName = "licenceNo",nullable = false)
-//    private Driver licenceNo;
-
-
     @ManyToOne
     @JoinColumn(name = "registrationNO",referencedColumnName = "registrationNO")
     private Car car;
@@ -50,6 +45,11 @@ public class CarRent {
     @JoinColumn(name = "customerId",referencedColumnName = "customerId")
     private Customer customer;
 
+
+
+    //    @ManyToOne   //nulable false thibbma data null wenna ba
+//    @JoinColumn(name ="licenceNo",referencedColumnName = "licenceNo",nullable = false)
+//    private Driver licenceNo;
 
 
 }

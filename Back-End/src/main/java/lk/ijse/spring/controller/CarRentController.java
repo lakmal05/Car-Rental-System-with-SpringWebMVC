@@ -108,7 +108,7 @@ public class CarRentController {
             uploadsDir.mkdir();
             bankSlip.transferTo(new File(uploadsDir.getAbsolutePath() + "\\" + bankSlip.getOriginalFilename()));
 
-            String slipfPath = projectPath + "\\Customers\\" + bankSlip.getOriginalFilename();
+            String slipfPath = projectPath + "\\Slip\\" + bankSlip.getOriginalFilename();
 
             service.uploadBankSlip(slipfPath, id);
 

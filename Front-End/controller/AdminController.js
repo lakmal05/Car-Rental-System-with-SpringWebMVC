@@ -1,3 +1,6 @@
+let today=new Date().toISOString().slice(0,10);
+$('#txtCarTodayDate').val(today);
+
 $(function (){
     loadPendingCustomers();
     loadRegisteredCustomers();
@@ -5,8 +8,103 @@ $(function (){
     loadAllMaintenances();
     loadAllUnderMaintenanceCars();
     generateMaintenanceId();
+    getAvailableDriverCount();
+    getOccupiedDriverCount();
+    getTodayBookingsCount();
+    loadTodayBookings();
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function getTodayBookingsCount() {
+    $.ajax({
+        url: baseURL + "CarRent/countTodayBookings/" + today,
+        method: "GET",
+        success: function (res) {
+            if (res.data != 0) {
+                if (res.data < 10) {
+                    $('#countBookings').text("0" + res.data);
+                } else {
+                    $('#countBookings').text(res.data);
+                }
+            } else {
+                $('#countBookings').text("00");
+            }
+        }
+    });
+}
+
+function getReservedCarsCount() {
+    let status = "Non-Available";
+    $.ajax({
+        url: baseURL + "car/count/" + status,
+        method: "GET",
+        success: function (res) {
+            if (res.data != 0) {
+                if (res.data < 10) {
+                    $('#countReservedCars').text("0" + res.data);
+                } else {
+                    $('#countReservedCars').text(res.data);
+                }
+            } else {
+                $('#countReservedCars').text("00");
+            }
+        }
+    })
+}
+
+function getAvailableDriverCount() {
+    let availability = true;
+    $.ajax({
+        url: baseURL + "driver/count/" + availability,
+        method: "GET",
+        success: function (res) {
+            if (res.data != 0) {
+                if (res.data < 10) {
+                    $('#countAvailableDrivers').text("0" + res.data);
+                } else {
+                    $('#countAvailableDrivers').text(res.data);
+                }
+            } else {
+                $('#countAvailableDrivers').text("00");
+            }
+        }
+    })
+}
+
+function getOccupiedDriverCount() {
+    let availability = false;
+    $.ajax({
+        url: baseURL + "driver/count/" + availability,
+        method: "GET",
+        success: function (res) {
+            if (res.data != 0) {
+                if (res.data < 10) {
+                    $('#countOccupiedDrivers').text("0" + res.data);
+                } else {
+                    $('#countOccupiedDrivers').text(res.data);
+                }
+            } else {
+                $('#countOccupiedDrivers').text("00");
+            }
+        }
+    })
+}
 
 
 
@@ -50,6 +148,28 @@ function loadPendingCustomers() {
     })
 }
 
+function loadTodayBookings() {
+ console.log("ok");
+    $('#todayBookingTable').empty();
+    $.ajax({
+        url: baseURL + "CarRent/getTodayBookings/" + today,
+        method: "GET",
+
+        success: function (res) {
+            for (const booking of res.data) {
+                let licence;
+                if (booking.driver === null) {
+                    licence = "No Driver";
+                } else {
+                    licence = booking.driver.licenceNo;
+                }
+
+                let row = `<tr><td>${booking.rentId}</td><td>${booking.date}</td><td>${booking.pickUpDate}</td><td>${booking.returnDate}</td><td>${booking.customer.customerId}</td><td>${booking.car.registrationNO}</td><td>${licence}</td><td>${booking.status}</td></tr>`;
+                $('#todayBookingTable').append(row);
+            }
+        }
+    })
+}
 
 
 function bindPendingCustomerTblClickEvents() {
