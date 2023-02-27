@@ -270,7 +270,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
 
         <div class="container-fluid">
-            <div id="main"></div>
+            <div id="main1"></div>
             <div id="mySidenav" class="sidenav">
 
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -292,8 +292,8 @@
                     <div class="row fields">
 
                         <div class="col-6">
-                            <label for="txtCusName" class="form-label mb-0">Name</label>
-                            <input type="text" class="form-control" id="txtCusName" name="cusName">
+                            <label for="txtCustName" class="form-label mb-0">Name</label>
+                            <input type="text" class="form-control" id="txtCustName" name="cusName">
                         </div>
 
                         <div class="col-6">
@@ -343,6 +343,11 @@
                     </div>
 
                 </div>
+
+                <div id="main">
+
+                </div>
+
 
             </div>
             <a class="navbar-brand" onclick="openNav()" style="" id="openSidePage">...</a>
@@ -408,7 +413,7 @@
                 <div  class="section-img-inner" style="background-image: url(assets/cars/general/prius/prius-1.webp);"></div>
 
                 <div class="carDetails">
-                    <h3>General CARS<</h3>
+<!--                    <h3>General CARS<</h3>-->
                 </div>
             </div>
 
@@ -461,7 +466,6 @@
             <div class="section-img" style="height: 66vh">
                 <div   class="section-img-inner" style="background-image: url(assets/cars/general/suzuki-Alto/alto-1.png);">
                     <div class="carDetails">
-                        <h3> Suzuki Alto K10</h3>
                     </div>
 
                 </div>
@@ -512,7 +516,6 @@
             <div class="section-img" style="top: -119px;height: 95vh">
                 <div  class="section-img-inner" style="background-image: url(assets/cars/general/suzuki-celerio/suzuki-celerio-03.png);">
                     <div class="carDetails">
-                        <h3>Suzuki Celerio</h3>
                     </div>
                 </div>
             </div>
@@ -569,7 +572,6 @@
             <div  class="section-img-inner" style="background-image: url(assets/cars/premium/toyota-corolla-axio/toyota-corolla-02.png);"></div>
 
             <div class="carDetails">
-                <h3>Prmium</h3>
             </div>
         </div>
 
@@ -616,7 +618,6 @@
             <div  class="section-img-inner" style="background-image: url(assets/cars/premium/toyota-allion-nzt-260/allion_ogp_01.jpg);"></div>
 
             <div class="carDetails">
-                <h3>full Type</h3>
             </div>
         </div>
 
@@ -664,7 +665,6 @@
             <div  class="section-img-inner" style="background-image: url(assets/cars/premium/toyota-bezza/Toyota-Bezza-Prime-Sedan-03.png);"></div>
 
             <div class="carDetails">
-                <h3>full Type</h3>
             </div>
         </div>
 
@@ -716,7 +716,6 @@
             <div class="section-img">
                 <div  class="section-img-inner" style="background-image: url(assets/cars/luxury/mercedes/mercedes-02.png);">
                     <div class="carDetails">
-                        <h3>Manual</h3>
                     </div>
                 </div>
             </div>
@@ -767,7 +766,6 @@
             <div class="section-img">
                 <div  class="section-img-inner" style="background-image: url(assets/cars/luxury/bmwi8/bmw-02.png);">
                     <div class="carDetails">
-                        <h3>Manual</h3>
                     </div>
                 </div>
             </div>
@@ -845,7 +843,7 @@
 
                         <div class="col-md-4">
                             <label for="txtCarColor" class="form-label">Car Color : </label>
-                            <select class="form-select" id="txtCarColor" aria-label="Default select example">
+                            <select class="form-select" id="txtCarColor" aria-label="Default select example" name="color">
                             <option selected> select car Type</option>
                             <option value="1">Red</option>
                             <option value="2">black</option>

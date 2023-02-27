@@ -10,8 +10,8 @@ let baseURL = "http://localhost:8080/Back_End_war/";
 
 function setCustomerDetails(customer) {
     // $('#txtCustId').val(customer.customerId);
-    $('#txtCusId').val(customer.customerId);
-    $('#txtCusName').val(customer.name);
+    $('#txtCustId').val(customer.customerId);
+    $('#txtCustName').val(customer.name);
     $('#txtCusAddress').val(customer.address);
     $('#txtCusEmail').val(customer.email);
     $('#txtCusContactNo').val(customer.contactNo);
@@ -64,8 +64,8 @@ function getAllUserData(username, password) {
 function updateCustomer() {
 
 
-    let customerId = $('#txtCusId').val();
-    let name = $('#txtCusName').val();
+    let customerId = $('#txtCustIdId').val();
+    let name = $('#txtCustName').val();
     let address = $('#txtCusAddress').val();
     let email = $('#txtCusEmail').val();
     let contact = $('#txtCusContactNo').val();

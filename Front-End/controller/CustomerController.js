@@ -15,30 +15,6 @@ function getLastLoginUser() {
     })
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $("#inputUserType").change(function () {
 
     var userType = $('#inputUserType').find('option:selected').text();
@@ -202,68 +178,68 @@ function getAllUserData(username, password) {
 }
 
 
-function setCustomerDetails(customer) {
-    $('#txtCustId').val(customer.customerId);
-    $('#txtCusId').val(customer.customerId);
-    $('#txtCusName').val(customer.name);
-    $('#txtCusAddress').val(customer.address);
-    $('#txtCusEmail').val(customer.email);
-    $('#txtCusContactNo').val(customer.contactNo);
-    $('#txtCusNIC').val(customer.nicNo);
-    $('#txtCusLicenceNo').val(customer.licenceNo);
-    $('#txtCusUsername').val(customer.username);
-    $('#txtCusPassword').val(customer.password);
-}
+// function setCustomerDetails(customer) {
+//     $('#txtCustId').val(customer.customerId);
+//     $('#txtCusId').val(customer.customerId);
+//     $('#txtCusName').val(customer.name);
+//     $('#txtCusAddress').val(customer.address);
+//     $('#txtCusEmail').val(customer.email);
+//     $('#txtCusContactNo').val(customer.contactNo);
+//     $('#txtCusNIC').val(customer.nicNo);
+//     $('#txtCusLicenceNo').val(customer.licenceNo);
+//     $('#txtCusUsername').val(customer.username);
+//     $('#txtCusPassword').val(customer.password);
+// }
 
 
 
 
 
-function updateCustomer() {
-    let id = $('#txtCustId').val();
-    let name = $('#txtCusName').val();
-    let address = $('#txtCusAddress').val();
-    let contactNo = $('#txtCusContactNo').val();
-    let email = $('#txtCusEmail').val();
-    let nic = $('#txtCusNIC').val();
-    let drivingLicense = $('#txtCusLicenceNo').val();
-    let userName = $('#txtCusUsername').val();
-    let password = $('#txtCusPassword').val();
-
-    var customer = {
-        customerId: id,
-        name: name,
-        address: address,
-        contactNo: contactNo,
-        email: email,
-        nicNo: nic,
-        licenceNo: drivingLicense,
-        username: userName,
-        password: password,
-    }
-
-    $.ajax({
-        url: baseURL + "customer",
-        method: "PUT",
-        contentType: "application/json",
-        data: JSON.stringify(customer),
-        success: function (res) {
-            getLastLoginUser();
-            // clearCustomerDetails();
-
-        },
-        error: function (ob) {
-
-        }
-    })
-}
-
-
-$('#btnUpdateCustomer').click(function (){
-
-    updateCustomer();
-
-})
+// function updateCustomer() {
+//     let id = $('#txtCustId').val();
+//     let name = $('#txtCusName').val();
+//     let address = $('#txtCusAddress').val();
+//     let contactNo = $('#txtCusContactNo').val();
+//     let email = $('#txtCusEmail').val();
+//     let nic = $('#txtCusNIC').val();
+//     let drivingLicense = $('#txtCusLicenceNo').val();
+//     let userName = $('#txtCusUsername').val();
+//     let password = $('#txtCusPassword').val();
+//
+//     var customer = {
+//         customerId: id,
+//         name: name,
+//         address: address,
+//         contactNo: contactNo,
+//         email: email,
+//         nicNo: nic,
+//         licenceNo: drivingLicense,
+//         username: userName,
+//         password: password,
+//     }
+//
+//     $.ajax({
+//         url: baseURL + "customer",
+//         method: "PUT",
+//         contentType: "application/json",
+//         data: JSON.stringify(customer),
+//         success: function (res) {
+//             getLastLoginUser();
+//             // clearCustomerDetails();
+//
+//         },
+//         error: function (ob) {
+//
+//         }
+//     })
+// }
+//
+//
+// $('#btnUpdateCustomer').click(function (){
+//
+//     updateCustomer();
+//
+// })
 
 
 

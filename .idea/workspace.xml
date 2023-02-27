@@ -10,25 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9886c7d-ff0b-4267-aeca-a9704f4ccf4a" name="Default Changelist" comment="content U">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e95be7a7-f146-4591-a0b2-515d3b8881b6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e95be7a7-f146-4591-a0b2-515d3b8881b6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/controller/CarRentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/controller/CarRentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/dto/CarRentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/dto/CarRentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/entity/CarRent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/entity/CarRent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/repo/CarRentRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/repo/CarRentRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/controller/CarRentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/controller/CarRentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/dto/CarRentDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/dto/CarRentDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/entity/CarRent.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/entity/CarRent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/repo/CarRentRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/repo/CarRentRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/controller/CarRentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/controller/CarRentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/dto/CarRentDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/dto/CarRentDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/entity/CarRent.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/entity/CarRent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/repo/CarRentRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/repo/CarRentRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/adminPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/controller/AdminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/controller/AdminController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/controller/CarRentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/controller/CarRentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/controller/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/controller/CustomerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/controller/UpdateCustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/controller/UpdateCustomerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/sidePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/sidePage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/vehicle.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/vehicle.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -272,7 +259,7 @@
       <workItem from="1677386738909" duration="4393000" />
       <workItem from="1677393635940" duration="11209000" />
       <workItem from="1677425658316" duration="736000" />
-      <workItem from="1677469018696" duration="8329000" />
+      <workItem from="1677469018696" duration="10979000" />
     </task>
     <servers />
   </component>

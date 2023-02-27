@@ -73,12 +73,12 @@ function setCustomerDetails(customer) {
     $('#txtCustId').val(customer.customerId);
     $('#txtCusId').val(customer.customerId);
     $('#txtCusName').val(customer.name);
-    // $('#txtCusAddress').val(customer.address);
-    // $('#txtCusEmail').val(customer.email);
-    // $('#txtCusContactNo').val(customer.contactNo);
-    // $('#txtCusNIC').val(customer.nicNo);
-    // $('#txtCusLicenceNo').val(customer.licenceNo);
-    // $('#txtCusUsername').val(customer.username);
+    $('#txtCustName').val(customer.address);
+    $('#txtCusEmail').val(customer.email);
+    $('#txtCusContactNo').val(customer.contactNo);
+    $('#txtCusNIC').val(customer.nicNo);
+    $('#txtCusLicenceNo').val(customer.licenceNo);
+    $('#txtCusUsername').val(customer.username);
 }
 
 $('#btnBookNow').click(function () {
@@ -103,7 +103,6 @@ function searchCustomerById(customerId) {
     });
 }
 
-
 function setCarDataToFields(car){
 
     $('#txtCarColor').val(car.color);
@@ -111,8 +110,6 @@ function setCarDataToFields(car){
 
 
 }
-
-
 
 function searchCarByRegNo(customer) {
     let registrationNo = $('#cmbRegistrationNo').find('option:selected').text();
@@ -233,14 +230,6 @@ function generateRentId() {
         }
     })
 }
-
-
-
-
-
-
-
-
 
 
 
