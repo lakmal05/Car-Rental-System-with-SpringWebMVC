@@ -11,11 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a9886c7d-ff0b-4267-aeca-a9704f4ccf4a" name="Default Changelist" comment="content U">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/controller/CarRentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/controller/CarRentController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/controller/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/controller/CustomerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/adminPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/controller/UpdateCustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/controller/UpdateCustomerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/sidePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/sidePage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/sidePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/assets/sidePage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/vehicle.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/vehicle.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,11 +87,11 @@
       <recent name="D:\Easy-Car-Rental-Company-master\Front-End\assets\cars\general\prius" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Easy-Car-Rental-Company-master\Front-End\assets" />
       <recent name="D:\Easy-Car-Rental-Company-master\Front-End\assets\cars\general\suzuki-celerio" />
       <recent name="D:\Easy-Car-Rental-Company-master\Front-End\assets\cars\premium\toyota-bezza" />
       <recent name="D:\Easy-Car-Rental-Company-master\Front-End\assets\cars\luxury\mercedes" />
       <recent name="D:\Easy-Car-Rental-Company-master\Front-End\assets\cars\premium" />
-      <recent name="D:\Easy-Car-Rental-Company-master\Front-End\assets\cars\premium\toyota-corolla-axio" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="lk.ijse.spring.advisor" />
@@ -259,7 +257,7 @@
       <workItem from="1677386738909" duration="4393000" />
       <workItem from="1677393635940" duration="11209000" />
       <workItem from="1677425658316" duration="736000" />
-      <workItem from="1677469018696" duration="10979000" />
+      <workItem from="1677469018696" duration="13304000" />
     </task>
     <servers />
   </component>
