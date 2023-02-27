@@ -83,7 +83,7 @@ function setCustomerDetails(customer) {
 
 $('#btnBookNow').click(function () {
     let regNo = $('#cmbRegistrationNo').find('option:selected').text();
-    if (regNo != "" && regNo != "-Select Registration No-" && $('#txtCarPickupDate').val()!="" && $('#txtCarReturnDate').val()!="") {
+    if (regNo != "" && regNo != "-Select Registration No-" && $('#txtCarPickupDate').val()!="" && $('#txtCarReturnDate').val()!="" ) {
         let custId = $('#txtCustId').val();
         searchCustomerById(custId);
     } else {
@@ -117,7 +117,9 @@ function searchCarByRegNo(customer) {
         url: baseURL+ "car/" + registrationNo,
         method: "GET",
         success: function (res) {
+            // console.log(res)
             let car = res.data;
+            // console.log(car);
             searchDriverByLicenceNo(customer, car);
         }
     })

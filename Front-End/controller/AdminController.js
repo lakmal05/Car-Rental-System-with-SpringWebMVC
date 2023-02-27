@@ -158,13 +158,14 @@ function loadTodayBookings() {
         success: function (res) {
             for (const booking of res.data) {
                 let licence;
-                if (booking.driver === null) {
+                if (booking.licenceNo === null) {
                     licence = "No Driver";
                 } else {
-                    licence = booking.driver.licenceNo;
+                    licence = booking.licenceNo.licenceNo;
                 }
 
-                let row = `<tr><td>${booking.rentId}</td><td>${booking.date}</td><td>${booking.pickUpDate}</td><td>${booking.returnDate}</td><td>${booking.customer.customerId}</td><td>${booking.car.registrationNO}</td><td>${licence}</td><td>${booking.status}</td></tr>`;
+                console.log(booking)
+                let row = `<tr><td>${booking.rentId}</td><td>${booking.date}</td><td>${booking.pickUpDate}</td><td>${booking.returnDate}</td><td>${booking.customerId.customerId}</td><td>${booking.registrationNO}</td><td>${licence}</td><td>${booking.status}</td></tr>`;
                 $('#todayBookingTable').append(row);
             }
         }
