@@ -11,10 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a9886c7d-ff0b-4267-aeca-a9704f4ccf4a" name="Default Changelist" comment="content U">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/adminPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/controller/UpdateCustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/controller/UpdateCustomerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/sidePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/assets/sidePage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/vehicle.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/vehicle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,17 +96,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 8.5.83" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.83" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Back_End_war/" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -258,6 +245,7 @@
       <workItem from="1677393635940" duration="11209000" />
       <workItem from="1677425658316" duration="736000" />
       <workItem from="1677469018696" duration="13304000" />
+      <workItem from="1677489628209" duration="1336000" />
     </task>
     <servers />
   </component>
