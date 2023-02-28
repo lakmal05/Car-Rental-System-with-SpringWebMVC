@@ -40,7 +40,7 @@ public interface CarRentRepo extends JpaRepository<CarRent,String> {
     @Modifying
     @Transactional
     @Query(value = "UPDATE CarRent SET bankSlip=:bankSlip WHERE rentId=:rentId", nativeQuery = true)
-    void updateBankSlip(@Param("bankSlip") String bankSlip, @Param("rentId") String customerId);
+    void updateBankSlip(@Param("bankSlip") String bankSlip, @Param("rentId") String rentId);
 
 
 
