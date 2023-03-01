@@ -9,6 +9,28 @@
 <!--    <link href="assets/js/jquery-3.6.1.min.js">-->
     <link href="assets/js/bootstrap.min.js" >
 
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Montserrat:wght@100&family=Open+Sans:wght@800&family=Roboto&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        #logo {
+            /*border: 1px solid red;*/
+            position: absolute;
+            left: 94%;
+            font-size: 18px;
+            color: #4375F8;
+            font-family: 'Jost', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Open Sans', sans-serif;
+            top: 7px;
+
+        }
+
+    </style>
+
+
+
 </head>
 
 
@@ -33,7 +55,7 @@
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Navbar</a>
+            <a class="navbar-brand" href="index.html"><img style="width: 27px;height: 27px;position:relative;top: -8px" src="assets/icon/log-out.png"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -41,7 +63,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">
+                            <p id="logo" >ECRC</p>
+                        </a>
                     </li>
 
                 </ul>

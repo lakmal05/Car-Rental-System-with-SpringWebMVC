@@ -1362,10 +1362,59 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <key id="381" parent="294" name="PRIMARY">
+    <column id="381" parent="294" name="damageCharge">
+      <Position>4</Position>
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="382" parent="294" name="driverPayment">
+      <Position>5</Position>
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="383" parent="294" name="extraKM">
+      <Position>6</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="384" parent="294" name="priseForExtraKM">
+      <Position>7</Position>
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="385" parent="294" name="rentPrice">
+      <Position>8</Position>
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="386" parent="294" name="returnLossDamageWaiver">
+      <Position>9</Position>
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="387" parent="294" name="totalPayment">
+      <Position>10</Position>
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="388" parent="294" name="rentId">
+      <Position>11</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="389" parent="294" name="FKbv3kxm8928o2b4eayuwnf68du">
+      <ColNames>rentId</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="390" parent="294" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>paymentId</ColNames>
       <Primary>1</Primary>
     </key>
+    <foreign-key id="391" parent="294" name="FKbv3kxm8928o2b4eayuwnf68du">
+      <ColNames>rentId</ColNames>
+      <RefTableName>carrent</RefTableName>
+      <RefColNames>rentId</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>

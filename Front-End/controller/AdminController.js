@@ -14,6 +14,7 @@ $(function () {
     loadTodayBookings();
     loadAllRentals();
 
+    // loadAllCars();
     loadPendingRentals();
     loadAllAcceptedRentals();
     loadAllRentals();

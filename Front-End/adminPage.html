@@ -59,7 +59,7 @@
 
         .addDriverDetails {
             background-color: white;
-            height: 42%;
+            height: 39%;
             width: 81%;
             position: relative;
             top: 25px;
@@ -166,7 +166,7 @@
             height: 50%;
             width: 100%;
             position: relative;
-            top: 51px;
+            top: 25px;
             left: 58px;
             border-radius: 35px;
             box-shadow: 0 5px 15px rgb(0 0 0/0.40);
@@ -238,14 +238,20 @@
         }
 
 
-        #btnsRents{
+        #btnsRents {
             position: relative;
             left: 43%;
             top: 42px;
             display: inline;
         }
-        #btnsRents>button{
+
+        #btnsRents > button {
             margin-left: 11px;
+        }
+
+
+        #btnsDriver > button {
+            margin-right: 20px;
         }
 
 
@@ -259,8 +265,12 @@
 
     <a class="nav-link active" aria-current="page" href="index.html">
         <p id="logo">ECRC</p>
-
     </a>
+
+    <div style="height:29px;width: 218px; background-color: white;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);border-radius: 30px;position:relative; left: 17px;  top: 6px;">
+        <a href="vehicle.html"><i style="font-size: 24px;position: relative;top: 1px;left: 10px"
+                                  class="fa-solid fa-car"></i></a>
+    </div>
 
 </header>
 
@@ -282,7 +292,6 @@
             <i id="iPayment" class="fa-sharp fa-regular fa-credit-card  i-cons"></i>
 
 
-
         </div>
 
         <section class="row col-10" style="background-color: white; border: 1px solid red">
@@ -290,7 +299,8 @@
 
             <!--=====================Home Table and div=============================-->
             <section class="homeSection">
-                <input id="txtCarTodayDate" type="text" disabled>
+                <input id="txtCarTodayDate" type="text" disabled
+                       style="background-color: white;border-radius: 56px; width: 100px;position: relative;top: -33px;">
 
                 <div class="row detailsDiv">
 
@@ -318,7 +328,8 @@
 
 
                 <!--    Table-->
-                <div class="row " style="margin-top:0;margin-left: 0;width: 96%;top: 118px;position: relative;left: 54px;border-radius: 22px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);overflow:scroll;height:215px;overflow:auto">
+                <div class="row "
+                     style="margin-top:0;margin-left: 0;width: 96%;top: 118px;position: relative;left: 54px;border-radius: 22px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);overflow:scroll;height:215px;overflow:auto">
 
 
                     <table class="table" id="bookingTbl">
@@ -353,7 +364,7 @@
 
 
                 <label class="headLabel">Add Driver</label>
-                <hr style="width: 100%;background-color: black;position: relative;top: 30px">
+                <hr style="width: 100%;background-color: black;position: relative;top: 30px;">
 
                 <form class="DriverForm">
 
@@ -375,6 +386,11 @@
                             <input class="form-control" id="txtDriverAddress" type="text">
                         </div>
 
+                        <div class="col-3">
+                            <label class="form-label" for="txtDriverContactNo">Contact No</label>
+                            <input class="form-control" id="txtDriverContactNo" type="text">
+                        </div>
+
                     </div>
 
 
@@ -383,20 +399,13 @@
 
                         <div class="row">
 
-                            <div class="col-3">
-                                <label class="form-label" for="txtDriverContactNo">Contact No</label>
-                                <input class="form-control" id="txtDriverContactNo" type="text">
-                            </div>
 
                             <div class="col-3">
                                 <label class="form-label" for="txtDriverNICNo">NIC</label>
                                 <input class="form-control" id="txtDriverNICNo" type="text">
                             </div>
 
-                        </div>
 
-
-                        <div class="row">
                             <div class="col-3">
                                 <label class="form-label" for="txtDriverUserName">User Name</label>
                                 <input class="form-control" id="txtDriverUserName" type="text">
@@ -414,20 +423,21 @@
 
                         </div>
 
-
                     </div>
 
-                    <button type="button" id="btnAddDriver" class="btn btn-dark"> Add</button>
-                    <button type="button" id="btnDeleteDriver" class="btn btn-danger">Delete</button>
-                    <button type="button" id="btnUpdateDriver" class="btn btn-dark">Update Driver</button>
-
+                    <div id="btnsDriver" style="display: inline-block;position: relative; left: 20%;top: 34px;">
+                        <button type="button" id="btnAddDriver" class="btn btn-dark" style="width: 114px"> Add</button>
+                        <button type="button" id="btnDeleteDriver" class="btn btn-danger" style="width: 114px">Delete
+                        </button>
+                        <button type="button" id="btnUpdateDriver" class="btn btn-dark">Update Driver</button>
+                    </div>
 
                 </form>
 
 
                 <!--  Driver Tabel-->
                 <div class="row "
-                     style="margin-top:0px;margin-left: 0px;width: 121%;top: 150px;position: relative;left: -31px">
+                     style="margin-top:0px;margin-left: 0px;width: 121%;top: 150px;position: relative;left: -31px;overflow:scroll;height:212px;overflow:auto;border-radius: 17px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%)">
 
 
                     <table class="table" id="registeredDriversTbl">
@@ -627,7 +637,8 @@
                 </form>
 
 
-                <div class="row" style="margin-top: 0px;  margin-left: 0px;   width: 121%; top: 130px;left: -54px;position: relative; border-radius: 33px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);overflow:scroll;height:212px;overflow:auto">
+                <div class="row"
+                     style="margin-top: 0px;  margin-left: 0px;   width: 121%; top: 130px;left: -54px;position: relative; border-radius: 33px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);overflow:scroll;height:212px;overflow:auto">
 
                     <table class="table" id="carTbl">
                         <thead class="thead-dark bg-dark text-white">
@@ -772,7 +783,8 @@
                 </div>
 
 
-                <div class="row " style="margin-top:0;margin-left: 0;width: 105%;top:145px;left: -28px;position: relative;border-radius: 16px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);overflow:scroll;height:109px;overflow:auto">
+                <div class="row "
+                     style="margin-top:0;margin-left: 0;width: 105%;top:145px;left: -28px;position: relative;border-radius: 16px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);overflow:scroll;height:109px;overflow:auto">
 
 
                     <table class="table">
@@ -861,49 +873,43 @@
 
                     <div class="row">
 
-<!--                        <div class="col-3">-->
-<!--                            <label class="form-label" for="txtRentPickUpVenue">Pick Up Venue</label>-->
-<!--                            <input class="form-control" id="txtRentPickUpVenue" type="text"  >-->
-<!--                        </div>-->
-
-
-
-<!--                        <div class="col-3">-->
-<!--                            <label class="form-label" for="txtRentReturnVenue">Return Venue</label>-->
-<!--                            <input class="form-control" id="txtRentReturnVenue" type="text">-->
-<!--                        </div>-->
-
-
+                        <!--                        <div class="col-3">-->
+                        <!--                            <label class="form-label" for="txtRentPickUpVenue">Pick Up Venue</label>-->
+                        <!--                            <input class="form-control" id="txtRentPickUpVenue" type="text"  >-->
+                        <!--                        </div>-->
 
 
                         <!--                        <div class="col-3">-->
-<!--                            <label class="form-label" for="ImageofBankSlip">ImageOfBankSlip</label>-->
-<!--                            <div id="ImageofBankSlip" style="height: 30px;width: 30px;background-color: black"></div>-->
-<!--                        </div>-->
+                        <!--                            <label class="form-label" for="txtRentReturnVenue">Return Venue</label>-->
+                        <!--                            <input class="form-control" id="txtRentReturnVenue" type="text">-->
+                        <!--                        </div>-->
+
+
+                        <!--                        <div class="col-3">-->
+                        <!--                            <label class="form-label" for="ImageofBankSlip">ImageOfBankSlip</label>-->
+                        <!--                            <div id="ImageofBankSlip" style="height: 30px;width: 30px;background-color: black"></div>-->
+                        <!--                        </div>-->
 
                     </div>
 
                     <div class="row" id="btnsRents">
 
-                            <button type="button" class="btn btn-dark  col-2" id="btnRentalAccept">Accept</button>
+                        <button type="button" class="btn btn-dark  col-2" id="btnRentalAccept">Accept</button>
 
 
+                        <button type="button" class="btn btn-danger col-2 " id="btnRentalReject">Reject</button>
 
-                            <button type="button" class="btn btn-danger col-2 " id="btnRentalReject">Reject</button>
-
-                            <button  type="button" class="btn btn-dark col-2" id="btnClearRental">Clear</button>
+                        <button type="button" class="btn btn-dark col-2" id="btnClearRental">Clear</button>
 
 
                     </div>
 
 
-
-
-
                 </form>
 
 
-                <div class="row " style="margin-top:0px;margin-left: -9px;width: 102%;top: 150px;position: relative;overflow:scroll;height:212px;overflow:auto;border-radius: 17px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);">
+                <div class="row "
+                     style="margin-top:0px;margin-left: -9px;width: 102%;top: 150px;position: relative;overflow:scroll;height:212px;overflow:auto;border-radius: 17px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);">
 
 
                     <table class="table" id="carRentalRequestTbl">
@@ -1001,7 +1007,8 @@
                             <input class="form-control" id="inputDamageCharge" type="text">
                         </div>
                         <div class="col-3">
-                            <label class="form-label" for="inputReturnLossDamageWaiver">Return Loss Damage Waiver</label>
+                            <label class="form-label" for="inputReturnLossDamageWaiver">Return Loss Damage
+                                Waiver</label>
                             <input class="form-control" id="inputReturnLossDamageWaiver" type="text">
                         </div>
 
@@ -1012,17 +1019,15 @@
                     </div>
 
 
-
-
                 </form>
 
                 <div class="col-1">
-                    <label class="mt-1 fs-4 col-3" id="btnSearchPayment" for="inputPaymentSearch" style="width: max-content"> <i class="fa-solid fa-magnifying-glass"></i> Search </label>
+                    <label class="mt-1 fs-4 col-3" id="btnSearchPayment" for="inputPaymentSearch"
+                           style="width: max-content"> <i class="fa-solid fa-magnifying-glass"></i> Search </label>
                 </div>
                 <div class="col-6 ms-3">
-                <input class="form-control col-9" id="inputPaymentSearch" type="text">
-              </div>
-
+                    <input class="form-control col-9" id="inputPaymentSearch" type="text">
+                </div>
 
 
                 <div class="row " style="margin-top:0px;margin-left: 0px;width: 96%;top: 250px;position: relative">
@@ -1068,12 +1073,13 @@
 
                         <div class="col-2">
                             <label class="form-label" for="txtSearchRegistrationNo">Registration No</label>
-                            <input class="form-control" id="txtSearchRegistrationNo" type="text" name="searchRegistrationNo">
+                            <input class="form-control" id="txtSearchRegistrationNo" type="text"
+                                   name="searchRegistrationNo">
                         </div>
 
                         <div class="col-2">
                             <label class="form-label" for="txtSearchBrand">Brand</label>
-                            <input class="form-control" id="txtSearchBrand"    name="searchBrand" disabled>
+                            <input class="form-control" id="txtSearchBrand" name="searchBrand" disabled>
                         </div>
 
                         <div class="col-2">
@@ -1101,7 +1107,7 @@
 
                     <div class="col-3" style="display: table-footer-group;position: relative; top: -58px; left: 485%">
                         <button type="button" id="btnAddToMaintenance" class="btn btn-dark">Add To Maintenance</button>
-                   </div>
+                    </div>
 
 
                     <hr style="width: 100%;background-color: black;position: relative;top: -68px;left: -17px">
@@ -1145,7 +1151,8 @@
                 </form>
 
                 <!-- ==========================================Under Mantenices=========================================================-->
-                <div class="row " style="margin-top:0px;margin-left: 0px;width: 113%;top: 78px;position: relative;left: -74px">
+                <div class="row "
+                     style="margin-top:0px;margin-left: 0px;width: 113%;top: 78px;position: relative;left: -74px;overflow:scroll;height:212px;overflow:auto;border-radius: 17px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%)">
 
 
                     <table class="table" id="carUnderMaintenanceTbl">
@@ -1176,9 +1183,9 @@
                 </div>
 
 
-
                 <!-- ==========================================All Mantenices=========================================================&ndash;&gt;-->
-                <div class="row " style="margin-top:0px;margin-left: 0px;width: 113%;position: relative;left:-74px;top: 119px ">
+                <div class="row "
+                     style="margin-top:0px;margin-left: 0px;width: 113%;position: relative;left:-74px;top: 119px;overflow:scroll;height:212px;overflow:auto;border-radius: 17px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%)">
 
 
                     <table class="table" id="allMaintenancesTbl">
@@ -1189,6 +1196,7 @@
                             <th>Date</th>
                             <th>Details</th>
                             <th>Cost</th>
+                            <th>Corlor</th>
                         </tr>
 
                         </thead>

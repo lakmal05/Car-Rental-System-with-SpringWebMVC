@@ -37,7 +37,7 @@ public class CarRent {
     @JoinColumn(name ="licenceNo",referencedColumnName = "licenceNo")
     private Driver licenceNo;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.ALL})//wait
     @JoinColumn(name = "registrationNO",referencedColumnName = "registrationNO")
     private Car car;
 

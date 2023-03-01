@@ -94,9 +94,23 @@ function bindCarTableClickEvents() {
 
 
 
+function clearAddCarFields() {
+    $('#txtRegNo').val("");
+    $('#txtBrand').val("");
+    $('#txtNoOfPassengers').val("");
+    $('#txtDailyRate').val("");
+    $('#txtMonthlyRate').val("");
+    $('#txtFreeKmForPrice').val("");
+    $('#txtFreeKmForDuration').val("");
+    $('#txtLossDamageWaiver').val("");
+    $('#txtPriceForExtraKm').val("");
+    $('#txtCompleteKm').val("");
+    $('#imgFrontView').val("");
+    $('#imgBackView').val("");
+    $('#imgSideView').val("");
+    $('#imgInteriorView').val("");
 
-
-
+}
 
 
 
@@ -166,6 +180,7 @@ function addCar() {
             uploadCarImages(regNo);
             loadAllCars();
             getAvailableCarCount();
+    clearAddCarFields();
 
         },
         error: function (ob) {
