@@ -130,9 +130,9 @@ public class CarRentServiceImpl implements CarRentService {
     }
 
     @Override
-    public void uploadBankSlip(String slipfPath, String id) {
-        if (repo.existsById(id)) {
-            repo.updateBankSlip(slipfPath, id);
+    public void uploadBankSlip(String slipfPath, String rentId) {
+        if (repo.existsById(rentId)) {
+            repo.updateBankSlip(slipfPath, rentId);
         } else {
             throw new RuntimeException("Customer Not Found");
         }

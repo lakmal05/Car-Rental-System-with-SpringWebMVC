@@ -5,8 +5,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.time.LocalDate;
+
+
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,11 +18,20 @@ import javax.persistence.Id;
 public class Payment {
 
     @Id
-    private String paymentId;
-    private String date;
-    private double amount;
+    private String paymentID;
+    private LocalDate date;
+    private double damageCharge;
+    private double returnLossDamageWaiver;
+    private double rentPrice;
+    private long extraKM;
+    private double priseForExtraKM;
+    private double driverPayment;
+    private double totalPayment;
 
 
+    @OneToOne(cascade = {javax.persistence.CascadeType.REFRESH, CascadeType.DETACH})
+    @JoinColumn(name = "rentId",referencedColumnName = "rentId",nullable = false)
+    private CarRent rentId;
 
 
 }

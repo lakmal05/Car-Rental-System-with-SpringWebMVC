@@ -108,10 +108,10 @@
         .addUserDetails {
             background-color: white;
 
-            height: 53%;
+            height: 51%;
             width: 92%;
             position: relative;
-            top: 50px;
+            top: 25px;
             left: 59px;
             border-radius: 35px;
             box-shadow: 0 5px 15px rgb(0 0 0/0.40);
@@ -130,11 +130,11 @@
         .addRentDetails {
             background-color: white;
 
-            height: 58%;
+            height: 43%;
             width: 100%;
             position: relative;
-            top: 51px;
-            left: -7px;
+            top: 37px;
+            left: 37px;
             border-radius: 35px;
             box-shadow: 0 5px 15px rgb(0 0 0/0.40);
 
@@ -163,11 +163,11 @@
         .addToMaintenance {
             background-color: white;
 
-            height: 42%;
+            height: 50%;
             width: 100%;
             position: relative;
             top: 51px;
-            left: -7px;
+            left: 58px;
             border-radius: 35px;
             box-shadow: 0 5px 15px rgb(0 0 0/0.40);
         }
@@ -214,15 +214,38 @@
         }
 
 
-
-        .buttons{
+        .buttons {
             position: relative;
             left: 72%;
             display: inline-block;
         }
 
-        .buttons>button{
+        .buttons > button {
             margin-right: 25px;
+        }
+
+        #logo {
+            /*border: 1px solid red;*/
+            position: absolute;
+            left: 94%;
+            font-size: 18px;
+            color: #4375F8;
+            font-family: 'Jost', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Open Sans', sans-serif;
+            top: 7px;
+
+        }
+
+
+        #btnsRents{
+            position: relative;
+            left: 43%;
+            top: 42px;
+            display: inline;
+        }
+        #btnsRents>button{
+            margin-left: 11px;
         }
 
 
@@ -231,6 +254,16 @@
 
 </head>
 <body>
+
+<header style="height: 35px;width: 100%;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);background-color: white">
+
+    <a class="nav-link active" aria-current="page" href="index.html">
+        <p id="logo">ECRC</p>
+
+    </a>
+
+</header>
+
 
 <main>
 
@@ -247,6 +280,8 @@
             <i id="iAdmin" class="fa-solid fa-unlock-keyhole i-cons"></i>
             <i id="iRent" class="fa-solid fa-book i-cons"></i>
             <i id="iPayment" class="fa-sharp fa-regular fa-credit-card  i-cons"></i>
+
+
 
         </div>
 
@@ -283,8 +318,7 @@
 
 
                 <!--    Table-->
-                <div class="row "
-                     style="margin-top:0;margin-left: 0;width: 96%;top: 110px;position: relative;left: 50px">
+                <div class="row " style="margin-top:0;margin-left: 0;width: 96%;top: 118px;position: relative;left: 54px;border-radius: 22px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);overflow:scroll;height:215px;overflow:auto">
 
 
                     <table class="table" id="bookingTbl">
@@ -441,6 +475,25 @@
                             <input class="form-control" id="txtBrand" type="text">
                         </div>
 
+
+                        <div class="col-3">
+                            <label for="txtLossDamageWaiver" class="form-label mb-0">Loss Damage Waiver
+                                (Rs.)</label>
+                            <input type="text" class="form-control" id="txtLossDamageWaiver" name="lossDamageWaiver">
+                        </div>
+
+                        <div class="col-3">
+                            <label class="form-label" for="txtPriceForExtraKm">Price Per Extra Km</label>
+                            <input class="form-control" id="txtPriceForExtraKm" type="text">
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="row">
+
+
                         <div class="col-3">
                             <label for="cmbtype" class="form-label mb-0">Type</label>
                             <select class="form-select" aria-label="Default select example" id="cmbtype"
@@ -464,12 +517,6 @@
                         </div>
 
 
-                    </div>
-
-
-                    <div class="row">
-
-
                         <div class="col-3">
                             <label for="cmbTransmissionType" class="form-label mb-0">Transmission</label>
                             <select class="form-select" aria-label="Default select example" id="cmbTransmissionType"
@@ -480,22 +527,6 @@
                             </select>
                         </div>
 
-                        <div class="col-3">
-                            <label class="form-label" for="txtNoOfPassengers">No of Passengers</label>
-                            <input class="form-control" id="txtNoOfPassengers" type="text">
-                        </div>
-
-
-                        <div class="col-3">
-                            <label for="txtCompleteKm" class="form-label mb-0">Complete Kilometers (Km)</label>
-                            <input type="text" class="form-control" id="txtCompleteKm" name="completeKm">
-                        </div>
-
-
-                    </div>
-
-
-                    <div class="row">
 
                         <div class="col-3">
                             <div class="mb-3">
@@ -514,42 +545,48 @@
                         </div>
 
 
-                        <div class="col-3">
+                    </div>
+
+
+                    <div class="row">
+
+
+                        <div class="col-2">
+                            <label class="form-label" for="txtNoOfPassengers">No of Passengers</label>
+                            <input class="form-control" id="txtNoOfPassengers" type="text">
+                        </div>
+
+
+                        <div class="col-2">
+                            <label for="txtCompleteKm" class="form-label mb-0">Complete KM</label>
+                            <input type="text" class="form-control" id="txtCompleteKm" name="completeKm"
+                                   placeholder="KM">
+                        </div>
+
+
+                        <div class="col-2">
                             <label class="form-label" for="txtDailyRate">Daily Rate</label>
                             <input class="form-control" id="txtDailyRate" type="text">
                         </div>
 
-                        <div class="col-3">
+                        <div class="col-2">
                             <label class="form-label" for="txtMonthlyRate">Monthly Rate</label>
                             <input class="form-control" id="txtMonthlyRate" type="text">
                         </div>
 
-                        <div class="col-3">
+                        <div class="col-2">
                             <label class="form-label" for="txtFreeKmForPrice">Free Km for a Price</label>
                             <input class="form-control" id="txtFreeKmForPrice" type="text">
                         </div>
 
-                        <div class="col-3">
-                            <label for="txtFreeKmForDuration" class="form-label mb-0">Free Km For The Duration
-                                (Km)</label>
+                        <div class="col-2">
+                            <label for="txtFreeKmForDuration" class="form-label mb-0">Free Km Duration
+                            </label>
                             <input type="text" class="form-control" id="txtFreeKmForDuration"
                                    name="freeKmForDuration">
                         </div>
 
-                    </div>
 
-                    <div class="row">
-
-                        <div class="col-3">
-                            <label class="form-label" for="txtPriceForExtraKm">Price Per Extra Km</label>
-                            <input class="form-control" id="txtPriceForExtraKm" type="text">
-                        </div>
-
-                        <div class="col-3">
-                            <label for="txtLossDamageWaiver" class="form-label mb-0">Loss Damage Waiver
-                                (Rs.)</label>
-                            <input type="text" class="form-control" id="txtLossDamageWaiver" name="lossDamageWaiver">
-                        </div>
                     </div>
 
 
@@ -579,24 +616,23 @@
 
                     </div>
 
+                    <div class="row" style="position: relative;left: 480px;  display: inline; top: 23px;">
 
-                    <button class="col-2 btn btn-dark" type="button" id="btnAddCar">Add Car</button>
-                    <button class="col-2 btn btn-danger" type="button" id="btnDeleteCar">Delete</button>
-                    <button class="col-2 btn btn-dark " type="button" id="btnUpdateCar">Update</button>
+                        <button class="col-2 btn btn-dark" type="button" id="btnAddCar">Add Car</button>
+                        <button class="col-2 btn btn-danger" type="button" id="btnDeleteCar">Delete</button>
+                        <button class="col-2 btn btn-dark " type="button" id="btnUpdateCar">Update</button>
 
-                    <!--   <button type="button" id="btnAddCar">Cleat Car</button>-->
+                    </div>
 
                 </form>
 
 
-                <div class="row "
-                     style="    margin-top: 0px;  margin-left: 0px;   width: 117%; top: 185px;    left: -39px;  position: relative; border-radius: 33px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);}">
-
+                <div class="row" style="margin-top: 0px;  margin-left: 0px;   width: 121%; top: 130px;left: -54px;position: relative; border-radius: 33px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);overflow:scroll;height:212px;overflow:auto">
 
                     <table class="table" id="carTbl">
                         <thead class="thead-dark bg-dark text-white">
                         <tr>
-                            <th>Registation No</th>
+                            <th>Registration No</th>
                             <th>Brand</th>
                             <th>Type</th>
                             <th>No Of Passengers</th>
@@ -605,10 +641,10 @@
                             <th>Color</th>
                             <th>Daily Rate</th>
                             <th>Monthly Rate</th>
-                            <th>Free Km For Price</th>
-                            <th>Free Km For Duration</th>
-                            <th>Loss Damage Waiver</th>
-                            <th>Price For Extra Km</th>
+                            <th>Free Km F Price</th>
+                            <th>Free Km F Duration</th>
+                            <th>Loss Damage W</th>
+                            <th>Price F Extra Km</th>
                             <th>Complete Km</th>
                             <th>Status</th>
                         </tr>
@@ -702,16 +738,16 @@
 
                     </div>
 
-<div class="buttons">
-                    <button type="button" id="btnAcceptCustomer" class="btn btn-dark">Accept</button>
-                    <button type="button" id="btnRejectCustomer" class="btn btn-danger">Reject</button>
-                    <button type="button" id="btnClearFields" class="btn btn-dark">Clear</button>
-</div>
+                    <div class="buttons">
+                        <button type="button" id="btnAcceptCustomer" class="btn btn-dark">Accept</button>
+                        <button type="button" id="btnRejectCustomer" class="btn btn-danger">Reject</button>
+                        <button type="button" id="btnClearFields" class="btn btn-dark">Clear</button>
+                    </div>
                 </form>
 
                 <!--  ======================Customer Tabel=====================================-->
                 <div class="row "
-                     style="margin-top:0;margin-left: 0;width: 105%;top: 112px;left: -28px;position: relative">
+                     style="margin-top:0;margin-left: 0;width: 105%;top: 97px;left: -28px;position: relative;border-radius: 33px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);overflow:scroll;height:135px;overflow:auto">
 
 
                     <table class="table">
@@ -736,8 +772,7 @@
                 </div>
 
 
-                <div class="row "
-                     style="margin-top:0;margin-left: 0;width: 105%;top:157px;left: -28px;position: relative">
+                <div class="row " style="margin-top:0;margin-left: 0;width: 105%;top:145px;left: -28px;position: relative;border-radius: 16px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);overflow:scroll;height:109px;overflow:auto">
 
 
                     <table class="table">
@@ -776,78 +811,25 @@
 
                     <div class="row">
 
-                        <div class="col-2">
-                            <label class="form-label" for="txtRentID">Rent ID</label>
-                            <input class="form-control" id="txtRentID" type="text">
-                        </div>
-
-                        <div class="col-2">
-                            <label class="form-label" for="txtRentDate">Rent Date</label>
-                            <input class="form-control" id="txtRentDate" type="text">
+                        <div class="col-3">
+                            <label class="form-label" for="txtRentId">Rent ID</label>
+                            <input class="form-control" id="txtRentId" type="text">
                         </div>
 
                         <div class="col-3">
-                            <label class="form-label" for="txtRentCarRegistrationNo">Car Registration No</label>
-                            <input class="form-control" id="txtRentCarRegistrationNo" type="text">
-                        </div>
-
-
-                        <div class="col-2">
-                            <label class="form-label" for="txtRentUserId">User Id</label>
-                            <input class="form-control" id="txtRentUserId" type="text">
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-3">
-                            <label class="form-label" for="txtRentUserName">User Name</label>
-                            <input class="form-control" id="txtRentUserName" type="text">
+                            <label class="form-label" for="txtDate"> Date</label>
+                            <input class="form-control" id="txtDate" type="text">
                         </div>
 
                         <div class="col-3">
-                            <label class="form-label" for="txtRentPickUpDate">Pick Up Date</label>
-                            <input class="form-control" id="txtRentPickUpDate" type="text">
+                            <label class="form-label" for="txtCarRegistrationNo">Car Registration No</label>
+                            <input class="form-control" id="txtCarRegistrationNo" type="text">
                         </div>
 
 
                         <div class="col-3">
-                            <label class="form-label" for="txtRentPickUpTime">Pick Up Time</label>
-                            <input class="form-control" id="txtRentPickUpTime" type="text">
-                        </div>
-
-                        <div class="col-3">
-                            <label class="form-label" for="txtRentPickUpVenue">Pick Up Venue</label>
-                            <input class="form-control" id="txtRentPickUpVenue" type="text">
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-
-
-                        <div class="col-3">
-                            <label class="form-label" for="txtRentReturnDate">ReturnDate</label>
-                            <input class="form-control" id="txtRentReturnDate" type="text">
-                        </div>
-
-
-                        <div class="col-3">
-                            <label class="form-label" for="txtRentReturnTime">Return Time</label>
-                            <input class="form-control" id="txtRentReturnTime" type="text">
-                        </div>
-
-
-                        <div class="col-3">
-                            <label class="form-label" for="txtRentReturnVenue">Return Venue</label>
-                            <input class="form-control" id="txtRentReturnVenue" type="text">
-                        </div>
-
-
-                        <div class="col-3">
-                            <label class="form-label" for="ImageofBankSlip">ImageOfBankSlip</label>
-                            <div id="ImageofBankSlip" style="height: 30px;width: 30px;background-color: black"></div>
+                            <label class="form-label" for="txtCusId">Customer Id</label>
+                            <input class="form-control" id="txtCusId" type="text">
                         </div>
 
                     </div>
@@ -855,62 +837,91 @@
 
                     <div class="row">
 
-
                         <div class="col-3">
-                            <label class="form-label" for="txtRentDriverId">Driver ID</label>
-                            <input class="form-control" id="txtRentDriverId" type="text">
+                            <label class="form-label" for="txtPickupDate">Pick Up Date</label>
+                            <input class="form-control" id="txtPickupDate" type="text">
                         </div>
 
-
                         <div class="col-3">
-                            <label class="form-label" for="txtRentDriverName">Driver Name</label>
-                            <input class="form-control" id="txtRentDriverName" type="text">
+                            <label class="form-label" for="txtReturnDate">ReturnDate</label>
+                            <input class="form-control" id="txtReturnDate" type="text">
                         </div>
 
+                        <div class="col-3">
+                            <label class="form-label" for="txtDLicenceNo">Driver ID</label>
+                            <input class="form-control" id="txtDLicenceNo" type="text">
+                        </div>
 
                         <div class="col-3">
-                            <label class="form-label" for="txtRentLossDamageWaiver">Loss Damage Waiver</label>
-                            <input class="form-control" id="txtRentLossDamageWaiver" type="text">
+                            <label class="form-label" for="txtRentalStatus">Status</label>
+                            <input class="form-control" id="txtRentalStatus" type="text">
                         </div>
 
                     </div>
+
+                    <div class="row">
+
+<!--                        <div class="col-3">-->
+<!--                            <label class="form-label" for="txtRentPickUpVenue">Pick Up Venue</label>-->
+<!--                            <input class="form-control" id="txtRentPickUpVenue" type="text"  >-->
+<!--                        </div>-->
+
+
+
+<!--                        <div class="col-3">-->
+<!--                            <label class="form-label" for="txtRentReturnVenue">Return Venue</label>-->
+<!--                            <input class="form-control" id="txtRentReturnVenue" type="text">-->
+<!--                        </div>-->
+
+
+
+
+                        <!--                        <div class="col-3">-->
+<!--                            <label class="form-label" for="ImageofBankSlip">ImageOfBankSlip</label>-->
+<!--                            <div id="ImageofBankSlip" style="height: 30px;width: 30px;background-color: black"></div>-->
+<!--                        </div>-->
+
+                    </div>
+
+                    <div class="row" id="btnsRents">
+
+                            <button type="button" class="btn btn-dark  col-2" id="btnRentalAccept">Accept</button>
+
+
+
+                            <button type="button" class="btn btn-danger col-2 " id="btnRentalReject">Reject</button>
+
+                            <button  type="button" class="btn btn-dark col-2" id="btnClearRental">Clear</button>
+
+
+                    </div>
+
+
+
+
 
                 </form>
 
 
-                <div class="row " style="margin-top:0px;margin-left: 0px;width: 96%;top: 150px;position: relative">
+                <div class="row " style="margin-top:0px;margin-left: -9px;width: 102%;top: 150px;position: relative;overflow:scroll;height:212px;overflow:auto;border-radius: 17px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);">
 
 
-                    <table class="table">
+                    <table class="table" id="carRentalRequestTbl">
                         <thead class="thead-dark bg-dark text-white">
                         <tr>
-                            <th scope="col">Registation No</th>
-                            <th scope="col">Brand</th>
-                            <th scope="col">Type</th>
-                            <th scope="col">Transmission Type</th>
-                            <th scope="col">Fuel Type</th>
-                            <th scope="col">No Of Passengers</th>
-                            <th scope="col">Daily Rate</th>
-                            <th scope="col">Monthly Rate</th>
-                            <th scope="col">Car Available</th>
+                            <th>Rent ID</th>
+                            <th>Date</th>
+                            <th>Pickup Date</th>
+                            <th>Return Date</th>
+                            <th>Car Registration No</th>
+                            <th>Customer ID</th>
+                            <th>Driver Licence No</th>
+                            <th>Status</th>
                         </tr>
 
                         </thead>
 
-                        <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-
-
-                        </tr>
+                        <tbody id="tblCarRentalRequests">
 
                         </tbody>
                     </table>
@@ -931,13 +942,13 @@
                     <div class="row">
 
                         <div class="col-2">
-                            <label class="form-label" for="txtPaymentId">Payment ID</label>
-                            <input class="form-control" id="txtPaymentId" type="text">
+                            <label class="form-label" for="inputPaymentID">Payment ID</label>
+                            <input class="form-control" id="inputPaymentID" type="text">
                         </div>
 
                         <div class="col-2">
-                            <label class="form-label" for="txtPaymentDate">Date</label>
-                            <input class="form-control" id="txtPaymentDate" type="date">
+                            <label class="form-label" for="inputPaymentDate">Date</label>
+                            <input class="form-control" id="inputPaymentDate" type="date">
                         </div>
 
                         <div class="col-3">
@@ -947,8 +958,8 @@
 
 
                         <div class="col-2">
-                            <label class="form-label" for="txtPaymentExtraKm">Extra Km</label>
-                            <input class="form-control" id="txtPaymentExtraKm" type="text">
+                            <label class="form-label" for="selectRentID">Rent ID</label>
+                            <select class="form-select" id="selectRentID" aria-label="Default select example"></select>
                         </div>
 
                     </div>
@@ -956,64 +967,85 @@
                     <div class="row">
 
                         <div class="col-3">
-                            <label class="form-label" for="txtPaymentPriceForExtraKm">Price For Extra km</label>
-                            <input class="form-control" id="txtPaymentPriceForExtraKm" type="text">
+                            <label class="form-label" for="inputRentPrice">Rent Price</label>
+                            <input class="form-control" id="inputRentPrice" type="text">
                         </div>
 
                         <div class="col-3">
-                            <label class="form-label" for="txtPaymentDamageCharges">Damage Charges</label>
-                            <input class="form-control" id="txtPaymentDamageCharges" type="text">
+                            <label class="form-label" for="inputExtraKM">Extra Km</label>
+                            <input class="form-control" id="inputExtraKM" type="text">
                         </div>
 
 
                         <div class="col-3">
-                            <label class="form-label" for="txtPaymentLossDamageWaiver">Return Loos Damage Waiver</label>
-                            <input class="form-control" id="txtPaymentLossDamageWaiver" type="text">
+                            <label class="form-label" for="inputPriseForExtraKM">Prise For Extra KMs</label>
+                            <input class="form-control" id="inputPriseForExtraKM" type="text">
                         </div>
 
                         <div class="col-3">
-                            <label class="form-label" for="txtPaymentDriverPayment">DriverPayment</label>
-                            <input class="form-control" id="txtPaymentDriverPayment" type="text">
+                            <label class="form-label" for="inputDriverPayment">DriverPayment</label>
+                            <input class="form-control" id="inputDriverPayment" type="text">
                         </div>
 
                     </div>
 
 
+                    <div class="row">
+
+                        <div class="col-3">
+                            <label class="form-label" for="inputTotalPayment">Total Payment</label>
+                            <input class="form-control" id="inputTotalPayment" type="text">
+                        </div>
+                        <div class="col-3">
+                            <label class="form-label" for="inputDamageCharge">Damage Charge</label>
+                            <input class="form-control" id="inputDamageCharge" type="text">
+                        </div>
+                        <div class="col-3">
+                            <label class="form-label" for="inputReturnLossDamageWaiver">Return Loss Damage Waiver</label>
+                            <input class="form-control" id="inputReturnLossDamageWaiver" type="text">
+                        </div>
+
+                        <div class="col-3">
+                            <button class="btn fs-5 me-3 btn-dark" type="button" id="btnPaymentPayed">Payed</button>
+
+                        </div>
+                    </div>
+
+
+
+
                 </form>
 
-                <div class="row " style="margin-top:0px;margin-left: 0px;width: 96%;top: 250px;position: relative">
+                <div class="col-1">
+                    <label class="mt-1 fs-4 col-3" id="btnSearchPayment" for="inputPaymentSearch" style="width: max-content"> <i class="fa-solid fa-magnifying-glass"></i> Search </label>
+                </div>
+                <div class="col-6 ms-3">
+                <input class="form-control col-9" id="inputPaymentSearch" type="text">
+              </div>
 
+
+
+                <div class="row " style="margin-top:0px;margin-left: 0px;width: 96%;top: 250px;position: relative">
 
                     <table class="table">
                         <thead class="thead-dark bg-dark text-white">
                         <tr>
-                            <th scope="col">Payment ID</th>
+                            <th scope="col">PaymentID</th>
                             <th scope="col">Date</th>
-                            <th scope="col">Rent Piece</th>
-                            <th scope="col">Extra Kms</th>
-                            <th scope="col">Price for extra KM</th>
-                            <th scope="col">Damage Charge</th>
-                            <th scope="col">Return Loos Damage Waiver</th>
-                            <th scope="col">Driver Payment</th>
-                            <th scope="col">Total Payment</th>
+                            <th scope="col">RentID</th>
+                            <th scope="col">RentPrice</th>
+                            <th scope="col">ExtraKM</th>
+                            <th scope="col">PriseForExtraKM</th>
+                            <th scope="col">DamageCharge</th>
+                            <th scope="col">ReturnLossDamageWaiver</th>
+                            <th scope="col">DriverPayment</th>
+                            <th scope="col">TotalPayment</th>
                         </tr>
 
                         </thead>
 
-                        <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
+                        <tbody id="tblPayment">
 
-
-                        </tr>
 
                         </tbody>
                     </table>
@@ -1036,59 +1068,63 @@
 
                         <div class="col-2">
                             <label class="form-label" for="txtSearchRegistrationNo">Registration No</label>
-                            <input class="form-control" id="txtSearchRegistrationNo" type="text">
+                            <input class="form-control" id="txtSearchRegistrationNo" type="text" name="searchRegistrationNo">
                         </div>
 
                         <div class="col-2">
                             <label class="form-label" for="txtSearchBrand">Brand</label>
-                            <input class="form-control" id="txtSearchBrand" type="date">
+                            <input class="form-control" id="txtSearchBrand"    name="searchBrand" disabled>
                         </div>
 
-                        <div class="col-3">
+                        <div class="col-2">
                             <label class="form-label" for="txtSearchType">Type</label>
-                            <input class="form-control" id="txtSearchType" type="text">
+                            <input class="form-control" id="txtSearchType" disabled>
                         </div>
 
 
                         <div class="col-2">
                             <label class="form-label" for="txtSearchTransmission">Transmission</label>
-                            <input class="form-control" id="txtSearchTransmission" type="text">
+                            <input class="form-control" id="txtSearchTransmission" disabled>
+                        </div>
+
+                        <div class="col-2">
+                            <label class="form-label" for="txtSearchColor">Color</label>
+                            <input class="form-control" id="txtSearchColor" disabled>
                         </div>
 
                     </div>
 
-                    <div class="row">
+                    <div class="col-1" style="display: inline-block;position: relative;top: -68px;left: 86%">
+                        <label class="form-label" for="txtSearchStatus">Status</label>
+                        <input class="form-control" id="txtSearchStatus" disabled>
+                    </div>
 
-                        <div class="col-3">
-                            <label class="form-label" for="txtSearchColor">Color</label>
-                            <input class="form-control" id="txtSearchColor" type="text">
-                        </div>
-
-                        <div class="col-3">
-                            <label class="form-label" for="txtSearchStatus">Status</label>
-                            <input class="form-control" id="txtSearchStatus" type="text">
-                        </div>
-                        <div class="col-3">
-                            <button type="button" id="btnAddToMaintenance" class="btn btn-dark">Add To Maintenance</button>
-
-                        </div>
+                    <div class="col-3" style="display: table-footer-group;position: relative; top: -58px; left: 485%">
+                        <button type="button" id="btnAddToMaintenance" class="btn btn-dark">Add To Maintenance</button>
+                   </div>
 
 
-                        <div class="col-3">
+                    <hr style="width: 100%;background-color: black;position: relative;top: -68px;left: -17px">
+
+
+                    <div class="row" style="    position: relative;top: -58px">
+
+
+                        <div class="col-2">
                             <label class="form-label" for="txtMaintenanceId">Maintenance ID</label>
-                            <input class="form-control" id="txtMaintenanceId" type="text">
+                            <input class="form-control" id="txtMaintenanceId" disabled>
                         </div>
 
-                        <div class="col-3">
+                        <div class="col-2">
                             <label class="form-label" for="txtCarRegNo">Registration No</label>
                             <input class="form-control" id="txtCarRegNo" type="text">
                         </div>
 
-                        <div class="col-3">
+                        <div class="col-2">
                             <label class="form-label" for="txtToday">Date</label>
-                            <input class="form-control" id="txtToday" type="text">
+                            <input class="form-control" id="txtToday" type="date">
                         </div>
-                        <div class="col-3">
+                        <div class="col-2">
                             <label class="form-label" for="txtCost">Cost</label>
                             <input class="form-control" id="txtCost" type="text">
                         </div>
@@ -1097,9 +1133,9 @@
                             <input class="form-control" id="txtMaintenanceDetails" type="text">
                         </div>
 
-                        <div class="col-3">
-                            <button type="button" id="btnMaintenancePaid" class="btn btn-dark">Paid</button>
 
+                        <div class="col-3" style="position: relative;left: 86%;top: 21px">
+                            <button type="button" id="btnMaintenancePaid" class="btn btn-dark">Paid</button>
                         </div>
 
 
@@ -1109,7 +1145,7 @@
                 </form>
 
                 <!-- ==========================================Under Mantenices=========================================================-->
-                <div class="row " style="margin-top:0px;margin-left: 0px;width: 96%;top: 250px;position: relative">
+                <div class="row " style="margin-top:0px;margin-left: 0px;width: 113%;top: 78px;position: relative;left: -74px">
 
 
                     <table class="table" id="carUnderMaintenanceTbl">
@@ -1139,11 +1175,10 @@
                     </table>
                 </div>
 
-                <hr style="width: 100%;background-color: black;position: relative;top: -290px">
 
 
                 <!-- ==========================================All Mantenices=========================================================&ndash;&gt;-->
-                <div class="row " style="margin-top:0px;margin-left: 0px;width: 96%;top: 250px;position: relative">
+                <div class="row " style="margin-top:0px;margin-left: 0px;width: 113%;position: relative;left:-74px;top: 119px ">
 
 
                     <table class="table" id="allMaintenancesTbl">

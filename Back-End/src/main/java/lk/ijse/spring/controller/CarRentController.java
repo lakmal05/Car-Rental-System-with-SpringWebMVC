@@ -99,8 +99,8 @@ public class CarRentController {
 
 
 
-    @PutMapping(path = "/up/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseUtil uploadImagesAndPath(@RequestPart("bankSlip") MultipartFile bankSlip,  @PathVariable String id) {
+    @PutMapping(path = "/up/{rentId}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil uploadImagesAndPath(@RequestPart("bankSlip") MultipartFile bankSlip,  @PathVariable String rentId) {
         try {
 //            String projectPath = String.valueOf(new File("H:\\Github Projects\\Easy-Car-Rental\\Car-Rental-FontEnd\\assets\\savedImages"));
             String projectPath = String.valueOf(new File("D:\\Easy-Car-Rental-Company-master\\Front-End\\assets\\saveImages"));
@@ -110,7 +110,7 @@ public class CarRentController {
 
             String slipfPath = projectPath + "\\Slip\\" + bankSlip.getOriginalFilename();
 
-            service.uploadBankSlip(slipfPath, id);
+            service.uploadBankSlip(slipfPath, rentId);
 
             return new ResponseUtil("200", "Uploaded", null);
 

@@ -7,10 +7,6 @@ let baseURL = "http://localhost:8080/Back_End_war/";
 
 
 
-
-
-
-
 // function checkIfLoginUserFormValid() {
 //     var username = $('#txtUserName').val();
 //     if (regLoginUsername.test(username)) {
@@ -27,11 +23,6 @@ let baseURL = "http://localhost:8080/Back_End_war/";
 //         $('#txtUserName').focus();
 //     }
 // }
-
-
-
-
-
 
 
 
@@ -56,13 +47,12 @@ function loginUser() {
     console.log(userType);
 
     if (userType === "Admin") {
-        // searchAdmin(userType, username, password);
-        searchCustomer(userType, username, password);
+        searchAdmin(userType, username, password);
 
     } else if (userType === "Customer") {
         searchCustomer(userType, username, password);
     } else if (userType === "Driver") {
-        // searchDriver(userType, username, password);
+        searchDriver(userType, username, password);
     }
 }
 
@@ -82,19 +72,19 @@ function loginSave(userType, username, password) {
             }
         ),
         success: function (res) {
-            if (userType === "Customer") {
-                location.replace("vehicle.html");
-
-                // location.replace("AdminDashboard.html");
+            if (userType === "Admin") {
+                location.replace("adminPage.html");
             } else if (userType === "Customer") {
                 location.replace("vehicle.html");
             } else if (userType === "Driver") {
-                // location.replace("DriverDashboard.html");
+                location.replace("driver.html");
             }
             console.log("Login data saved");
         }
     })
 }
+
+
 
 $(function (){
     getNewLoginId();
@@ -106,6 +96,22 @@ function getNewLoginId() {
         method: "GET",
         success: function (res) {
             $('#txtLogId').val(res.data);
+        }
+    });
+}
+
+
+function searchAdmin(userType, username, password) {
+    $.ajax({
+        url: baseURL + "admin/" + username + "/" + password,
+        method: "GET",
+        success: function (res) {
+            if (res.data === true) {
+                loginSave(userType, username, password);
+
+            } else {
+                alert(res.message);
+            }
         }
     });
 }
@@ -125,3 +131,17 @@ function searchCustomer(userType, username, password) {
     })
 }
 
+function searchDriver(userType, username, password) {
+    $.ajax({
+        url: baseURL + "driver/" + username + "/" + password,
+        method: "GET",
+        success: function (res) {
+            console.log(res.data);
+            if (res.data === true) {
+                loginSave(userType, username, password);
+            } else {
+                alert(res.message);
+            }
+        }
+    })
+}

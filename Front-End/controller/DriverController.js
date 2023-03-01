@@ -46,10 +46,6 @@ function loadAllDrivers() {
 }
 
 
-
-
-
-
 function bindRegisterDriversClickEvents() {
     $('#tblRegisteredDrivers>tr').click(function () {
         let licenceNo = $(this).children().eq(0).text();
@@ -77,14 +73,6 @@ function findDriver(licenceNo) {
         }
     })
 }
-
-
-
-
-
-
-
-
 
 
 

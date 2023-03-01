@@ -176,10 +176,10 @@ function addCarRent(customer, car, driver) {
 }
 
 
-function uploadBankSlip(id){
+function uploadBankSlip(rentId){
 
     var fileObjectSlip = $('#inputBankSlip')[0].files[0];
-    var fileNameSlip = id + "-bankSlip-" + $('#inputBankSlip')[0].files[0].name;
+    var fileNameSlip = rentId + "-bankSlip-" + $('#inputBankSlip')[0].files[0].name;
 
 
     var data =new FormData();
@@ -189,7 +189,7 @@ function uploadBankSlip(id){
 
     $.ajax({
 
-        url: baseURL + "carRent/up/" + id,
+        url: baseURL + "carRent/up/" + rentId,
         method: "PUT",
         async: true,
         contentType: false,

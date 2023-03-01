@@ -16,68 +16,63 @@ public class PaymentController {
 
     @Autowired
     PaymentService service;
-//
-//    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseUtil getAllPayments() {
-//        return new ResponseUtil("200", "Ok", service.getAllPayments());
-//    }
-//
-//    @ResponseStatus(HttpStatus.CREATED)
-//    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseUtil savePayment(@RequestBody PaymentDTO dto) {
-//        System.out.println(dto.toString());
-//        service.savePayment(dto);
-//        return new ResponseUtil("200", "Saved", null);
-//    }
-//
-//    @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseUtil updatePayment(@RequestBody PaymentDTO dto) {
-//        service.updatePayment(dto);
-//        return new ResponseUtil("200", "Updated", null);
-//    }
-//
-//    @DeleteMapping(params = {"paymentId"}, produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseUtil deletePayment(@RequestParam String paymentId) {
-//        service.deletePayment(paymentId);
-//        return new ResponseUtil("200", "Deleted", null);
-//    }
-//
-//    @GetMapping(path = "/{paymentId}", produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseUtil searchPayment(@PathVariable String paymentId) {
-//        return new ResponseUtil("200", "Ok", service.searchPayment(paymentId));
-//    }
-//
-//    @GetMapping(path = "/{fromDate}/{toDate}", produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseUtil getAllPaymentsByDateRange(@PathVariable String fromDate, @PathVariable String toDate) {
-//        System.out.println(fromDate + "/" + toDate);
-//        return new ResponseUtil("200", "Ok", service.getAllPaymentsByDateRange(fromDate, toDate));
-//    }
-//
-//    @GetMapping(path = "/getAll/{customerId}", produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseUtil getAllPaymentsByCustomerId(@PathVariable String customerId) {
-//        return new ResponseUtil("200", "Ok", service.getAllPaymentsByCustomerId(customerId));
-//    }
-//
-//    @GetMapping(path = "/generatePaymentId", produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseUtil generatePaymentId() {
-//        return new ResponseUtil("200", "Ok", service.generatePaymentId());
-//    }
-//
-//    @DeleteMapping(path = "/delete/{rentId}", produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseUtil deletePaymentByRentId(@PathVariable String rentId) {
-//        service.deletePaymentByRentId(rentId);
-//        return new ResponseUtil("200", "deleted", null);
-//    }
-//
-//    @GetMapping(path = "/calculatePaidPayment/{rentId}", produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseUtil calculatePaidPayment(@PathVariable String rentId) {
-//        return new ResponseUtil("200", "Ok", service.calculatePaidPayments(rentId));
-//    }
-//
-//    @GetMapping(path = "/getSum/{fromDate}/{toDate}", produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseUtil getSumOfPaymentsCost(@PathVariable String fromDate, @PathVariable String toDate) {
-//        return new ResponseUtil("200", "Ok", service.getSumOfPaymentsByDateRange(fromDate, toDate));
-//    }
+
+
+
+    @GetMapping(path = "/generatePaymentId", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil generatePaymentId() {
+        return new ResponseUtil("200", "Done", service.generatePaymentId());
+    }
+
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getAllPayments() {
+        return new ResponseUtil("200", "Done", service.getAllPayments());
+    }
+
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil savePayment(@RequestBody PaymentDTO dto) {
+        System.out.println(dto.toString());
+        service.savePayment(dto);
+        return new ResponseUtil("200","Payment Added Successfully "+dto.toString(),null);
+    }
+
+    @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil updatePayment(@RequestBody PaymentDTO dto) {
+        service.updatePayment(dto);
+        return new ResponseUtil("200","Payment Updated Successfully "+dto.toString(),null);
+    }
+
+    @DeleteMapping(params = {"paymentID"}, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil deletePayment(@RequestParam String paymentID) {
+        service.deletePayment(paymentID);
+        return new ResponseUtil("200",paymentID+" Payment Deleted Successfully ",null);
+    }
+
+    @GetMapping(path = "/{paymentID}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil searchPayment(@PathVariable String paymentID) {
+        return new ResponseUtil("200", "Done", service.searchPayment(paymentID));
+    }
+
+    @GetMapping(path = "/dailyIncome", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getAllPaymentsByDaily() {
+        return new ResponseUtil("200", "Done", service.getAllPaymentsByDaily());
+    }
+
+    @GetMapping(path = "/weeklyIncome", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getAllPaymentsByWeekly() {
+        return new ResponseUtil("200", "Done", service.getAllPaymentsByWeekly());
+    }
+
+    @GetMapping(path = "/monthlyIncome", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getAllPaymentsByMonthly() {
+        return new ResponseUtil("200", "Done", service.getAllPaymentsByMonthly());
+    }
+
+    @GetMapping(path = "/yearlyIncome", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getAllPaymentsByYearly() {
+        return new ResponseUtil("200", "Done", service.getAllPaymentsByYearly());
+    }
 
 
 }
