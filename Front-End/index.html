@@ -58,6 +58,27 @@
     .inputGroup :is(input:focus, input:valid) {
         border-color: rgb(150, 150, 200);
     }
+
+
+    .loginImg>div>img{
+
+        height: 100px;
+       width: 100px;
+    }
+
+
+    .btndiscover{
+        position: relative;
+        top: 54%;
+        width: 135px;
+        height: 53px;
+        z-index: 999;
+    }
+
+
+
+
+
 </style>
 
 
@@ -84,7 +105,9 @@
             <div id="contentSection">
                 <h2>Easy Car Rental</h2>
                 <p>Lorem ipsumistquis praesentium.</p>
-                <button>Discover NOW</button>
+
+                <button class="btndiscover"><a href="#signIn">Discover NOW</a> </button>
+
                 <img src="assets/Images/logo.png" alt="">
             </div>
 
@@ -98,9 +121,18 @@
 <!--        <h5>sign UP</h5>-->
 
 
-        <div class="col-lg-6 " style="background-color: #e8e8e8; height: 100vh">
+        <div class="col-lg-6 loginImg " style="background-color: #e8e8e8; height: 100vh">
 
-            <p style="text-align: center ; margin: auto;padding: 100px 0 ; display: block;vertical-align: middle">IF u Dont have an account <a href="registerFrom.html" >Reigster hear</a> </p>
+<!--            <div><img style=" height: 411px;width: 673px;" src="assets/Images/login/ballon.svg"> </div>-->
+            <div style=" position: relative; top: 89px;left: 249px;"><img style=" height: 411px;width: 673px;"  src="assets/Images/login/boy.svg"> </div>
+            <div><img  src="assets/Images/login/man.svg"> </div>
+            <div style="position: relative; top: -75%"><img  style="height: 187px;width: 216px;" src="assets/Images/login/startman.svg"> </div>
+
+            
+            <p style="font-size: 49px;position: relative;top: -99%;left: 71px;">Sing In to Recharge
+              <a style=" position: relative;  top: 4px; left: 47px; display: inline-block;"> Direct <span>"ECRC"</span> </a>  </p>
+
+            <p style="     display: block;position: relative;top: -93%; left: 78px;"> IF you don't have an account You can <a href="registerFrom.html" >Register hear</a> </p>
 
         </div>
 

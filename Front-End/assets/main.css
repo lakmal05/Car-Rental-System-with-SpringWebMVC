@@ -89,13 +89,16 @@ li a:hover
     position: absolute;
     /* top: 18%; */
     /* right: 32%; */
+
     z-index: 999;
     display: grid;
     place-items: center;
     cursor: pointer;
     margin-top: 63px;
-    margin-left: 144px;
+    margin-left: 88px;
     padding-left: 79px;
+
+    left: 142px;
 }
 #sideImg img
 {
