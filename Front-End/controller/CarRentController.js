@@ -152,8 +152,11 @@ function addCarRent(customer, car, driver) {
         returnVenue:ReturnVenue,
         status: status,
         customerId: customer,
-        registrationNO: car,
-        licenceNo: driver,
+        // registrationNO: car,
+        car: car,
+        customer: customer,
+        driver: driver,
+        // licenceNo: driver,
         lossDamageWaiver:lossDamageWavier,
     }
 

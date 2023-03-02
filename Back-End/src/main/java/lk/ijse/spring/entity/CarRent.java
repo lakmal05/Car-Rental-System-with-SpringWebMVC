@@ -35,21 +35,20 @@ public class CarRent {
 
     @ManyToOne
     @JoinColumn(name ="licenceNo",referencedColumnName = "licenceNo")
-    private Driver licenceNo;
+    private Driver driver;
 
-    @ManyToOne(cascade = {CascadeType.ALL})//wait
-    @JoinColumn(name = "registrationNO",referencedColumnName = "registrationNO")
+    @ManyToOne
+    @JoinColumn(name = "registrationNO",referencedColumnName = "registrationNO",nullable = false)
     private Car car;
 
     @ManyToOne
-    @JoinColumn(name = "customerId",referencedColumnName = "customerId")
+    @JoinColumn(name = "customerId",referencedColumnName = "customerId",nullable = false)
     private Customer customer;
 
 
-
-    //    @ManyToOne   //nulable false thibbma data null wenna ba
-//    @JoinColumn(name ="licenceNo",referencedColumnName = "licenceNo",nullable = false)
-//    private Driver licenceNo;
+// @ManyToOne//nulable false thibbma data null wenna ba
+//@JoinColumn(name ="licenceNo",referencedColumnName = "licenceNo",nullable = false)
+//private Driver licenceNo;
 
 
 }

@@ -1150,10 +1150,12 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <column id="332" parent="289" name="registrationNO">
       <Position>10</Position>
       <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
     <column id="333" parent="289" name="customerId">
       <Position>11</Position>
       <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
     <column id="334" parent="289" name="licenceNo">
       <Position>12</Position>
@@ -1237,11 +1239,11 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>11</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="353" parent="290" name="username">
+    <column id="353" parent="290" name="status">
       <Position>12</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="354" parent="290" name="status">
+    <column id="354" parent="290" name="username">
       <Position>13</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
@@ -1348,70 +1350,65 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <RefTableName>car</RefTableName>
       <RefColNames>registrationNO</RefColNames>
     </foreign-key>
-    <column id="378" parent="294" name="paymentId">
+    <column id="378" parent="294" name="paymentID">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="379" parent="294" name="amount">
+    <column id="379" parent="294" name="damageCharge">
       <Position>2</Position>
       <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="380" parent="294" name="date">
       <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>date|0s</DataType>
     </column>
-    <column id="381" parent="294" name="damageCharge">
+    <column id="381" parent="294" name="driverPayment">
       <Position>4</Position>
       <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="382" parent="294" name="driverPayment">
+    <column id="382" parent="294" name="extraKM">
       <Position>5</Position>
-      <DataType>double|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="383" parent="294" name="extraKM">
-      <Position>6</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="384" parent="294" name="priseForExtraKM">
+    <column id="383" parent="294" name="priseForExtraKM">
+      <Position>6</Position>
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="384" parent="294" name="rentPrice">
       <Position>7</Position>
       <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="385" parent="294" name="rentPrice">
+    <column id="385" parent="294" name="returnLossDamageWaiver">
       <Position>8</Position>
       <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="386" parent="294" name="returnLossDamageWaiver">
+    <column id="386" parent="294" name="totalPayment">
       <Position>9</Position>
       <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="387" parent="294" name="totalPayment">
+    <column id="387" parent="294" name="rentId">
       <Position>10</Position>
-      <DataType>double|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="388" parent="294" name="rentId">
-      <Position>11</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="389" parent="294" name="FKbv3kxm8928o2b4eayuwnf68du">
+    <index id="388" parent="294" name="FKbv3kxm8928o2b4eayuwnf68du">
       <ColNames>rentId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="390" parent="294" name="PRIMARY">
+    <key id="389" parent="294" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>paymentId</ColNames>
+      <ColNames>paymentID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="391" parent="294" name="FKbv3kxm8928o2b4eayuwnf68du">
+    <foreign-key id="390" parent="294" name="FKbv3kxm8928o2b4eayuwnf68du">
       <ColNames>rentId</ColNames>
       <RefTableName>carrent</RefTableName>
       <RefColNames>rentId</RefColNames>

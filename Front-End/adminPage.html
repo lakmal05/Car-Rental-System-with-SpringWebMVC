@@ -150,14 +150,13 @@
 
         .addPaymentDetails {
             background-color: white;
-
-            height: 42%;
+            height: 45%;
             width: 100%;
             position: relative;
-            top: 51px;
-            left: -7px;
+            top: 40px;
+            left: 46px;
             border-radius: 35px;
-            box-shadow: 0 5px 15px rgb(0 0 0/0.40);
+            box-shadow: 0 5px 15px rgb(0 0 0 / 40%);
         }
 
         .addToMaintenance {
@@ -185,6 +184,19 @@
             /* margin-top: 9px; */
             margin-left: 35px;
             top: 34px;
+        }
+
+
+        .addToIncomeReport {
+            /*background-color: white;*/
+
+            /*height: 50%;*/
+            /*width: 100%;*/
+            /*position: relative;*/
+            /*top: 25px;*/
+            /*left: 58px;*/
+            /*border-radius: 35px;*/
+            /*box-shadow: 0 5px 15px rgb(0 0 0/0.40);*/
         }
 
 
@@ -255,11 +267,19 @@
         }
 
 
+        .detailsRep{
+            box-shadow: 0 8px 15px rgb(0 0 0 / 40%);
+            height: 44%;
+            margin-left: 10%;
+            /* margin-top: 1px; */
+            margin-bottom: 16px;
+        }
+
     </style>
 
 
 </head>
-<body>
+<body style="overflow-x: hidden">
 
 <header style="height: 35px;width: 100%;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);background-color: white">
 
@@ -290,6 +310,7 @@
             <i id="iAdmin" class="fa-solid fa-unlock-keyhole i-cons"></i>
             <i id="iRent" class="fa-solid fa-book i-cons"></i>
             <i id="iPayment" class="fa-sharp fa-regular fa-credit-card  i-cons"></i>
+            <i id="ireport" class="fa-solid fa-money-check-dollar i-cons"></i>
 
 
         </div>
@@ -949,7 +970,7 @@
 
                         <div class="col-2">
                             <label class="form-label" for="inputPaymentID">Payment ID</label>
-                            <input class="form-control" id="inputPaymentID" type="text">
+                            <input class="form-control" id="inputPaymentID" type="text" disabled>
                         </div>
 
                         <div class="col-2">
@@ -1012,25 +1033,25 @@
                             <input class="form-control" id="inputReturnLossDamageWaiver" type="text">
                         </div>
 
-                        <div class="col-3">
+                        <div class="col-3" style="    position: relative;top: 28px;">
                             <button class="btn fs-5 me-3 btn-dark" type="button" id="btnPaymentPayed">Payed</button>
-
                         </div>
                     </div>
 
 
                 </form>
 
-                <div class="col-1">
+                <div class="col-1" style="position: relative; top: 118px;left: 41px;">
                     <label class="mt-1 fs-4 col-3" id="btnSearchPayment" for="inputPaymentSearch"
                            style="width: max-content"> <i class="fa-solid fa-magnifying-glass"></i> Search </label>
                 </div>
-                <div class="col-6 ms-3">
+                <div class="col-6 ms-3" style="    position: relative;top: 79px; left: 160px;">
                     <input class="form-control col-9" id="inputPaymentSearch" type="text">
                 </div>
 
 
-                <div class="row " style="margin-top:0px;margin-left: 0px;width: 96%;top: 250px;position: relative">
+                <div class="row "
+                     style="margin-top:0px;margin-left: 0px;width: 109%;top: 108px;position: relative;overflow:scroll;height:212px;overflow:auto;border-radius: 17px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%);left: -39px">
 
                     <table class="table">
                         <thead class="thead-dark bg-dark text-white">
@@ -1152,7 +1173,7 @@
 
                 <!-- ==========================================Under Mantenices=========================================================-->
                 <div class="row "
-                     style="margin-top:0px;margin-left: 0px;width: 113%;top: 78px;position: relative;left: -74px;overflow:scroll;height:212px;overflow:auto;border-radius: 17px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%)">
+                     style="margin-top:0px;margin-left: 0px;width: 113%;top: 48px;position: relative;left: -74px;overflow:scroll;height:170px;overflow:auto;border-radius: 17px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%)">
 
 
                     <table class="table" id="carUnderMaintenanceTbl">
@@ -1185,7 +1206,7 @@
 
                 <!-- ==========================================All Mantenices=========================================================&ndash;&gt;-->
                 <div class="row "
-                     style="margin-top:0px;margin-left: 0px;width: 113%;position: relative;left:-74px;top: 119px;overflow:scroll;height:212px;overflow:auto;border-radius: 17px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%)">
+                     style="margin-top:0px;margin-left: 0px;width: 113%;position: relative;left:-74px;top: 72px;overflow:scroll;height:129px;overflow:auto;border-radius: 17px;box-shadow: 0 8px 15px rgb(0 0 0 / 40%)">
 
 
                     <table class="table" id="allMaintenancesTbl">
@@ -1208,6 +1229,73 @@
 
 
             </div>
+
+
+            <!--=====================Income Report==============================-->
+            <div class="addToIncomeReport">
+
+                <label class="headLabel">Maintainers</label>
+                <hr style="width: 100%;background-color: black;position: relative;top: 30px">
+
+
+                <div class="detailsRep" style=" width: 39%;position: relative; top: 20px;  display: inline-block;"> <a>Daily Income</a>
+
+                    <table class="table  ">
+                        <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Total Income</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblDailyIncome"></tbody>
+                    </table>
+
+                </div>
+
+                <div class="detailsRep" style=" width: 39%;position: relative; top: 20px;  display: inline-block;"> <a> Weekly Income </a>
+
+                    <table class="table  ">
+                        <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Week No</th>
+                            <th scope="col">Total Income</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblWeeklyIncome"></tbody>
+                    </table>
+
+                </div>
+                <div class="detailsRep" style=" width: 39%;position: relative; top: 20px;  display: inline-block;"> <a>Monthly Income</a>
+
+                    <table class="table  ">
+                        <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Month</th>
+                            <th scope="col">Total Income</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblMonthlyIncome"></tbody>
+                    </table>
+
+                </div>
+
+                <div class="detailsRep" style=" width: 39%;position: relative; top: 20px;  display: inline-block;"> <a>Annually Income </a>
+
+                    <table class="table">
+                        <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Year</th>
+                            <th scope="col">Total Income</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblAnnuallyIncome"></tbody>
+                    </table>
+
+                </div>
+
+
+
+
 
 
             </div>
@@ -1272,6 +1360,7 @@
     $(".addRentDetails").css('display', 'none');
     $(".addPaymentDetails").css('display', 'none');
     $(".addToMaintenance").css('display', 'none');
+    $(".addToIncomeReport").css('display', 'none');
 
 
     $("#iHome").click(function () {
@@ -1282,6 +1371,7 @@
         $(".addRentDetails").css('display', 'none');
         $(".addPaymentDetails").css('display', 'none');
         $(".addToMaintenance").css('display', 'none');
+        $(".addToIncomeReport").css('display', 'none');
 
 
     });
@@ -1295,6 +1385,7 @@
         $(".addRentDetails").css('display', 'none');
         $(".addPaymentDetails").css('display', 'none');
         $(".addToMaintenance").css('display', 'none');
+        $(".addToIncomeReport").css('display', 'none');
 
 
     });
@@ -1307,6 +1398,7 @@
         $(".addRentDetails").css('display', 'none');
         $(".addPaymentDetails").css('display', 'none');
         $(".addToMaintenance").css('display', 'none');
+        $(".addToIncomeReport").css('display', 'none');
 
 
     });
@@ -1320,6 +1412,7 @@
         $(".addRentDetails").css('display', 'none');
         $(".addPaymentDetails").css('display', 'none');
         $(".addToMaintenance").css('display', 'none');
+        $(".addToIncomeReport").css('display', 'none');
 
 
     });
@@ -1333,6 +1426,7 @@
         $(".addPaymentDetails").css('display', 'none')
         $(".homeSection").css('display', 'none');
         $(".addToMaintenance").css('display', 'none');
+        $(".addToIncomeReport").css('display', 'none');
 
     });
     $("#iPayment").click(function () {
@@ -1343,6 +1437,7 @@
         $("#addDriverDetails").css('display', 'none');
         $(".homeSection").css('display', 'none');
         $(".addToMaintenance").css('display', 'none');
+        $(".addToIncomeReport").css('display', 'none');
 
     })
 
@@ -1355,7 +1450,21 @@
         $("#addCarDetails").css('display', 'none');
         $("#addDriverDetails").css('display', 'none');
         $(".homeSection").css('display', 'none');
-    })
+        $(".addToIncomeReport").css('display', 'none');
+
+    });
+
+    $("#ireport").click(function () {
+        $(".addToIncomeReport").css('display', 'block');
+        $(".addToMaintenance").css('display', 'none');
+        $(".addPaymentDetails").css('display', 'none');
+        $(".addRentDetails").css('display', 'none');
+        $(".addUserDetails").css('display', 'none');
+        $("#addCarDetails").css('display', 'none');
+        $("#addDriverDetails").css('display', 'none');
+        $(".homeSection").css('display', 'none');
+
+    });
 
 
     /*opacity buttons*/

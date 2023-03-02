@@ -306,6 +306,14 @@ img::after {
     cursor: pointer;
 }
 
+#ireport{
+    position: relative;
+    top: 532px;
+    right: 13px;
+    opacity: 20%;
+    cursor: pointer;
+}
+
 #iHome:hover{
     opacity: 90%;
     color: #4375F8;
@@ -339,6 +347,12 @@ img::after {
     opacity: 90%;
     color: #4375F8;
 }
+
+#ireport:hover{
+    opacity: 90%;
+    color: #4375F8;
+}
+
 
 
 /*income details*/

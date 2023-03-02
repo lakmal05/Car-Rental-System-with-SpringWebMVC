@@ -24,6 +24,11 @@ $(function () {
     loadAllPayments();
     loadAllRentIdsToPaymentComboBox();
 
+    loadAllDailyIncomes();
+    loadAllAnnuallyIncomes();
+    loadAllWeeklyIncomes();
+
+
 })
 
 
@@ -308,25 +313,19 @@ function loadRegisteredCustomers() {
 //===============================================remtal accept==========================================================================
 
 function loadAllRentals() {
-    console.log("rentel req");
-
     $('#tblCarRentals').empty();
     $.ajax({
         url: baseURL + "CarRent",
         method: "GET",
         success: function (res) {
-
             for (const carRent of res.data) {
-                // console.log(carRent)
                 let licence;
-                if (carRent.licenceNo === null) {
+                if (carRent.driver === null) {
                     licence = "No Driver";
-                    // console.log(carRent.licenceNo)
                 } else {
-
-                    licence = carRent.licenceNo.licenceNo;
+                    licence = carRent.driver.licenceNo;
                 }
-                let row = `<tr><td>${carRent.rentId}</td><td>${carRent.date}</td><td>${carRent.pickUpDate}</td><td>${carRent.returnDate}</td><td>${carRent.registrationNO}</td><td>${carRent.customerId.customerId}</td><td>${licence}</td><td>${carRent.status}</td></tr>`;
+                let row = `<tr><td>${carRent.rentId}</td><td>${carRent.date}</td><td>${carRent.pickUpDate}</td><td>${carRent.returnDate}</td><td>${carRent.car.registrationNO}</td><td>${carRent.customer.customerId}</td><td>${licence}</td><td>${carRent.status}</td></tr>`;
                 $('#tblCarRentals').append(row);
             }
         }
@@ -346,9 +345,9 @@ function loadAllAcceptedRentals() {
                 if (carRent.driver === null) {
                     licence = "No Driver";
                 } else {
-                    licence = carRent.licenceNo.licenceNo;
+                    licence = carRent.driver.licenceNo;
                 }
-                let row = `<tr><td>${carRent.rentId}</td><td>${carRent.date}</td><td>${carRent.pickUpDate}</td><td>${carRent.returnDate}</td><td>${carRent.registrationNO}</td><td>${carRent.customerId.customerId}</td><td>${licence}</td><td>${carRent.status}</td></tr>`;
+                let row = `<tr><td>${carRent.rentId}</td><td>${carRent.date}</td><td>${carRent.pickUpDate}</td><td>${carRent.returnDate}</td><td>${carRent.car.registrationNO}</td><td>${carRent.customer.customerId}</td><td>${licence}</td><td>${carRent.status}</td></tr>`;
                 $('#tableCarRental').append(row);
             }
         }
@@ -358,20 +357,19 @@ function loadAllAcceptedRentals() {
 function loadPendingRentals() {
     let status = "Pending";
 
-    console.log("rentel req");
     $('#tblCarRentalRequests').empty();
     $.ajax({
-        url: baseURL + "CarRent/get/" + status,
+        url: baseURL+ "CarRent/get/" + status,
         method: "GET",
         success: function (res) {
             for (const carRent of res.data) {
                 let licence;
-                if (carRent.licenceNo === null) {
+                if (carRent.driver === null) {
                     licence = "No Driver";
                 } else {
-                    licence = carRent.licenceNo.licenceNo;
+                    licence = carRent.driver.licenceNo;
                 }
-                let row = `<tr><td>${carRent.rentId}</td><td>${carRent.date}</td><td>${carRent.pickUpDate}</td><td>${carRent.returnDate}</td><td>${carRent.registrationNO}</td><td>${carRent.customerId.customerId}</td><td>${licence}</td><td>${carRent.status}</td></tr>`;
+                let row = `<tr><td>${carRent.rentId}</td><td>${carRent.date}</td><td>${carRent.pickUpDate}</td><td>${carRent.returnDate}</td><td>${carRent.car.registrationNO}</td><td>${carRent.customer.customerId}</td><td>${licence}</td><td>${carRent.status}</td></tr>`;
                 $('#tblCarRentalRequests').append(row);
             }
             bindCarRentalRequestTableClickEvents();
@@ -426,10 +424,22 @@ function acceptRental() {
             updateCarStatus();
             clearRentalRequestFields();
             loadAllAcceptedRentals();
-
+            swal({
+                title: "Confirmation!",
+                text: "Car Rental Accepted Successfully",
+                icon: "success",
+                button: "Close",
+                timer: 2000
+            });
         },
         error: function (ob) {
-
+            swal({
+                title: "Error!",
+                text: "Car Rental Not Accepted",
+                icon: "error",
+                button: "Close",
+                timer: 2000
+            });
         }
     })
 }
@@ -1136,6 +1146,69 @@ function updateDStatus(driverID) {
         success: function (res) {
             getAvailableDriverCount();
             loadAllDrivers();
+        }
+    })
+}
+
+
+
+// ==============================Incoem Reports=============================================
+function loadAllDailyIncomes() {
+    $('#tblDailyIncome').empty();
+    $.ajax({
+        url: baseURL + "payment/dailyIncome",
+        method: "GET",
+        success: function (res) {
+            for (const income of res.data) {
+                console.log(income);
+                let row = `<tr><td>${income.rentPrice}</td><td>${income.totalPayment}</td></tr>`;
+                $('#tblDailyIncome').append(row);
+            }
+        }
+    })
+}
+
+function loadAllWeeklyIncomes() {
+    $('#tblWeeklyIncome').empty();
+    $.ajax({
+        url: baseURL + "payment/weeklyIncome",
+        method: "GET",
+        success: function (res) {
+            for (const income of res.data) {
+                console.log(income);
+                let row = `<tr><td>${income.rentPrice}</td><td>${income.totalPayment}</td></tr>`;
+                $('#tblWeeklyIncome').append(row);
+            }
+        }
+    })
+}
+
+function loadAllMonthlyIncomes() {
+    $('#tblMonthlyIncome').empty();
+    $.ajax({
+        url: baseURL + "payment/monthlyIncome",
+        method: "GET",
+        success: function (res) {
+            for (const income of res.data) {
+                console.log(income);
+                let row = `<tr><td>${income.paymentID}</td><td>${income.totalPayment}</td></tr>`;
+                $('#tblMonthlyIncome').append(row);
+            }
+        }
+    })
+}
+
+function loadAllAnnuallyIncomes() {
+    $('#tblAnnuallyIncome').empty();
+    $.ajax({
+        url: baseURL + "payment/yearlyIncome",
+        method: "GET",
+        success: function (res) {
+            for (const income of res.data) {
+                console.log(income);
+                let row = `<tr><td>${income.rentPrice}</td><td>${income.totalPayment}</td></tr>`;
+                $('#tblAnnuallyIncome').append(row);
+            }
         }
     })
 }

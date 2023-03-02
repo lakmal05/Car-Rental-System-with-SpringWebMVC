@@ -29,9 +29,9 @@ public class CarRentDTO {
     private String status;
 
 
-    private CarDTO registrationNO;
-    private CustomerDTO customerId;
-    private DriverDTO licenceNo;
+    private CarDTO car;
+    private CustomerDTO customer;
+    private DriverDTO driver;
 
 
 }

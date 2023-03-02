@@ -25,4 +25,12 @@ public interface PaymentRepo extends JpaRepository<Payment, String> {
     @Query(value = "SELECT sum(totalPayment) as income,YEAR(date) as week FROM payment GROUP BY YEAR(date)", nativeQuery = true)
     List<CustomEntity> getAllPaymentsByYearly();
 
+
+
+
+
+
+
+
+
 }
