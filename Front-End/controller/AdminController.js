@@ -476,7 +476,8 @@ function rejectRentals(rentId) {
 
 // =======================================Maintaincese============================================
 
-// let regRegNo="";
+let regRegNo= /^[A-z]{2}$/;
+
 
 function generateMaintenanceId() {
     $.ajax({
@@ -502,10 +503,12 @@ function checkSearchRegNo() {
     let regNo = $('#txtSearchRegistrationNo').val();
     if (regRegNo.test(regNo)) {
         $('#txtSearchRegistrationNo').css('border', '2px solid green');
+        $('#txtSearchRegistrationNo');
         return true;
     } else {
         $('#txtSearchRegistrationNo').css('border', '2px solid red');
-        return false;
+        $('#txtSearchRegistrationNo');
+        return true;
     }
 }
 
@@ -515,6 +518,7 @@ function searchCarByRegistrationNo(registrationNo) {
         method: "GET",
         success: function (res) {
             let car = res.data;
+            console.log(car,"car sucsess")
             $('#txtSearchBrand').val(car.brand);
             $('#txtSearchType').val(car.type);
             $('#txtSearchTransmission').val(car.transmissionType);
