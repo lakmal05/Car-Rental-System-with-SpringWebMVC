@@ -771,7 +771,7 @@ function loadAllPayments() {
                 } else {
                     driver = payment.driverPayment;
                 }
-                let row = `<tr><td>${payment.paymentID}</td><td>${payment.date}</td><td>${payment.rentID}</td><td>${payment.rentPrice}</td><td>${payment.extraKM}</td><td>${payment.priseForExtraKM}</td><td>${payment.damageCharge}</td><td>${payment.returnLossDamageWaiver}</td><td>${driver}</td><td>${payment.totalPayment}</td></tr>`;
+                let row = `<tr><td>${payment.paymentID}</td><td>${payment.date}</td><td>${payment.rentId}</td><td>${payment.rentPrice}</td><td>${payment.extraKM}</td><td>${payment.priseForExtraKM}</td><td>${payment.damageCharge}</td><td>${payment.returnLossDamageWaiver}</td><td>${driver}</td><td>${payment.totalPayment}</td></tr>`;
                 $('#tblPayment').append(row);
             }
             bindPaymentClickEvents();
@@ -1084,9 +1084,9 @@ function addPayment(carRent) {
             console.log("Success");
             generatePaymentID();
             updateCarRentFinished(carRent.rentID);
-            updateCStatus(carRent.cars.registrationNumber);
+            updateCStatus(carRent.car.registrationNO);
             if (carRent.driverID != null) {
-                updateDStatus(carRent.driverID.driverID);
+                updateDStatus(carRent.driver.driverID);
             }
             loadAllPayments();
             clearPaymentFields();
@@ -1179,7 +1179,7 @@ function loadAllWeeklyIncomes() {
         method: "GET",
         success: function (res) {
             for (const income of res.data) {
-                console.log(income);
+                console.log(income,"income");
                 let row = `<tr><td>${income.rentPrice}</td><td>${income.totalPayment}</td></tr>`;
                 $('#tblWeeklyIncome').append(row);
             }
