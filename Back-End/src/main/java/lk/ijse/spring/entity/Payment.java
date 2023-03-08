@@ -33,9 +33,7 @@ public class Payment {
     @JoinColumn(name = "rentId",referencedColumnName = "rentId",nullable = false)
     private CarRent rentId;
 
-//    @ManyToOne
-//    @JoinColumn(name = "customerId",referencedColumnName = "customerId",nullable = false)
-//    private Customer customer;
+
 
 
 }

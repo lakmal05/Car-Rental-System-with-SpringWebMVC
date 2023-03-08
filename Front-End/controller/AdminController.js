@@ -1091,10 +1091,10 @@ function addPayment(carRent) {
         success: function (res) {
             console.log("Success");
             generatePaymentID();
-            updateCarRentFinished(carRent.rentID);
+            updateCarRentFinished(carRent.rentId);
             updateCStatus(carRent.car.registrationNO);
-            if (carRent.driverID != null) {
-                updateDStatus(carRent.driver.driverID);
+            if (carRent.driver != null) {
+                updateDStatus(carRent.driver.licenceNo);
             }
             loadAllPayments();
             clearPaymentFields();
@@ -1127,8 +1127,8 @@ function updateCarRentFinished(rentId) {
         method: "PUT",
         success: function (res) {
             console.log("rent status updated");
-            loadAllRents();
-            loadTodayRents()
+            loadAllRentals();
+            loadTodayBookings();
         },
         error: function (error) {
             console.log("rent status not updated");
@@ -1144,7 +1144,7 @@ function updateCStatus(registrationNumber) {
         method: "PUT",
         success: function (res) {
             getAvailableCarCount();
-            getRentedCarCount();
+            getReservedCarsCount();
             loadAllCars();
         }
     })
