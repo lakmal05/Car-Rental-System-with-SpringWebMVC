@@ -48,7 +48,10 @@
     background-position: center;
     background-size: cover;
 
-
+    -moz-box-shadow: inset 10px 10px 50px #fff;
+    -webkit-box-shadow: inset 10px 10px 50px #fff;
+    box-shadow: inset 10px 10px 50px #fff;
+    border-radius: 15px;
 
 }
 
@@ -67,11 +70,11 @@
     height: 100vh;
 }
 
-.insert{
-    margin-top:0px ;
-   padding-top:24px ;
-    padding-left: 60px;
-}
+/*.insert{*/
+/*    margin-top:0px ;*/
+/*   padding-top:24px ;*/
+/*    padding-left: 60px;*/
+/*}*/
 
 
 

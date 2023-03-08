@@ -9,8 +9,39 @@
     <link href="assets/home.css" rel="stylesheet">
 <!--    <link href="npm i bootstrap@5.3.0-alpha1" crossorigin="anonymous" rel="stylesheet">-->
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Montserrat:wght@100&family=Open+Sans:wght@800&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Montserrat:wght@100&family=Open+Sans:wght@800&family=Roboto&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Montserrat:wght@100;800&family=Open+Sans:wght@800&family=Roboto&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Montserrat:wght@100;800&family=Roboto&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+
 
 </head>
+
+<style>
+
+    #logo {
+        /*border: 1px solid red;*/
+        position: absolute;
+        left: 94%;
+        font-size: 18px;
+        color: #4375F8;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        top: 7px;
+
+    }
+</style>
+
 
 
 <body>
@@ -19,7 +50,7 @@
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Navbar</a>
+            <a class="navbar-brand" href="index.html"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -27,7 +58,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">
+                            <p id="logo">ECRC</p>
+                        </a>
                     </li>
 
                 </ul>
@@ -42,7 +75,7 @@
     <section id="register" class="row">
 
         <!--    for Image-->
-        <div class="reg-div-1 col-lg-6  " style="background-color: #b2bec3 ; padding: 28px">
+        <div class="reg-div-1 col-lg-6  " style="background-color: #dfe6e9 ; padding: 28px">
 
             <div class=" col-lg-8 reg-div-sem1"
                  style="background-color: black ; height: 525px; width: 548px ; text-align: center;margin: 0 auto;margin-left: 36px">
@@ -51,10 +84,9 @@
         </div>
 
         <!--    for from-->
-        <div class=" reg-div-2 col-lg-6" style="background-color: yellow ; padding: 28px">
+        <div class=" reg-div-2 col-lg-6" style="background-color: white; padding: 28px;">
 
-            <div class=" col-lg-8 reg-div-sem2"
-                 style="background-color: white ; height: 525px; width: 548px ; text-align: center;margin: 0 auto;margin-left: -27px">
+            <div class=" col-lg-8 reg-div-sem2" style="background-color: white ; height: 525px; width: 548px ;margin-left: -27px;border-radius: 25px; box-shadow: 0 5px 15px rgb(0 0 0/0.40);">
 
                 <!--=====Register Customer From===-->
                 <form id="registerForm">
@@ -65,89 +97,100 @@
                             <input type="hidden" class="form-control" id="txtCustomerID" placeholder="name">
                         </div>
 
-                        <div class="col-1" style="position: relative;left: -82px">
 
-                            <label for="inputUserType">Type</label>
-                            <select name="userType" id="inputUserType">
-                                <option value="-Select User Type-">-Select Type-</option>
+                        <div class="col-3" style="position: relative;left: 126px;top:21px; border-radius: 25px;width: 179px;box-shadow: 0 5px 15px rgb(0 0 0 / 40%);border: 1px solid white;">
+
+                            <select name="userType" id="inputUserType" style="border: 1px solid white">
+                                <option value="-Select User Type-">-Select User Type-</option>
                                 <option value="Admin">Admin</option>
                                 <option value="Customer">Customer</option>
                             </select>
                         </div>
 
-                        <div class="col-3">
-                            <input type="text" class="form-control" id="txtName" placeholder="name">
-                        </div>
-
-                        <div class="col-3">
-                            <input type="text" class="form-control" id="txtCustomerPassword" placeholder="password">
-                        </div>
-
                     </div>
 
                     <!--===Address & Contact===-->
-                    <div class="row insert">
-                        <div class="col-5">
+                    <div class="row insert" style="position:relative;top: 32px;left: 60px">
+
+                        <div class="col-4">
+                            <input type="text" class="form-control" id="txtName" placeholder="name">
+                        </div>
+
+                        <div class="col-4">
                             <input type="text" class="form-control" id="txtCustomerAddress" placeholder="address">
                         </div>
-                        <div class="col-5">
-                            <input type="text" class="form-control" id="txtCustomerContact" placeholder="contact">
-                        </div>
+
+
                     </div>
 
                     <!--  ==Email===-->
-                    <div class="row insert">
-                        <div class="col-5">
+                    <div class="row insert" style="position: relative;left: 59px;top: 53px">
+
+
+                        <div class="col-4">
+                            <input type="text" class="form-control" id="txtCustomerContact" placeholder="contact">
+                        </div>
+
+                        <div class="col-4">
                             <input type="text" class="form-control" id="txtCustomerEmail" placeholder="E-mail">
                         </div>
+
                     </div>
 
-                    <!-- =======NIC Number===-->
-                    <div class="row insert">
-                        <div class="col-6">
+                    <div class="row insert" style="position:relative;left: 58px;top: 81px">
+
+                        <!-- =======NIC Number===-->
+                        <div class="col-4">
                             <input type="text" class="form-control" id="txtCustomerNic" placeholder="NIC Number">
                         </div>
 
-                        <!-- =======NIC FrontImge===-->
-                        <div class="col-md-3">
-                            <label for="inputCustomerNicImgFront" class="form-label">NIC IMG</label>
-                            <input type="file" class="form-control" id="inputCustomerNicImgFront">
-                        </div>
-
-                        <!-- =======NIC NumberBackImg===-->
-                        <div class="col-md-3">
-                            <label for="inputCustomerNicImgBack" class="form-label">back img</label>
-                            <input type="file" class="form-control" id="inputCustomerNicImgBack">
-                        </div>
-
-                    </div>
-
-                    <!--  ==driving License===-->
-                    <div class="row insert">
-
-                        <div class="col-6">
+                        <div class="col-4">
                             <input type="text" class="form-control" id="txtCustomerDrivingLicenseNo"
                                    placeholder="driving License">
                         </div>
 
+                    </div>
+
+                    <div class="row insert" style="position:relative;top: 109px;left: 49px">
+
+                        <!-- =======NIC FrontImge===-->
+                        <div class="col-3">
+                            <label for="inputCustomerNicImgFront" class="form-label">NIC Front Image</label>
+                            <input type="file" class="form-control" id="inputCustomerNicImgFront">
+                        </div>
+
+                        <!-- =======NIC NumberBackImg===-->
+                        <div class="col-3">
+                            <label for="inputCustomerNicImgBack" class="form-label">NIC Back Image</label>
+                            <input type="file" class="form-control" id="inputCustomerNicImgBack">
+                        </div>
+
+
                         <!--  ==driving License Image===-->
-                        <div class="col-md-3">
-                            <label for="inputCustomerDrivingLicenseImg" class="form-label">License Img</label>
+                        <div class="col-3">
+                            <label for="inputCustomerDrivingLicenseImg" class="form-label">License Image</label>
                             <input type="file" class="form-control" id="inputCustomerDrivingLicenseImg">
                         </div>
 
                     </div>
 
                     <!--  ===userName==-->
-                    <div class="row insert">
-                        <div class="col-3">
+                    <div class="row insert" style="position:relative;top: 150px;left: 50px">
+
+                        <div class="col-4">
                             <input type="text" class="form-control" id="txtCustomerUserName" placeholder="User Name">
                         </div>
                     </div>
+
+                    <div class="col-4" style="position:relative;display: inline-block;left: 275px;top: 111px">
+                        <input type="text" class="form-control" id="txtCustomerPassword" placeholder="password">
+                    </div>
+
+
                 </form>
 
                 <!--======Submit button====-->
-                <div class="row" style="padding-top: 24px;padding-left: 150px">
+                <div class="row" style="padding-top: 24px;padding-left: 171px;position: relative;top: 136px">
                     <button type="button" class="btn btn-primary col-lg-6 col-md-4" id="btnRegister">Submit</button>
                 </div>
 

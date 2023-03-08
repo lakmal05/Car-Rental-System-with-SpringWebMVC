@@ -12,8 +12,12 @@ public interface PaymentRepo extends JpaRepository<Payment, String> {
     @Query(value = "SELECT paymentId FROM Payment ORDER BY paymentId DESC LIMIT 1", nativeQuery = true)
     String generatePaymentId();
 
-    @Query(value = "FROM Payment p GROUP BY p.date ORDER BY p.date")
-    List<Payment> getAllPaymentsByDaily();
+//    @Query(value = "FROM Payment p GROUP BY p.date ORDER BY p.date")
+//    List<Payment> getAllPaymentsByDaily();
+
+
+    @Query(value = "SELECT p.date as date, sum(p.totalPayment) as income FROM Payment p  GROUP BY p.date ORDER BY p.date")
+    List<CustomEntity> getAllPaymentsByDaily();
 
 
     @Query(value = "SELECT WEEK(date) as week, sum(totalPayment) as income FROM payment WHERE date >    DATE_SUB(NOW(), INTERVAL 5 WEEK) GROUP BY WEEK(date) ORDER BY date", nativeQuery = true)
@@ -24,12 +28,6 @@ public interface PaymentRepo extends JpaRepository<Payment, String> {
 
     @Query(value = "SELECT sum(totalPayment) as income,YEAR(date) as week FROM payment GROUP BY YEAR(date)", nativeQuery = true)
     List<CustomEntity> getAllPaymentsByYearly();
-
-
-
-
-
-
 
 
 

@@ -12,16 +12,15 @@
     <list default="true" id="a9886c7d-ff0b-4267-aeca-a9704f4ccf4a" name="Default Changelist" comment="content U">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/dto/PaymentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/dto/PaymentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/entity/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/service/CarRentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/service/CarRentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/entity/CustomEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/entity/CustomEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/repo/PaymentRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/repo/PaymentRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/lk/ijse/spring/service/impl/PaymentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/dto/PaymentDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/dto/PaymentDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/entity/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/Back-End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/entity/Payment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/dto/PaymentDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/dto/PaymentDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/entity/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/lk/ijse/spring/entity/Payment.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/adminPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/assets/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/assets/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/controller/AdminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/controller/AdminController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/controller/CarRentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/controller/CarRentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/registerFrom.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/registerFrom.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +273,8 @@
       <workItem from="1678177710613" duration="3962000" />
       <workItem from="1678183499046" duration="1762000" />
       <workItem from="1678195332147" duration="2292000" />
-      <workItem from="1678242205865" duration="612000" />
+      <workItem from="1678242205865" duration="6979000" />
+      <workItem from="1678251670540" duration="4463000" />
     </task>
     <servers />
   </component>

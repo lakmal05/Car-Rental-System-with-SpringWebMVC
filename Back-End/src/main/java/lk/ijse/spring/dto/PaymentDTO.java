@@ -40,4 +40,11 @@ public class PaymentDTO {
         this.totalPayment = totalPayment;
     }
 
+
+    public PaymentDTO(LocalDate date, double totalPayment) {
+        this.date = date;
+        this.totalPayment = totalPayment;
+    }
+
+
 }

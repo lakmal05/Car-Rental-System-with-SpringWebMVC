@@ -779,7 +779,7 @@ function loadAllPayments() {
                 } else {
                     driver = payment.driverPayment;
                 }
-                let row = `<tr><td>${payment.paymentID}</td><td>${payment.date}</td><td>${payment.rentId}</td><td>${payment.rentPrice}</td><td>${payment.extraKM}</td><td>${payment.priseForExtraKM}</td><td>${payment.damageCharge}</td><td>${payment.returnLossDamageWaiver}</td><td>${driver}</td><td>${payment.totalPayment}</td></tr>`;
+                let row = `<tr><td>${payment.paymentID}</td><td>${payment.date}</td><td>${payment.rentId.rentId}</td><td>${payment.rentPrice}</td><td>${payment.extraKM}</td><td>${payment.priseForExtraKM}</td><td>${payment.damageCharge}</td><td>${payment.returnLossDamageWaiver}</td><td>${driver}</td><td>${payment.totalPayment}</td></tr>`;
                 $('#tblPayment').append(row);
             }
             bindPaymentClickEvents();
@@ -1165,6 +1165,8 @@ function updateDStatus(driverID) {
 
 
 // ==============================Incoem Reports=============================================
+loadAllMonthlyIncomes();
+
 function loadAllDailyIncomes() {
     $('#tblDailyIncome').empty();
     $.ajax({
@@ -1173,7 +1175,7 @@ function loadAllDailyIncomes() {
         success: function (res) {
             for (const income of res.data) {
                 console.log(income);
-                let row = `<tr><td>${income.rentPrice}</td><td>${income.totalPayment}</td></tr>`;
+                let row = `<tr><td>${income.date}</td><td>${income.totalPayment}</td></tr>`;
                 $('#tblDailyIncome').append(row);
             }
         }
