@@ -32,7 +32,7 @@ public interface CarRentService {
 
 
 
-    void uploadBankSlip(String slipfPath, String id);
+    void uploadBankSlip(String slipfPath, String rentId);
 
 
 

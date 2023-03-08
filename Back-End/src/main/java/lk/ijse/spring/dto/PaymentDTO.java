@@ -28,7 +28,7 @@ public class PaymentDTO {
     private double driverPayment;
     private double totalPayment;
 
-    private String rentId;
+    private CarRentDTO rentId;
 
     public PaymentDTO(double rentPrice, double totalPayment) {
         this.rentPrice = rentPrice;

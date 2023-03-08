@@ -33,9 +33,14 @@ $(function () {
 
 
 function getToday() {
-    var date = new Date();
-    var current_date = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
-    return current_date;
+    // var date = new Date();
+    // var current_date = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+    // return current_date;
+
+    let string = new Date().toJSON().split("T")[0];
+    return string;
+
+
 }
 
 function setDates() {
@@ -744,6 +749,9 @@ function updateCarStatusToAvailable(registrationNo) {
 // =========================================Payment================================================================
 
 
+
+
+
 function generatePaymentID() {
     $.ajax({
         url: baseURL + "payment/generatePaymentId",
@@ -958,13 +966,13 @@ function calculatePriceForExtraKMs(extraKMs) {
             $('#inputPriseForExtraKM').val(costForExtraKMs);
         },
         error: function (error) {
-            Swal.fire({
-                position: 'top-end',
-                icon: 'error',
-                title: "This Rent Is Not Exist...",
-                showConfirmButton: false,
-                timer: 1500
-            });
+            // Swal.fire({
+            //     position: 'top-end',
+            //     icon: 'error',
+            //     title: "This Rent Is Not Exist...",
+            //     showConfirmButton: false,
+            //     timer: 1500
+            // });
         }
     })
 }
@@ -1072,7 +1080,7 @@ function addPayment(carRent) {
         priseForExtraKM: priceForEctraKMs,
         driverPayment: driverPayment,
         totalPayment: totalPayment,
-        rentID: carRent,
+        rentId: carRent,
     }
 
     $.ajax({

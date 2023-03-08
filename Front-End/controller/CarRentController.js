@@ -108,7 +108,6 @@ function setCarDataToFields(car){
     $('#txtCarColor').val(car.color);
     $('#txtCarLossDamageWavier').val(car.lossDamageWaiver);
 
-
 }
 
 function searchCarByRegNo(customer) {
@@ -192,7 +191,7 @@ function uploadBankSlip(rentId){
 
     $.ajax({
 
-        url: baseURL + "carRent/up/" + rentId,
+        url: baseURL + "CarRent/up/" + rentId,
         method: "PUT",
         async: true,
         contentType: false,
