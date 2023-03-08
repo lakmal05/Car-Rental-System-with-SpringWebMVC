@@ -714,7 +714,7 @@ function checkCarRegNo() {
         $('#txtCarRegNo').css('border', '2px solid green');
         return true;
     } else {
-        $('#txtCarRegNo').css('border', '2px solid red');
+        $('#txtCarRegNo').css('border', '2px solid green');
         return false;
     }
 }
@@ -733,10 +733,10 @@ $('#txtCost').on('keyup', function (event) {
 function checkCarMaintenanceCost() {
     let cost = $('#txtCost').val();
     if (regDailyRate.test(cost)) {
-        $('#txtCost').css('border', '2px solid green');
+        $('#txtCost');
         return true;
     } else {
-        $('#txtCost').css('border', '2px solid red');
+        $('#txtCost');
         return false;
     }
 }
@@ -931,7 +931,7 @@ function bindPaymentClickEvents() {
 
 function clearPaymentFields() {
     $('#inputPaymentID').val("");
-    $('#inputPaymentDate').val("");
+    // $('#inputPaymentDate').val("");
     $('#inputRentPrice').val("");
     $('#inputExtraKM').val("");
     $('#inputPriseForExtraKM').val("");

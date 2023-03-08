@@ -73,12 +73,14 @@ function setCustomerDetails(customer) {
     $('#txtCustId').val(customer.customerId);
     $('#txtCusId').val(customer.customerId);
     $('#txtCusName').val(customer.name);
-    $('#txtCustName').val(customer.address);
+    $('#txtCustName').val(customer.name);
+    $('#txtCustAddress').val(customer.address);
     $('#txtCusEmail').val(customer.email);
     $('#txtCusContactNo').val(customer.contactNo);
     $('#txtCusNIC').val(customer.nicNo);
     $('#txtCusLicenceNo').val(customer.licenceNo);
     $('#txtCusUsername').val(customer.username);
+    $('#txtCusPassword').val(customer.password);
 }
 
 $('#btnBookNow').click(function () {
@@ -168,6 +170,14 @@ function addCarRent(customer, car, driver) {
         success: function (res) {
             uploadBankSlip(rentId);
             getLastRent(rentId, customer);
+
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Booking Complete',
+                showConfirmButton: false,
+                timer: 1500
+            })
 
 
         },
