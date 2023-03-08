@@ -180,11 +180,24 @@ function addCar() {
             uploadCarImages(regNo);
             loadAllCars();
             getAvailableCarCount();
-    clearAddCarFields();
+            clearAddCarFields();
+            Swal.fire({
+                position: 'top-end',
+                icon: 'Success',
+                title: 'Car Added',
+                showConfirmButton: false,
+                timer: 1500
+            })
 
         },
         error: function (ob) {
-
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'Unsuccessful',
+                showConfirmButton: false,
+                timer: 1500
+            })
         }
     })
 
@@ -281,9 +294,23 @@ function updateCar() {
         success: function (res) {
             loadAllCars();
 
+            Swal.fire({
+                position: 'top-end',
+                icon: 'Updated',
+                title: 'Update Complete',
+                showConfirmButton: false,
+                timer: 1500
+            })
 
         },
         error: function (ob) {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'Please Try Again',
+                showConfirmButton: false,
+                timer: 1500
+            })
 
         }
     });
@@ -307,8 +334,22 @@ function deleteCar() {
             getAvailableCarCount();
             loadAllCars();
 
+            Swal.fire({
+                position: 'top-end',
+                icon: 'Success',
+                title: 'Delete Complete',
+                showConfirmButton: false,
+                timer: 1500
+            })
         },
         error: function (ob) {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'Unsuccessfulll',
+                showConfirmButton: false,
+                timer: 1500
+            })
 
         }
     })

@@ -176,14 +176,14 @@ function loadTodayBookings() {
         success: function (res) {
             for (const booking of res.data) {
                 let licence;
-                if (booking.licenceNo === null) {
+                if (booking.driver === null) {
                     licence = "No Driver";
                 } else {
-                    licence = booking.licenceNo.licenceNo;
+                    licence = booking.driver.licenceNo;
                 }
 
                 console.log(booking)
-                let row = `<tr><td>${booking.rentId}</td><td>${booking.date}</td><td>${booking.pickUpDate}</td><td>${booking.returnDate}</td><td>${booking.customerId.customerId}</td><td>${booking.registrationNO}</td><td>${licence}</td><td>${booking.status}</td></tr>`;
+                let row = `<tr><td>${booking.rentId}</td><td>${booking.date}</td><td>${booking.pickUpDate}</td><td>${booking.returnDate}</td><td>${booking.customer.customerId}</td><td>${booking.car.registrationNO}</td><td>${licence}</td><td>${booking.status}</td></tr>`;
                 $('#todayBookingTable').append(row);
             }
         }
@@ -273,6 +273,14 @@ function acceptCustomer(id) {
             getRegisterCustomersCount();
             loadRegisteredCustomers();
 
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Customer  Accept',
+                showConfirmButton: false,
+                timer: 1500
+            })
+
         }
     })
 }
@@ -281,6 +289,15 @@ $('#btnRejectCustomer').click(function () {
     if ($('#txtCustomerId').val() != "") {
         let customerId = $('#txtCustomerId').val();
         rejectPendingCustomer(customerId);
+
+        Swal.fire({
+            position: 'top-end',
+            icon: 'rejected',
+            title: 'Customer Rejected',
+            showConfirmButton: false,
+            timer: 1500
+        })
+
     } else {
 
     }
@@ -408,8 +425,11 @@ function bindCarRentalRequestTableClickEvents() {
 $('#btnRentalAccept').click(function () {
     if ($('#txtRentId').val() != "") {
         acceptRental();
+
+
     } else {
-        alert("Please select car rental");
+        // alert("Please select car rental");
+
     }
 })
 
@@ -427,24 +447,27 @@ function acceptRental() {
             loadTodayBookings();
             updateDriverStatus();
             updateCarStatus();
-            clearRentalRequestFields();
             loadAllAcceptedRentals();
-            swal({
-                title: "Confirmation!",
-                text: "Car Rental Accepted Successfully",
-                icon: "success",
-                button: "Close",
-                timer: 2000
-            });
+
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Rental Accept',
+                showConfirmButton: false,
+                timer: 1500
+            })
+
         },
         error: function (ob) {
-            swal({
-                title: "Error!",
-                text: "Car Rental Not Accepted",
-                icon: "error",
-                button: "Close",
-                timer: 2000
-            });
+
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'Something Went Worng Try Again',
+                showConfirmButton: false,
+                timer: 1500
+            })
+
         }
     })
 }
@@ -469,7 +492,6 @@ function rejectRentals(rentId) {
             loadPendingRentals();
             loadTodayBookings();
             getTodayBookingsCount();
-            clearRentalRequestFields();
 
         },
         error: function (ob) {
@@ -477,6 +499,57 @@ function rejectRentals(rentId) {
         }
     })
 }
+
+
+
+
+function updateCarStatus() {
+    let registrationNO = $('#txtCarRegistrationNo').val();
+    let status = "Non-Available";
+
+    $.ajax({
+        url: baseURL + "car/updateCarStatus/" + registrationNO + "/" + status,
+        method: "PUT",
+        success: function (res) {
+            loadAllCars();
+            getAvailableCarCount();
+            getReservedCarsCount();
+
+            Swal.fire({
+                position: 'top-end',
+                icon: 'update',
+                title: 'Updated',
+                showConfirmButton: false,
+                timer: 1500
+            })
+
+        }
+
+    })
+}
+
+function updateDriverStatus() {
+    let licenceNo = $('#txtDLicenceNo').val();
+
+    if (licenceNo != "No Driver") {
+        $.ajax({
+            url: baseURL + "driver/updateNonAvailable/" + licenceNo,
+            method: "PUT",
+            success: function (res) {
+                loadAllDrivers();
+                getAvailableDriverCount();
+                getOccupiedDriverCount();
+            }
+        })
+    }
+}
+
+
+
+
+
+
+
 
 
 // =======================================Maintaincese============================================
@@ -539,10 +612,23 @@ $('#btnAddToMaintenance').click(function () {
             let registrationNo = $('#txtSearchRegistrationNo').val();
             addToMaintenance(registrationNo);
         } else {
-            alert("Car is not available in this time.")
+
+            Swal.fire({
+                position: 'top-end',
+                icon: 'question',
+                title: 'Car is not available in this time',
+                showConfirmButton: false,
+                timer: 1500
+            })
         }
     } else {
-        alert("Please select a car");
+        Swal.fire({
+            position: 'top-end',
+            icon: 'question',
+            title: 'Please select a Car',
+            showConfirmButton: false,
+            timer: 1500
+        })
     }
 })
 
@@ -557,6 +643,13 @@ function addToMaintenance(registrationNo) {
             getAvailableCarCount();
             getReservedCarsCount();
             loadAllUnderMaintenanceCars();
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Success',
+                showConfirmButton: false,
+                timer: 1500
+            })
 
         }
     })
@@ -682,6 +775,15 @@ function searchMaintenanceCar() {
             console.log(car);
             addPaymentToMaintenance(car);
 
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'Somthing Went Wrong Try Again',
+                showConfirmButton: false,
+                timer: 1500
+            })
+
+
         }
     })
 }
@@ -707,6 +809,15 @@ function addPaymentToMaintenance(car) {
         data: JSON.stringify(maintenance),
         success: function (res) {
             updateCarStatusToAvailable(car.registrationNO);
+
+            Swal.fire({
+                position: 'top-end',
+                icon: 'Added',
+                title: 'Rental Accept',
+                showConfirmButton: false,
+                timer: 1500
+            })
+
         }
     })
 }
@@ -723,7 +834,6 @@ function updateCarStatusToAvailable(registrationNo) {
             loadAllUnderMaintenanceCars();
             loadAllMaintenances();
             generateMaintenanceId();
-            clearPaidFields();
 
 
         }
@@ -866,13 +976,13 @@ $("#btnSearchPayment").click(function () {
         },
         error: function (error) {
             let errorReason = JSON.parse(error.responseText);
-            // Swal.fire({
-            //     position: 'top-end',
-            //     icon: 'error',
-            //     title: "Payment " + paymentID + " Not Exist...",
-            //     showConfirmButton: false,
-            //     timer: 1500
-            // });
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: "Payment " + paymentID + " Not Exist...",
+                showConfirmButton: false,
+                timer: 1500
+            });
         }
     });
 });
@@ -907,13 +1017,13 @@ $('#selectRentID').change(function () {
 
         },
         error: function (error) {
-            // Swal.fire({
-            //     position: 'top-end',
-            //     icon: 'error',
-            //     title: "This Rent Is Not Exist...",
-            //     showConfirmButton: false,
-            //     timer: 1500
-            // });
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: "This Rent Is Not Exist...",
+                showConfirmButton: false,
+                timer: 1500
+            });
         }
     })
 })
@@ -966,13 +1076,13 @@ function calculatePriceForExtraKMs(extraKMs) {
             $('#inputPriseForExtraKM').val(costForExtraKMs);
         },
         error: function (error) {
-            // Swal.fire({
-            //     position: 'top-end',
-            //     icon: 'error',
-            //     title: "This Rent Is Not Exist...",
-            //     showConfirmButton: false,
-            //     timer: 1500
-            // });
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: "This Rent Is Not Exist...",
+                showConfirmButton: false,
+                timer: 1500
+            });
         }
     })
 }
@@ -1136,11 +1246,11 @@ function updateCarRentFinished(rentId) {
     })
 }
 
-function updateCStatus(registrationNumber) {
-    let availability = "Available";
+function updateCStatus(registrationNO) {
+    let status = "Available";
 
     $.ajax({
-        url: baseURL + "car/updateCarAvailability/" + registrationNumber + "/" + availability,
+        url: baseURL + "car/updateCarStatus/" + registrationNO + "/" + status,
         method: "PUT",
         success: function (res) {
             getAvailableCarCount();
