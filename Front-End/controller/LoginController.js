@@ -109,8 +109,16 @@ function searchAdmin(userType, username, password) {
             if (res.data === true) {
                 loginSave(userType, username, password);
 
+
             } else {
-                alert(res.message);
+                // alert(res.message);
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Invalid Data',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
             }
         }
     });
@@ -125,7 +133,14 @@ function searchCustomer(userType, username, password) {
             if (res.data === true) {
                 loginSave(userType, username, password);
             } else {
-                alert(res.message);
+                // alert(res.message);
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Invalid Data',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
             }
         }
     })
@@ -140,7 +155,14 @@ function searchDriver(userType, username, password) {
             if (res.data === true) {
                 loginSave(userType, username, password);
             } else {
-                alert(res.message);
+                // alert(res.message);
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Invalid Data',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
             }
         }
     })
